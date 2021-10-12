@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES" class="no-js" data-theme="system">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <meta name="author" content="Germán Freixinós">
+        <meta name="description" content="Sitio web personal de Germán Freixinós, desarrollador web front-end.">
+        <meta name="color-scheme" content="light dark">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/forms.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/assets.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/typography.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/reduce-motion.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <script src="/assets/scripts/main.js" defer></script>
+    </head>
+
+    <body>
+        {% include "partials/site-header.html" %}
+        <main class="region">
+            {{ content | safe }}
+        </main>
+        {% include "partials/site-footer.html" %}
+    </body>
+</html>

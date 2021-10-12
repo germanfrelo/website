@@ -1,0 +1,20 @@
+{
+    "items": [
+        {
+            "text": "Inicio",
+            "url": "/"
+        },
+        {
+            "text": "Portfolio",
+            "url": "/portfolio/"
+        },
+        {
+            "text": "Sobre mí",
+            "url": "/about/"
+        },
+        {
+            "text": "Contacto",
+            "url": "/contact/"
+        }
+    ]
+}

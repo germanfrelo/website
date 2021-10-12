@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-ES" class="no-js" data-theme="system">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | Germán Freixinós</title>
+        <meta name="author" content="Germán Freixinós">
+        <meta name="description" content="Sitio web personal de Germán Freixinós, desarrollador web front-end.">
+        <meta name="color-scheme" content="light dark">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/forms.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/assets.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/typography.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/reduce-motion.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <script src="/assets/scripts/main.js" defer></script>
+        <script src="/assets/scripts/project-to-do-list.js" defer></script>
+
+        <style>
+            main {
+                display: grid;
+                grid-auto-rows: auto 1fr auto;
+            }
+
+            .layout-header-todo{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                row-gap: var(--s-2);
+                column-gap: var(--s2);
+            }
+
+            .tasks-counter {
+                font-size: var(--fs4);
+                line-height: 1;
+            }
+
+            .tasks-list > * + * {
+                margin-block-start: var(--s0);
+                padding-block-start: var(--s0);
+                border-block-start: var(--bw-thin) solid var(--c-border);
+            }
+
+            .task-item {
+                padding-inline: var(--padding-xxs);
+            }
+
+            .task-actions button {
+                font-size: var(--fs-1);
+            }
+
+            .completed {
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="wrapper site-header site-header-layout">
+            <a href="/" class="logo">Germán Freixinós</a>
+
+            <nav class="site-nav">
+                <ul class="site-nav-layout">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/portfolio" aria-current="page">Portfolio</a></li>
+                    <li><a href="/about">Sobre mí</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="wrapper region layout-stack-xl">
+            <header class="layout-header-todo">
+                <h1>Tareas</h1>
+                <p id="tasks-counter" class="tasks-counter">0</p>
+            </header>
+
+            <ul id="tasks-list" class="tasks-list"></ul>
+
+            <form id="form-add-task">
+                <label for="form-input">Nombre de la tarea</label>
+                <div class="layout-input-button">
+                    <input type="text" name="input" required>
+                    <button type="submit" name="submit">Añadir tarea</button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrapper site-footer-layout">
+                <ul class="social-list-layout">
+                    <li>
+                        <a class="link-icon" href="https://linkedin.com/in/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-linkedin"></use>
+                            </svg>
+                            <span class="visually-hidden">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-icon" href="https://github.com/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-github"></use>
+                            </svg>
+                            <span class="visually-hidden">Github</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-icon" href="https://codepen.io/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-codepen"></use>
+                            </svg>
+                            <span class="visually-hidden">CodePen</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-icon" href="https://twitter.com/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-twitter"></use>
+                            </svg>
+                            <span class="visually-hidden">Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <form id="theme-toggle-form">
+                    <fieldset>
+                        <legend class="visually-hidden">Apariencia</legend>
+                        <ul class="theme-toggle-layout">
+                            <li>
+                                <input type="radio" name="theme" value="light" id="light" class="visually-hidden">
+                                <label for="light">
+                                    <span class="visually-hidden">Claro</span>
+                                    <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-sun"></use>
+                                    </svg>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" value="dark" id="dark" class="visually-hidden">
+                                <label for="dark">
+                                    <span class="visually-hidden">Oscuro</span>
+                                    <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-moon"></use>
+                                    </svg>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" value="system" id="system" class="visually-hidden" checked>
+                                <label for="system">
+                                    <span class="visually-hidden">Sistema</span>
+                                    <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-sun-moon"></use>
+                                    </svg>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>

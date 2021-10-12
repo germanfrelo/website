@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es-ES" class="no-js" data-theme="system">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | Germán Freixinós</title>
+        <meta name="author" content="Germán Freixinós">
+        <meta name="description" content="Sitio web personal de Germán Freixinós, desarrollador web front-end.">
+        <meta name="color-scheme" content="light dark">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/forms.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/assets.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/typography.css">
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css/reduce-motion.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <script src="/assets/scripts/main.js" defer></script>
+        <script src="/assets/scripts/project-game-ping-pong-score-keeper.js" defer></script>
+
+        <style>
+            :root {
+                --c-player1: hsl(220deg 100% 55%);
+                --c-player2: hsl(344deg 100% 45%);
+                --c-on-player: var(--c-white);
+            }
+
+            [data-theme="dark"] {
+                --c-player1: hsl(220deg 100% 65%);
+                --c-player2: hsl(344deg 100% 55%);
+                --c-on-player: var(--c-blue-grey-050);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                [data-theme="system"] {
+                    --c-player1: hsl(220deg 100% 65%);
+                    --c-player2: hsl(344deg 100% 55%);
+                    --c-on-player: var(--c-blue-grey-050);
+                }
+            }
+
+            main {
+                --line-length: 30rem;
+                text-align: center;
+            }
+
+            select {
+                min-inline-size: 6ch;
+            }
+
+            .players-container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                row-gap: var(--spacing, 1rem);
+                column-gap: var(--s0);
+            }
+
+            .players-container > * {
+                flex: 1;
+            }
+
+            .msg {
+                font-size: var(--fs2);
+                font-weight: var(--fw-600);
+            }
+
+            .msg:empty {
+                display: none;
+            }
+
+            .score {
+                padding: var(--padding-xxs);
+                font-family: var(--ff-system-mono);
+                font-size: 3rem;
+                line-height: 1;
+                text-align: center;
+                background-color: var(--c-background-secondary);
+                border-radius: var(--br-sm);
+            }
+
+            .player1 {
+                --c-player: var(--c-player1);
+            }
+
+            .player2 {
+                --c-player: var(--c-player2);
+            }
+
+            .player-name {
+                font-size: var(--fs2);
+                line-height: var(--lh-small);
+                font-weight: var(--fw-700);
+                color: var(--c-player);
+            }
+
+            .player-button {
+                display: block;
+                inline-size: 100%;
+                white-space: nowrap;
+                color: var(--c-on-player);
+                background-color: var(--c-player);
+                border-color: var(--c-player);
+            }
+
+            .msg [class*="player"] {
+                color: var(--c-player);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="wrapper site-header site-header-layout">
+            <a href="/" class="logo">Germán Freixinós</a>
+
+            <nav class="site-nav">
+                <ul class="site-nav-layout">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/portfolio" aria-current="page">Portfolio</a></li>
+                    <li><a href="/about">Sobre mí</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="wrapper region layout-stack-xl">
+            <h1>Ping-pong</h1>
+
+            <div>
+                <label for="points-selector">Límite de turnos</label>
+                <select id="points-selector">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="players-container">
+                <div id="player1Container" class="layout-stack-xs">
+                    <p id="player1Name" class="player-name player1">Jugador 1</p>
+                    <p id="player1Display" class="score">0</p>
+                    <button id="player1Btn" class="player-button player1">+ 1</button>
+                </div>
+
+                <div id="player2Container" class="layout-stack-xs">
+                    <p id="player2Name" class="player-name player2">Jugador 2</p>
+                    <p id="player2Display" class="score">0</p>
+                    <button id="player2Btn" class="player-button player2">+ 1</button>
+                </div>
+            </div>
+
+            <p id="result" class="msg"></p>
+
+            <button id="reset-game-btn">Reiniciar juego</button>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrapper site-footer-layout">
+                <ul class="social-list-layout">
+                    <li>
+                        <a class="link-icon" href="https://linkedin.com/in/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-linkedin"></use>
+                            </svg>
+                            <span class="visually-hidden">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-icon" href="https://github.com/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-github"></use>
+                            </svg>
+                            <span class="visually-hidden">Github</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-icon" href="https://codepen.io/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-codepen"></use>
+                            </svg>
+                            <span class="visually-hidden">CodePen</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-icon" href="https://twitter.com/germanfrelo" rel="external noreferrer noopener">
+                            <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-twitter"></use>
+                            </svg>
+                            <span class="visually-hidden">Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <form id="theme-toggle-form">
+                    <fieldset>
+                        <legend class="visually-hidden">Apariencia</legend>
+                        <ul class="theme-toggle-layout">
+                            <li>
+                                <input type="radio" name="theme" value="light" id="light" class="visually-hidden">
+                                <label for="light">
+                                    <span class="visually-hidden">Claro</span>
+                                    <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-sun"></use>
+                                    </svg>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" value="dark" id="dark" class="visually-hidden">
+                                <label for="dark">
+                                    <span class="visually-hidden">Oscuro</span>
+                                    <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-moon"></use>
+                                    </svg>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" value="system" id="system" class="visually-hidden" checked>
+                                <label for="system">
+                                    <span class="visually-hidden">Sistema</span>
+                                    <svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-sun-moon"></use>
+                                    </svg>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>
