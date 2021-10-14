@@ -553,7 +553,7 @@ button:focus-visible,
     row-gap: var(--s0);
 }
 
-.hero-layout > img {
+.hero-layout > picture {
     order: -1;
 }
 

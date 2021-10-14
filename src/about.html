@@ -6,7 +6,11 @@ layout: "layouts/base.html"
 <div class="wrapper flow">
     <h1>Sobre mí</h1>
 
-    <img class="avatar" src="/assets/images/german-freixinos.jpg" alt="Germán Freixinós" width="1024" height="1024">
+    <picture>
+        <source type="image/webp" srcset="/assets/images/german-freixinos.webp">
+        <source type="image/jpeg" srcset="/assets/images/german-freixinos.jpg">
+        <img class="avatar" src="/assets/images/german-freixinos.jpg" alt="Germán Freixinós" width="1024" height="1024">
+    </picture>
 
     <p>Me llamo <strong>Germán Freixinós López</strong>, y soy <strong>desarrollador web front&#8209;end</strong>.</p>
 
