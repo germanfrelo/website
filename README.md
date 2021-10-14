@@ -1,6 +1,6 @@
-# germanfrelo.dev
+# germanfreixinos.com
 
-Source code for [germanfrelo.dev](https://germanfrelo.dev), my personal website, built with [Jamstack](https://jamstack.org) ([Eleventy](https://www.11ty.dev) + [GitHub](https://github.com) + [Netlify](https://www.netlify.com)).
+Source code for my personal website at [**germanfreixinos.com**](https://germanfreixinos.com), built with [Jamstack](https://jamstack.org) ([Eleventy](https://www.11ty.dev) + [GitHub](https://github.com) + [Netlify](https://www.netlify.com)).
 
 ## License
 
