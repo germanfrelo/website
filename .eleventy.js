@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
     // Set directories to pass through to the public folder
     eleventyConfig.addPassthroughCopy("./src/assets");
+    eleventyConfig.addPassthroughCopy({ static: "/" });
 
     return {
         markdownTemplateEngine: 'njk',
