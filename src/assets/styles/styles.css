@@ -57,8 +57,8 @@
     --fs-2: 0.75rem;
     /* Font Weight */
     --fw-700: 700;
-    --fw-500: 500;
     --fw-600: 600;
+    --fw-500: 500;
     --fw-400: 400;
     /* Line Height */
     --lh-body: 1.5;
@@ -238,6 +238,14 @@ a {
     color: var(--c-accent);
 }
 
+a[href*="://"]::after {
+    content: " ↗︎";
+}
+
+a[href*="://"][class*="icon"]::after {
+    content: "";
+}
+
 a:hover {
     /* text-decoration-line: underline; */
     /* color: inherit; */
@@ -246,7 +254,7 @@ a:hover {
 
 .site-nav a {
     display: block;
-    font-weight: var(--fw-600);
+    font-weight: var(--fw-500);
     text-decoration: none;
     color: inherit;
 }
@@ -257,6 +265,10 @@ a:hover {
 
 .site-footer a {
     color: inherit;
+}
+
+.site-footer a:hover {
+    color: var(--c-accent);
 }
 
 a.logo {
@@ -581,7 +593,7 @@ button:focus-visible,
 
 .logo {
     font-size: var(--fs1);
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-600);
 }
 
 .project-title {
@@ -613,6 +625,7 @@ button:focus-visible,
     padding-block: var(--s2);
     font-size: var(--fs-1);
     text-align: center;
+    color: var(--c-text-secondary);
     background-color: var(--c-background-secondary);
 }
 
@@ -701,11 +714,12 @@ button:focus-visible,
     --size: var(--bw-thin);
     display: flex;
     flex-wrap: wrap;
-    /* padding: var(--size); */
-    /* gap: var(--size); */
-    /* background-color: var(--c-background-primary); */
     border: var(--size) solid;
     border-radius: var(--br-md);
+}
+
+.theme-toggle-layout:hover {
+    color: var(--c-text-primary);
 }
 
 .theme-toggle-layout > * {
@@ -718,9 +732,6 @@ button:focus-visible,
     font-size: var(--fs1);
     line-height: 0;
     text-align: center;
-    color: var(--c-text-primary);
-    /* background-color: var(--c-background-primary); */
-    /* border-radius: var(--br-sm); */
 }
 
 .theme-toggle-layout label:hover {
@@ -729,6 +740,10 @@ button:focus-visible,
 
 .theme-toggle-layout :checked + label {
     color: var(--c-background-primary);
+    background-color: var(--c-text-secondary);
+}
+
+.theme-toggle-layout:hover :checked + label {
     background-color: var(--c-text-primary);
 }
 
