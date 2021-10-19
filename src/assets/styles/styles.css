@@ -232,24 +232,15 @@ ol[class] {
    ======================================== */
 
 a {
-    /* text-decoration-line: none; */
-    /* text-underline-offset: 0.125em; */
-    /* text-decoration-thickness: 0.125em; */
     color: var(--c-accent);
 }
 
 a[href*="://"]::after {
-    content: " ↗︎";
+    content: " ↗";
 }
 
 a[href*="://"][class*="icon"]::after {
     content: "";
-}
-
-a:hover {
-    /* text-decoration-line: underline; */
-    /* color: inherit; */
-    /* border-block-end: 0.125em solid; */
 }
 
 .site-nav a {
@@ -274,15 +265,6 @@ a:hover {
 a.logo {
     text-decoration: none;
     color: inherit;
-}
-
-a[class*="cta"] {
-    font-weight: var(--fw-600);
-}
-
-a[class*="cta"]::after {
-    content: " →";
-    white-space: nowrap;
 }
 
 a[aria-current="page"] {
