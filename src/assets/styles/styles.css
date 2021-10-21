@@ -42,11 +42,13 @@
     --padding-xs: 0.5em;
     --padding-xxs: 0.25em;
     /* Font Family */
-    --ff-system-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --ff-system-serif: Georgia, Times, serif;
-    --ff-system-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-    --ff-sans: Inter, var(--ff-system-sans);
-    --ff-display-serif: "DM Serif Display", var(--ff-system-serif);
+    --ff-sans:
+        "Inter",
+        ui-sans-serif, system-ui, Helvetica, Arial, sans-serif;
+    --ff-display-serif:
+        "DM Serif Display",
+        Georgia, Times, serif;
+    --ff-mono: ui-monospace, Menlo, Monaco, monospace;
     /* Font Size */
     --fs4:  2.5rem;
     --fs3:  2rem;
@@ -80,9 +82,9 @@
     --c-wrong:          crimson;
     --c-correct:        green;
     /* Border With */
-    --bw-thin: 0.125rem;
-    --bw-medium: 0.1875rem;
-    --bw-thick: 0.25rem;
+    --bw-thin: 0.0625rem;
+    --bw-medium: 0.125rem;
+    --bw-thick: 0.1875rem;
     /* Border Radius */
     --br-sm: 0.125rem;
     --br-md: 0.1875rem;
@@ -92,7 +94,6 @@
     --c-accent:                 var(--c-blue-mid);
     --c-shadow:                 var(--c-blue-grey-900);
     --c-border:                 var(--c-blue-grey-900);
-    --c-tag:                    var(--c-blue-grey-900);
     --c-text-primary:           var(--c-blue-grey-100);
     --c-text-secondary:         var(--c-blue-grey-400);
     --c-background-primary:     var(--c-white);
@@ -104,7 +105,6 @@
     --c-accent:                 var(--c-blue-light);
     --c-shadow:                 var(--c-blue-grey-050);
     --c-border:                 var(--c-blue-grey-200);
-    --c-tag:                    var(--c-blue-grey-200);
     --c-text-primary:           var(--c-blue-grey-970);
     --c-text-secondary:         var(--c-blue-grey-600);
     --c-background-primary:     var(--c-blue-grey-050);
@@ -117,7 +117,6 @@
         --c-accent:                 var(--c-blue-light);
         --c-shadow:                 var(--c-blue-grey-050);
         --c-border:                 var(--c-blue-grey-200);
-        --c-tag:                    var(--c-blue-grey-200);
         --c-text-primary:           var(--c-blue-grey-970);
         --c-text-secondary:         var(--c-blue-grey-600);
         --c-background-primary:     var(--c-blue-grey-050);
@@ -128,6 +127,12 @@
 
 
 /* ============ 1. GLOBAL (HTML) STYLES AND ENFORCED INHERITANCE ============ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 * {
     margin: 0;
@@ -146,6 +151,7 @@ html:focus-within {
     scroll-behavior: smooth;
 }
 
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
@@ -214,17 +220,20 @@ h1 {
     font-size: var(--fs4);
 }
 
-/* Text content
+/* Text/Grouping content
    ======================================== */
 
-ul,
-ol {
+:where(ul, ol) {
     padding-inline-start: 1em;
 }
 
-ul[class],
-ol[class] {
-    list-style: none;
+:where(nav) :where(ol, ul) {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+:where(ul, ol)[class] {
+    list-style-type: none;
     padding-inline-start: 0;
 }
 
@@ -235,17 +244,13 @@ a {
     color: var(--c-accent);
 }
 
-a[href*="://"]::after {
-    content: " ↗";
-}
-
-a[href*="://"][class*="icon"]::after {
-    content: "";
+a[href*="://"]:not(:where([href*="germanfreixinos.com"], [class*="icon"]))::after {
+    content: " \2197";
 }
 
 .site-nav a {
     display: block;
-    font-weight: var(--fw-500);
+    font-weight: var(--fw-600);
     text-decoration: none;
     color: inherit;
 }
@@ -276,7 +281,7 @@ a[aria-current="page"]::after {
     content: "";
     display: block;
     position: absolute;
-    bottom: calc(var(--bw-medium) * -2);
+    bottom: calc(var(--bw-medium) * -1);
     inline-size: 100%;
     block-size: var(--bw-medium);
     background-color: currentColor;
@@ -286,7 +291,7 @@ strong {
     font-weight: var(--fw-700);
 }
 
-/* Image and multimedia
+/* Embedded content/Image and multimedia
    ======================================== */
 
 img,
@@ -294,37 +299,52 @@ picture {
     display: block;
 }
 
+img,
+video {
+    block-size: auto;
+    max-inline-size: 100%;
+}
+
+svg:not([fill]) {
+    fill: currentColor;
+}
+
 /* Forms
    ======================================== */
+
+input,
+select {
+    block-size: auto;
+    max-inline-size: 100%;
+}
+
+button,
+input,
+select {
+    padding: var(--padding-xs);
+    font: inherit;
+    line-height: var(--lh-small);
+    letter-spacing: inherit;
+    color: inherit;
+    background-color: var(--c-background-primary);
+    border: var(--bw-medium) solid;
+    border-radius: var(--br-md);
+}
+
+button,
+select {
+    padding-inline: var(--padding-lg);
+    font-weight: var(--fw-600);
+}
+
+button {
+    box-shadow: 0 var(--bw-medium) currentColor;
+}
 
 label {
     display: block;
     font-weight: var(--fw-600);
     line-height: var(--lh-small);
-}
-
-select,
-input,
-textarea,
-button {
-    padding: var(--padding-xs);
-    line-height: var(--lh-small);
-    background-color: var(--c-background-primary);
-    border: var(--bw-thin) solid;
-    border-radius: var(--br-md);
-}
-
-select {
-    font-weight: var(--fw-600);
-    -webkit-appearance: none;
-    appearance: auto;
-    background: transparent;
-}
-
-button {
-    padding-inline: var(--padding-lg);
-    font-weight: var(--fw-600);
-    box-shadow: 0 var(--bw-thin) currentColor;
 }
 
 [type="submit"] {
@@ -336,28 +356,25 @@ button {
     box-shadow: none;
 }
 
-textarea,
 [type="text"],
 [type="number"],
 [type="email"] {
-    box-shadow: inset var(--bw-medium) var(--bw-medium) var(--c-shadow);
+    box-shadow: inset var(--bw-thick) var(--bw-thick) var(--c-shadow);
 }
 
 [disabled],
 [aria-disabled="true"] {
+    cursor: not-allowed;
     opacity: 0.25;
 }
 
 :focus-visible,
 .visually-hidden:focus-visible + label {
-    --outline-width: var(--bw-thin);
+    --outline-width: var(--bw-medium);
     outline: var(--outline-width) solid var(--c-accent);
 }
 
-select:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-button:focus-visible,
+:where(button, input, select):focus-visible,
 .visually-hidden:focus-visible + label {
     outline-offset: var(--outline-width);
 }
@@ -575,7 +592,7 @@ button:focus-visible,
 
 .logo {
     font-size: var(--fs1);
-    font-weight: var(--fw-600);
+    font-weight: var(--fw-700);
 }
 
 .project-title {
@@ -585,10 +602,6 @@ button:focus-visible,
 
 .project-title a {
     font-weight: inherit;
-}
-
-.project-technologies {
-    color: var(--c-text-secondary);
 }
 
 .region {
@@ -679,7 +692,9 @@ button:focus-visible,
     font-weight: var(--fw-500);
     line-height: 1;
     letter-spacing: 0.01em;
-    background-color: var(--c-tag);
+    text-transform: lowercase;
+    color: var(--c-text-secondary);
+    border: var(--bw-thin) solid var(--c-border);
     border-radius: var(--br-sm);
 }
 
@@ -693,7 +708,7 @@ button:focus-visible,
 }
 
 .theme-toggle-layout {
-    --size: var(--bw-thin);
+    --size: var(--bw-medium);
     display: flex;
     flex-wrap: wrap;
     border: var(--size) solid;
@@ -734,7 +749,6 @@ button:focus-visible,
     width: 1px !important;
     height: 1px !important;
     overflow: hidden !important;
-    clip: rect(1px,1px,1px,1px) !important;
     clip-path: inset(100%) !important;
     white-space: nowrap !important;
 }
