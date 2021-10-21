@@ -220,6 +220,10 @@ h1 {
     font-size: var(--fs4);
 }
 
+address {
+    font-style: normal;
+}
+
 /* Text/Grouping content
    ======================================== */
 
