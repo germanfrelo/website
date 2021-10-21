@@ -245,7 +245,11 @@ a {
 }
 
 a[href*="://"]:not(:where([href*="germanfreixinos.com"], [class*="icon"]))::after {
-    content: " \2197";
+    /*
+        "\00A0" = non-breaking space ( )
+        "\2197" = ↗
+    */
+    content: "\00A0\2197";
 }
 
 .site-nav a {
