@@ -618,6 +618,7 @@ label {
 
 .site-header {
     padding-block: var(--s1);
+    background-color: var(--c-background-secondary);
 }
 
 .site-nav {
@@ -685,7 +686,7 @@ label {
 }
 
 @media (min-width: 25rem) {
-    .with-js .site-footer-layout {
+    .site-footer-layout {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
