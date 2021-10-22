@@ -1,5 +1,4 @@
 document.documentElement.classList.remove("no-js");
-document.documentElement.classList.add("with-js");
 
 
 // ---------- Page theme toggle ----------
