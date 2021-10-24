@@ -1,10 +1,11 @@
 /*
     Structure:
-    0. Global variables.
-    1. Global (HTML) styles and enforced inheritance.
-    2. Flow algorithm and exceptions (using the lobotomized owl selector).
-    3. Element and attribute styles.
-    4. Generic utility classes.
+    1. Fonts
+    2. Global variables.
+    3. Global (HTML) styles and enforced inheritance.
+    4. Flow algorithm and exceptions (using the lobotomized owl selector).
+    5. Element and attribute styles.
+    6. Generic utility classes.
 */
 
 
@@ -22,7 +23,42 @@
 */
 
 
-/* ============ 0. VARIABLES ============ */
+/* ============ 1. FONTS ============ */
+
+@font-face {
+    font-family: "Inter";
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/Inter-Regular.woff2?v=3.19") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style:  normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/assets/fonts/Inter-Medium.woff2?v=3.19") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style:  normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/assets/fonts/Inter-SemiBold.woff2?v=3.19") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/Inter-Bold.woff2?v=3.19") format("woff2");
+}
+
+
+/* ============ 2. VARIABLES ============ */
 
 :root {
     /* Spacing */
@@ -45,9 +81,9 @@
     --ff-sans:
         "Inter",
         ui-sans-serif, system-ui, Helvetica, Arial, sans-serif;
-    --ff-display-serif:
+    /* --ff-display-serif:
         "DM Serif Display",
-        Georgia, Times, serif;
+        Georgia, Times, serif; */
     --ff-mono: ui-monospace, Menlo, Monaco, monospace;
     /* Font Size */
     --fs4:  2.5rem;
@@ -71,7 +107,7 @@
     --c-blue-grey-150:  hsl(214deg 15% 15%);
     --c-blue-grey-200:  hsl(214deg 15% 20%);
     --c-blue-grey-400:  hsl(214deg 15% 40%);
-    --c-blue-grey-600:  hsl(214deg 15% 60%);
+    --c-blue-grey-700:  hsl(214deg 15% 70%);
     --c-blue-grey-900:  hsl(214deg 15% 90%);
     --c-blue-grey-970:  hsl(214deg 25% 97%);
     --c-white:          hsl(214deg 0% 100%);
@@ -106,7 +142,7 @@
     --c-shadow:                 var(--c-blue-grey-050);
     --c-border:                 var(--c-blue-grey-200);
     --c-text-primary:           var(--c-blue-grey-970);
-    --c-text-secondary:         var(--c-blue-grey-600);
+    --c-text-secondary:         var(--c-blue-grey-700);
     --c-background-primary:     var(--c-blue-grey-050);
     --c-background-secondary:   var(--c-blue-grey-100);
     --c-background-hover:       var(--c-blue-grey-lighter);
@@ -118,7 +154,7 @@
         --c-shadow:                 var(--c-blue-grey-050);
         --c-border:                 var(--c-blue-grey-200);
         --c-text-primary:           var(--c-blue-grey-970);
-        --c-text-secondary:         var(--c-blue-grey-600);
+        --c-text-secondary:         var(--c-blue-grey-700);
         --c-background-primary:     var(--c-blue-grey-050);
         --c-background-secondary:   var(--c-blue-grey-100);
         --c-background-hover:       var(--c-blue-grey-lighter);
@@ -126,7 +162,7 @@
 }
 
 
-/* ============ 1. GLOBAL (HTML) STYLES AND ENFORCED INHERITANCE ============ */
+/* ============ 3. GLOBAL (HTML) STYLES AND ENFORCED INHERITANCE ============ */
 
 *,
 *::before,
@@ -168,7 +204,7 @@ html:focus-within {
 }
 
 
-/* ============ 2. FLOW ALGORITHM AND EXCEPTIONS ============ */
+/* ============ 4. FLOW ALGORITHM AND EXCEPTIONS ============ */
 
 /* * + * {
     margin-block-start: calc(var(--ratio) * 1em);
@@ -183,7 +219,7 @@ label + * {
 }
 
 
-/* ============ 3. ELEMENT AND ATTRIBUTE STYLES ============ */
+/* ============ 5. ELEMENT AND ATTRIBUTE STYLES ============ */
 
 /* Content sectioning
    ======================================== */
@@ -211,7 +247,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--ff-display-serif);
+    /* font-family: var(--ff-display-serif); */
     font-weight: var(--fw-700);
     line-height: var(--lh-small);
 }
@@ -388,7 +424,7 @@ label {
 }
 
 
-/* ============ 4. GENERIC UTILITY CLASSES ============ */
+/* ============ 6. GENERIC UTILITY CLASSES ============ */
 
 /* Flow
    ======================================== */
