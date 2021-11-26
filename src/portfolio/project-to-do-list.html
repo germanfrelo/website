@@ -6,58 +6,58 @@ layout: "layouts/base.html"
 <script src="/assets/scripts/project-to-do-list.js" defer></script>
 
 <style>
-    main {
-        display: grid;
-        grid-auto-rows: auto 1fr auto;
-    }
+	main {
+		display: grid;
+		grid-auto-rows: auto 1fr auto;
+	}
 
-    .layout-header-todo{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        row-gap: var(--s-2);
-        column-gap: var(--s2);
-    }
+	.layout-header-todo{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		row-gap: var(--s-2);
+		column-gap: var(--s2);
+	}
 
-    .tasks-counter {
-        font-size: var(--fs4);
-        line-height: 1;
-    }
+	.tasks-counter {
+		font-size: var(--fs4);
+		line-height: 1;
+	}
 
-    .tasks-list > * + * {
-        margin-block-start: var(--s0);
-        padding-block-start: var(--s0);
-        border-block-start: var(--bw-medium) solid var(--c-border);
-    }
+	.tasks-list > * + * {
+		margin-block-start: var(--s0);
+		padding-block-start: var(--s0);
+		border-block-start: var(--bw-medium) solid var(--c-border);
+	}
 
-    .task-item {
-        padding-inline: var(--padding-xxs);
-    }
+	.task-item {
+		padding-inline: var(--padding-xxs);
+	}
 
-    .task-actions button {
-        font-size: var(--fs-1);
-    }
+	.task-actions button {
+		font-size: var(--fs-1);
+	}
 
-    .completed {
-        text-decoration: line-through;
-        opacity: 0.5;
-    }
+	.completed {
+		text-decoration: line-through;
+		opacity: 0.5;
+	}
 </style>
 
 <div class="wrapper layout-stack-xl">
-    <header class="layout-header-todo">
-        <h1>Tareas</h1>
-        <p id="tasks-counter" class="tasks-counter">0</p>
-    </header>
+	<header class="layout-header-todo">
+		<h1>Tareas</h1>
+		<p id="tasks-counter" class="tasks-counter">0</p>
+	</header>
 
-    <ul id="tasks-list" class="tasks-list"></ul>
+	<ul id="tasks-list" class="tasks-list"></ul>
 
-    <form id="form-add-task">
-        <label for="form-input">Nombre de la tarea</label>
-        <div class="layout-input-button">
-            <input type="text" name="input" required>
-            <button type="submit" name="submit">Añadir tarea</button>
-        </div>
-    </form>
+	<form id="form-add-task">
+		<label for="form-input">Nombre de la tarea</label>
+		<div class="layout-input-button">
+			<input type="text" name="input" required>
+			<button type="submit" name="submit">Añadir tarea</button>
+		</div>
+	</form>
 </div>

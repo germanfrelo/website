@@ -6,39 +6,39 @@ layout: "layouts/base.html"
 <script src="/assets/scripts/project-image-gallery.js" defer></script>
 
 <style>
-    main {
-        --line-length: 50rem;
-        text-align: center;
-    }
+	main {
+		--line-length: 50rem;
+		text-align: center;
+	}
 
-    .list-img-gallery {
-        --min-column-size: 5rem;
-        gap: var(--s-1);
-    }
+	.list-img-gallery {
+		--min-column-size: 5rem;
+		gap: var(--s-1);
+	}
 
-    .img-gallery {
-        outline: none;
-        cursor: pointer;
-    }
+	.img-gallery {
+		outline: none;
+		cursor: pointer;
+	}
 
-    .img-gallery--active {
-        box-shadow:
-            0 0 0 var(--bw-medium) var(--c-background-primary),
-            0 0 0 calc(var(--bw-medium) * 2) var(--c-accent);
-    }
+	.img-gallery--active {
+		box-shadow:
+			0 0 0 var(--bw-medium) var(--c-background-primary),
+			0 0 0 calc(var(--bw-medium) * 2) var(--c-accent);
+	}
 </style>
 
 <div class="wrapper layout-stack-lg">
-    <h1>Galería de imágenes</h1>
-    <p>Recarga la página para ver nuevas imágenes</p>
+	<h1>Galería de imágenes</h1>
+	<p>Recarga la página para ver nuevas imágenes</p>
 
-    <img id="featured-img" src="https://via.placeholder.com/1920x1080.jpg/eee/bbb?text=Loading image..." alt="Random image">
-    <div>
-        <button id="btn-brightness">Oscurecer</button>
-    </div>
-    <ul id="list-img" class="list-img-gallery layout-grid-fit"></ul>
+	<img id="featured-img" src="https://via.placeholder.com/1920x1080.jpg/eee/bbb?text=Loading image..." alt="Random image">
+	<div>
+		<button id="btn-brightness">Oscurecer</button>
+	</div>
+	<ul id="list-img" class="list-img-gallery layout-grid-fit"></ul>
 
-    <footer>
-        <p>Imágenes de <a href="https://picsum.photos/" rel="external noopener">Lorem Picsum</a></p>
-    </footer>
+	<footer>
+		<p>Imágenes de <a href="https://picsum.photos/" rel="external noopener">Lorem Picsum</a></p>
+	</footer>
 </div>

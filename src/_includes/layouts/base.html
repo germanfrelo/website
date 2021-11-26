@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="es-ES" class="no-js" data-theme="system">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>{%- if title -%}{{ title }} | {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
+		<title>{%- if title -%}{{ title }} | {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
 
-        <link rel="stylesheet" href="https://germanfrelo.github.io/base-css-stylesheet/base.css">
-        <link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="stylesheet" href="https://germanfrelo.github.io/base-css-stylesheet/base.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
 
-        <script src="/assets/scripts/main.js" defer></script>
+		<script src="/assets/scripts/main.js" defer></script>
 
-        <meta name="author" content="Germán Freixinós">
-        <meta name="description" content="{{ description }}">
-        <meta name="color-scheme" content="light dark">
-    </head>
+		<meta name="author" content="Germán Freixinós">
+		<meta name="description" content="{{ description }}">
+		<meta name="color-scheme" content="light dark">
+	</head>
 
-    <body>
-        {% include "partials/site-header.html" %}
+	<body>
+		{% include "partials/site-header.html" %}
 
-        <main class="region">
-            {{ content | safe }}
-        </main>
+		<main class="region">
+			{{ content | safe }}
+		</main>
 
-        {% include "partials/site-footer.html" %}
-    </body>
+		{% include "partials/site-footer.html" %}
+	</body>
 </html>

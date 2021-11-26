@@ -1,16 +1,16 @@
 {
-  "name": "germanfreixinos.com",
-  "version": "1.0.0",
-  "description": "Personal website of Germán Freixinós López",
-  "main": "index.js",
-  "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
-  },
-  "keywords": [],
-  "author": "Germán Freixinós López",
-  "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
-  }
+	"name": "germanfreixinos.com",
+	"version": "1.0.0",
+	"description": "Personal website of Germán Freixinós López",
+	"main": "index.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy"
+	},
+	"keywords": [],
+	"author": "Germán Freixinós López",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1"
+	}
 }

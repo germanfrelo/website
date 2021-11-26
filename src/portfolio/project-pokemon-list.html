@@ -6,62 +6,62 @@ layout: "layouts/base.html"
 <script src="/assets/scripts/project-pokemon-list.js" defer></script>
 
 <style>
-    main {
-        --line-length: 100%;
-        text-align: center;
-    }
+	main {
+		--line-length: 100%;
+		text-align: center;
+	}
 
-    main form {
-        max-inline-size: 20rem;
-        margin-inline: auto;
-    }
+	main form {
+		max-inline-size: 20rem;
+		margin-inline: auto;
+	}
 
-    main label {
-        text-align: start;
-    }
+	main label {
+		text-align: start;
+	}
 
-    main figcaption > * + * {
-        margin-block-start: 0;
-    }
+	main figcaption > * + * {
+		margin-block-start: 0;
+	}
 
-    .list-pokemon {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-        font-size: var(--fs-1);
-        text-align: center;
-    }
+	.list-pokemon {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		font-size: var(--fs-1);
+		text-align: center;
+	}
 
-    .list-pokemon:empty {
-        display: none;
-    }
+	.list-pokemon:empty {
+		display: none;
+	}
 
-    .pokemon-name {
-        font-weight: var(--fw-600);
-    }
+	.pokemon-name {
+		font-weight: var(--fw-600);
+	}
 
-    .msg {
-        font-weight: var(--fw-600);
-    }
+	.msg {
+		font-weight: var(--fw-600);
+	}
 
-    .msg:empty {
-        display: none;
-    }
+	.msg:empty {
+		display: none;
+	}
 </style>
 
 <div class="wrapper layout-stack-xl">
-    <h1>Lista de Pokémon</h1>
-    <p>Introduce cuántos Pokémon quieres que se muestren (máximo 898).</p>
+	<h1>Lista de Pokémon</h1>
+	<p>Introduce cuántos Pokémon quieres que se muestren (máximo 898).</p>
 
-    <form id="pokemon-form">
-        <label for="input">Rango</label>
-        <div class="layout-input-button">
-            <input id="input" type="number" pattern="[0-9]*" name="input" min="1" max="898" required>
-            <button id="submit" type="submit" inputmode="numeric" pattern="[0-9]*" name="submit">Mostrar</button>
-        </div>
-    </form>
+	<form id="pokemon-form">
+		<label for="input">Rango</label>
+		<div class="layout-input-button">
+			<input id="input" type="number" pattern="[0-9]*" name="input" min="1" max="898" required>
+			<button id="submit" type="submit" inputmode="numeric" pattern="[0-9]*" name="submit">Mostrar</button>
+		</div>
+	</form>
 
-    <p id="msg-info" class="msg"></p>
-    <ol id="list" class="layout-grid-fill list-pokemon"></ol>
+	<p id="msg-info" class="msg"></p>
+	<ol id="list" class="layout-grid-fill list-pokemon"></ol>
 </div>
