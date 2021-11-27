@@ -199,11 +199,6 @@ address {
 	padding-inline-start: 1em;
 }
 
-:where(ul, ol)[class] {
-	list-style-type: none;
-	padding-inline-start: 0;
-}
-
 /* Inline text semantics
    ======================================== */
 

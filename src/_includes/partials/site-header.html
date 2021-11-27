@@ -5,7 +5,7 @@
 		</a>
 
 		<nav aria-label="Primary" class="site-nav">
-			<ul class="site-nav-layout">
+			<ul role="list" class="site-nav-layout">
 				{% for item in navigation.items %}
 				<li>
 					<a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
