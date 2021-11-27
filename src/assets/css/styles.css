@@ -618,14 +618,6 @@ label {
 	color: var(--c-accent);
 }
 
-@media (min-width: 25rem) {
-	.site-footer-layout {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-}
-
 .tag {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
@@ -652,6 +644,7 @@ label {
 	--size: var(--bw-medium);
 	display: flex;
 	flex-wrap: wrap;
+	color: var(--c-text-secondary);
 	border: var(--size) solid;
 	border-radius: var(--br-md);
 }
