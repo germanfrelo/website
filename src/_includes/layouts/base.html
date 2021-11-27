@@ -13,15 +13,14 @@
 
 		<meta name="author" content="Germán Freixinós">
 		<meta name="description" content="{{ description }}">
+
 		<meta name="color-scheme" content="light dark">
 	</head>
 
 	<body>
 		{% include "partials/site-header.html" %}
 
-		<main class="region">
-			{{ content | safe }}
-		</main>
+		<main class="region">{{ content | safe }}</main>
 
 		{% include "partials/site-footer.html" %}
 	</body>
