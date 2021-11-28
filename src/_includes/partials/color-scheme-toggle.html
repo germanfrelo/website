@@ -1,32 +1,43 @@
-<form id="theme-toggle-form">
+<form id="theme-toggle-form" class="theme-toggle">
 	<fieldset>
 		<legend class="visually-hidden">Apariencia</legend>
-		<ul role="list" class="theme-toggle-layout">
+		<ul role="list" class="theme-toggle__inner">
 			<li>
-				<input type="radio" name="theme" value="light" id="light" class="visually-hidden">
-				<label for="light">
-					<span class="visually-hidden">Claro</span>
-					<svg class="icon" role="img" aria-hidden="true" width="24" height="24">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-sun"></use>
-					</svg>
+				<label for="system" class="theme-toggle__option-wrapper">
+					<input type="radio" name="theme" value="system" id="system" class="visually-hidden" checked>
+					<span class="theme-toggle__option-text">
+						<span class="visually-hidden">Sistema</span>
+						<svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink"
+								xlink:href="/assets/icons/icons.svg#icon-sun-moon"></use>
+						</svg>
+					</span>
 				</label>
 			</li>
 			<li>
-				<input type="radio" name="theme" value="dark" id="dark" class="visually-hidden">
-				<label for="dark">
-					<span class="visually-hidden">Oscuro</span>
-					<svg class="icon" role="img" aria-hidden="true" width="24" height="24">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-moon"></use>
-					</svg>
+				<label for="light" class="theme-toggle__option-wrapper">
+					<input type="radio" name="theme" value="light" id="light" class="visually-hidden">
+					<span class="theme-toggle__option-text">
+						<span class="visually-hidden">Claro</span>
+						<svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink"
+								xlink:href="/assets/icons/icons.svg#icon-sun">
+							</use>
+						</svg>
+					</span>
 				</label>
 			</li>
 			<li>
-				<input type="radio" name="theme" value="system" id="system" class="visually-hidden" checked>
-				<label for="system">
-					<span class="visually-hidden">Sistema</span>
-					<svg class="icon" role="img" aria-hidden="true" width="24" height="24">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-sun-moon"></use>
-					</svg>
+				<label for="dark" class="theme-toggle__option-wrapper">
+					<input type="radio" name="theme" value="dark" id="dark" class="visually-hidden">
+					<span class="theme-toggle__option-text">
+						<span class="visually-hidden">Oscuro</span>
+						<svg class="icon" role="img" aria-hidden="true" width="24" height="24">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink"
+								xlink:href="/assets/icons/icons.svg#icon-moon">
+							</use>
+						</svg>
+					</span>
 				</label>
 			</li>
 		</ul>

@@ -1,19 +1,18 @@
-<header class="site-header">
-	<div class="wrapper site-header-layout">
-		<a href="/" aria-label="{{ site.title }} - inicio" class="logo">
-			<span>Germán Freixinós</span>
-		</a>
+<header class="[ site-header ] [ weight-semibold ]">
+	<div class="wrapper">
+		<div class="site-header__inner">
+			<a href="/" aria-label="{{ site.title }} - inicio" class="site-header__logo">Germán Freixinós</a>
 
-		<nav aria-label="Primary" class="site-nav">
-			<ul role="list" class="site-nav-layout">
-				{% for item in navigation.items %}
-				<li>
-					<a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</nav>
-
-		{% include "partials/color-scheme-toggle.html" %}
+			<nav>
+				<ul role="list" class="[ site-nav ] [ l-cluster-md ]">
+					{% for item in navigation.items %}
+					<li>
+						<a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			{% include "partials/color-scheme-toggle.html" %}
+		</div>
 	</div>
 </header>
