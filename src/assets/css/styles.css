@@ -423,11 +423,6 @@ label {
 	--auto-repeat: auto-fit;
 }
 
-[class*="layout-grid-"].portfolio {
-	--min-column-size: 23rem;
-	gap: var(--spacing);
-}
-
 /* Sidebar
    ======================================== */
 
@@ -533,15 +528,6 @@ label {
 .logo {
 	font-size: var(--fs1);
 	font-weight: var(--fw-700);
-}
-
-.project-title {
-	font-size: var(--fs1);
-	font-weight: var(--fw-700);
-}
-
-.project-title a {
-	font-weight: inherit;
 }
 
 .region {
