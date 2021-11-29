@@ -1,10 +1,11 @@
-const root = document.documentElement;
 document.documentElement.classList.remove("no-js");
 
 
 // ---------- Theme Toggle ----------
 
+const root = document.documentElement;
 const themeToggle = document.querySelector("#theme-toggle-form");
+const imagesAndSources = document.querySelectorAll("[srcset], [src]");
 const currentTheme = root.dataset.theme;
 
 const savedTheme = localStorage.getItem("theme");
@@ -23,12 +24,39 @@ themeToggle.addEventListener("change", (e) => {
 		root.dataset.theme = selectedTheme;
 		localStorage.setItem("theme", selectedTheme);
 
-		let colorScheme;
+		let colorScheme = "light dark";
 
-		if (selectedTheme !== "system") {
-			colorScheme = selectedTheme;
-		} else {
-			colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark light" : "light dark";
+		switch (selectedTheme) {
+			case "light":
+				colorScheme = selectedTheme;
+				imagesAndSources.forEach(element => {
+					if (element.matches("img")) element.src = element.src.replace("[dark]", "[light]");
+					if (element.matches("source")) element.srcset = element.srcset.replace("[dark]", "[light]");
+				});
+				break;
+			case "dark":
+				colorScheme = selectedTheme;
+				imagesAndSources.forEach(element => {
+					if (element.matches("img")) element.src = element.src.replace("[light]", "[dark]");
+					if (element.matches("source")) element.srcset = element.srcset.replace("[light]", "[dark]");
+				});
+				break;
+			case "system":
+				colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark light" : "light dark";
+				imagesAndSources.forEach(element => {
+					if (element.matches("img")) element.src = element.src.replace("[dark]", "[light]");
+					if (element.matches("source")) {
+						if (element.matches("[media*='light']")) {
+							element.srcset = element.srcset.replace("[dark]", "[light]");
+						} else if (element.matches("[media*='dark']")) {
+							element.srcset = element.srcset.replace("[light]", "[dark]");
+						}
+					}
+				});
+				break;
+			default:
+				colorScheme = "light dark";
+				break;
 		}
 
 		document.querySelector("meta[name='color-scheme']").content = colorScheme;
