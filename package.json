@@ -3,9 +3,17 @@
 	"version": "1.0.0",
 	"description": "Personal website of Germán Freixinós López",
 	"keywords": [],
+	"homepage": "https://github.com/germanfrelo/website#readme",
+	"bugs": {
+		"url": "https://github.com/germanfrelo/website/issues"
+	},
 	"license": "ISC",
 	"author": "Germán Freixinós López",
-	"main": "index.js",
+	"main": ".eleventy.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/germanfrelo/website.git"
+	},
 	"scripts": {
 		"start": "eleventy --serve",
 		"build": "eleventy"
