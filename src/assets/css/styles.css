@@ -181,33 +181,13 @@ html {
    ======================================== */
 
 body {
+	display: grid;
+	align-content: space-between;
 	background-color: var(--c-bg-1);
-}
-
-/* Sticky footer */
-
-body {
-	display: flex;
-	flex-direction: column;
-}
-
-body > main {
-	flex-grow: 1;
-}
-
-body > header,
-body > footer {
-	flex-shrink: 0;
 }
 
 /* Content sectioning
    ======================================== */
-
-main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
 
 h1,
 h2,
