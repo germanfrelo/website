@@ -4,7 +4,7 @@ document.documentElement.classList.remove("no-js");
 // ---------- Theme Toggle ----------
 
 const root = document.documentElement;
-const themeToggle = document.querySelector("#theme-toggle-form");
+const themeToggle = document.querySelector("#theme-toggle");
 const imagesAndSources = document.querySelectorAll("[srcset], [src]");
 const currentTheme = root.dataset.theme;
 

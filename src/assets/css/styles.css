@@ -1028,7 +1028,7 @@ summary ~ * {
 /* Theme toggle
    ======================================== */
 
-.no-js #theme-toggle-form {
+.no-js .theme-toggle {
 	display: none;
 }
 
