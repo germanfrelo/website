@@ -1,0 +1,38 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-recess-order"
+	],
+	"rules": {
+		"indentation": "tab",
+		"no-missing-end-of-source-newline": null,
+		"custom-media-pattern": null,
+		"custom-property-pattern": null,
+		"keyframes-name-pattern": null,
+		"selector-class-pattern": null,
+		"selector-id-pattern": null,
+		"value-keyword-case": [
+			"lower",
+			{
+				"ignoreKeywords": [
+					"Arial",
+					"Consolas",
+					"Helvetica",
+					"Menlo",
+					"Roboto",
+					"SFMono-Regular"
+				],
+				"ignoreProperties": [
+					"--ff-sans",
+					"--ff-mono"
+				]
+			}
+		],
+		"max-line-length": [
+			120,
+			{
+				"ignorePattern": []
+			}
+		]
+	}
+}
