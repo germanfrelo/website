@@ -1,5 +1,5 @@
 {
-	"name": "germanfreixinos.com",
+	"name": "website",
 	"version": "1.0.0",
 	"description": "Personal website of Germán Freixinós López",
 	"keywords": [],
@@ -16,9 +16,11 @@
 	},
 	"scripts": {
 		"start": "eleventy --serve",
-		"build": "eleventy"
+		"build": "eleventy",
+		"lint:js": "eslint ."
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^0.12.1"
+		"@11ty/eleventy": "^0.12.1",
+		"eslint": "^8.5.0"
 	}
 }
