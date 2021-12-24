@@ -104,11 +104,11 @@
 	--c-d-bg-4: hsl(214deg 15% 28%);
 	--c-d-lk-1: hsl(214deg 97% 70%);
 	--c-d-lk-2: hsl(214deg 97% 65%);
-	--c-d-lk-a: hsla(214deg 97% 70% / 10%);
-	--c-d-lk-tx: sl(214deg 15% 10%);
+	--c-d-lk-a: hsl(214deg 97% 70% / 10%);
+	--c-d-lk-tx: hsl(214deg 15% 10%);
 	--c-d-ac-1: hsl(167deg 100% 40%);
 	--c-d-ac-2: hsl(167deg 100% 80%);
-	--c-d-ac-tx: sl(167deg 50% 10%);
+	--c-d-ac-tx: hsl(167deg 50% 10%);
 
 	/* Border With */
 	--bw-thick: 0.25rem;
