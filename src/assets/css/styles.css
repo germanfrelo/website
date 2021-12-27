@@ -176,6 +176,7 @@ html {
 	line-height: var(--lh-large);
 	color: var(--c-tx-2);
 	accent-color: var(--c-ac-2);
+	color-scheme: var(--color-scheme);
 }
 
 /* Sectioning root

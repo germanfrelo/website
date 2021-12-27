@@ -2,16 +2,15 @@ document.documentElement.classList.remove("no-js")
 
 // ---------- Theme Toggle ----------
 
-const root = document.documentElement
-const themeToggle = document.querySelector("#theme-toggle")
-const imagesAndSources = document.querySelectorAll("[srcset], [src]")
-const currentTheme = root.dataset.theme
-
 const savedTheme = localStorage.getItem("theme")
+const currentTheme = document.documentElement.dataset.theme
+const themeToggle = document.querySelector("#theme-toggle")
 
 if (savedTheme && (savedTheme !== currentTheme)) {
 	themeToggle.querySelector(`input[value='${savedTheme}']`).checked = true
-	root.dataset.theme = savedTheme
+	setRootDataTheme(savedTheme)
+	setColorScheme(savedTheme)
+	setImagesByTheme(savedTheme)
 }
 
 themeToggle.addEventListener("change", (e) => {
@@ -20,45 +19,76 @@ themeToggle.addEventListener("change", (e) => {
 	if (selectedInput) {
 		const selectedTheme = selectedInput.value
 
-		root.dataset.theme = selectedTheme
-		localStorage.setItem("theme", selectedTheme)
-
-		let colorScheme = "light dark"
-
-		switch (selectedTheme) {
-			case "light":
-				colorScheme = selectedTheme
-				imagesAndSources.forEach(element => {
-					if (element.matches("img")) element.src = element.src.replace("[dark]", "[light]")
-					if (element.matches("source")) element.srcset = element.srcset.replace("[dark]", "[light]")
-				})
-				break
-			case "dark":
-				colorScheme = selectedTheme
-				imagesAndSources.forEach(element => {
-					if (element.matches("img")) element.src = element.src.replace("[light]", "[dark]")
-					if (element.matches("source")) element.srcset = element.srcset.replace("[light]", "[dark]")
-				})
-				break
-			case "system":
-				colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark light" : "light dark"
-				imagesAndSources.forEach(element => {
-					if (element.matches("img")) element.src = element.src.replace("[dark]", "[light]")
-					if (element.matches("source")) {
-						if (element.matches("[media*='light']")) {
-							element.srcset = element.srcset.replace("[dark]", "[light]")
-						} else if (element.matches("[media*='dark']")) {
-							element.srcset = element.srcset.replace("[light]", "[dark]")
-						}
-					}
-				})
-				break
-			default:
-				colorScheme = "light dark"
-				break
-		}
-
-		document.querySelector("meta[name='color-scheme']").content = colorScheme
-		root.style.colorScheme = colorScheme
+		setRootDataTheme(selectedTheme)
+		setColorScheme(selectedTheme)
+		setImagesByTheme(selectedTheme)
+		updateSavedTheme(selectedTheme)
 	}
 })
+
+function updateSavedTheme(theme) {
+	localStorage.setItem("theme", theme)
+}
+
+function setRootDataTheme(theme) {
+	document.documentElement.dataset.theme = theme
+}
+
+function setColorScheme(theme) {
+	let colorScheme = "light dark"
+
+	switch (theme) {
+		case "light":
+		case "dark":
+			colorScheme = theme
+			break
+
+		case "system":
+			colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark light" : "light dark"
+			break
+
+		default:
+			break
+	}
+
+	// In the meta tag in HTML
+	document.querySelector("meta[name='color-scheme']").content = colorScheme
+	// In CSS
+	document.documentElement.style.setProperty("--color-scheme", colorScheme)
+}
+
+function setImagesByTheme(selectedTheme) {
+	const imagesAndSources = document.querySelectorAll("[srcset], [src]")
+
+	switch (selectedTheme) {
+		case "light":
+			imagesAndSources.forEach(element => {
+				if (element.matches("img")) element.src = element.src.replace("[dark]", "[light]")
+				if (element.matches("source")) element.srcset = element.srcset.replace("[dark]", "[light]")
+			})
+			break
+
+		case "dark":
+			imagesAndSources.forEach(element => {
+				if (element.matches("img")) element.src = element.src.replace("[light]", "[dark]")
+				if (element.matches("source")) element.srcset = element.srcset.replace("[light]", "[dark]")
+			})
+			break
+
+		case "system":
+			imagesAndSources.forEach(element => {
+				if (element.matches("img")) element.src = element.src.replace("[dark]", "[light]")
+				if (element.matches("source")) {
+					if (element.matches("[media*='light']")) {
+						element.srcset = element.srcset.replace("[dark]", "[light]")
+					} else if (element.matches("[media*='dark']")) {
+						element.srcset = element.srcset.replace("[light]", "[dark]")
+					}
+				}
+			})
+			break
+
+		default:
+			break
+	}
+}
