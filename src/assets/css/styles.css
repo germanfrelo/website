@@ -64,7 +64,7 @@
 	--lh-small: 1.25;
 
 	/* Inline size */
-	--page-max-inline-size: 60rem;
+	--page-max-inline-size: 75rem;
 	--measure: 90ch;
 
 	/* Padding */
@@ -874,14 +874,8 @@ summary ~ * {
 
 .portfolio {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-	gap: var(--s-600);
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-.portfolio > * {
-	flex-basis: 19rem;
-	flex-grow: 1;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+	gap: var(--s-800);
 }
 
 /* Project
@@ -889,43 +883,44 @@ summary ~ * {
 
 .project {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	gap: var(--s-400);
+	font-size: 0.875rem;
 	color: var(--c-tx-3);
-	border: var(--bw-thin) solid var(--c-bg-3);
-	border-radius: var(--border-radius);
 }
 
 .project__img {
-	max-block-size: 15rem;
+	flex-basis: 13rem;
+	flex-grow: 1;
+	min-block-size: 10rem;
 }
 
 .project img {
 	inline-size: 100%;
 	block-size: 100%;
-	border-start-start-radius: var(--border-radius);
-	border-start-end-radius: var(--border-radius);
 	object-fit: cover;
 	object-position: top;
+	border: var(--bw-thin) solid var(--c-bg-3);
+	border-radius: var(--border-radius);
 }
 
 .project__content {
-	display: flex;
-	flex-direction: column;
-	gap: var(--s-300);
-	padding: var(--padding-lg);
-	border-block-start: var(--bw-thin) solid var(--c-bg-3);
-}
-
-.project__content > :last-child {
-	margin-block-start: auto;
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 60%;
 }
 
 .project__title {
 	font-size: var(--s-500);
+	font-weight: var(--fw-700);
 }
 
-.project a {
-	display: block;
+.project__title a {
+	color: var(--c-tx-2);
+}
+
+.project__title a:hover {
+	color: var(--c-lk-2);
 }
 
 /* Site header
@@ -953,6 +948,7 @@ summary ~ * {
 /* Site nav
    ======================================== */
 
+/* stylelint-disable-next-line no-descending-specificity */
 .site-nav a {
 	display: inline-block;
 	color: inherit;
@@ -964,7 +960,7 @@ summary ~ * {
 }
 
 .site-nav a:hover {
-	color: var(--c-lk-1);
+	color: var(--c-lk-2);
 }
 
 /* Site main
@@ -996,7 +992,7 @@ summary ~ * {
 }
 
 .site-footer a:hover {
-	color: var(--c-lk-1);
+	color: var(--c-lk-2);
 }
 
 /* Tag
@@ -1006,12 +1002,11 @@ summary ~ * {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-size: var(--s-300);
+	font-size: 0.875em;
 	font-weight: var(--fw-500);
 	line-height: var(--lh-small);
 	white-space: nowrap;
 	background-color: var(--c-bg-2);
-	border: var(--bw-thin) solid var(--c-bg-3);
 	border-radius: var(--border-radius);
 }
 
