@@ -4,8 +4,7 @@
 		"stylelint-config-recess-order"
 	],
 	"rules": {
-		"indentation": "tab",
-		"no-missing-end-of-source-newline": null,
+		"indentation": null,
 		"custom-media-pattern": null,
 		"custom-property-pattern": null,
 		"keyframes-name-pattern": null,
