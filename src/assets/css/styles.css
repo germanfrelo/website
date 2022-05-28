@@ -885,6 +885,7 @@ summary ~ * {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--s-400);
+	align-content: flex-start;
 	font-size: 0.875rem;
 	color: var(--c-tx-3);
 }
