@@ -47,7 +47,7 @@
 	--base-size: 1rem;
 
 	/* Scale Ratio */
-	--ratio: 1.25; /* Major Third */
+	--ratio: 1.25;
 
 	/* Size Scale */
 	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
@@ -1072,6 +1072,7 @@ summary ~ * {
 	content: "";
 	border-radius: var(--theme-toggle-border-radius);
 }
+
 /* stylelint-disable-next-line no-descending-specificity */
 .theme-toggle__option-text > * {
 	z-index: 1;
