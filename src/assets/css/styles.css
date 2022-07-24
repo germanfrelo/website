@@ -25,7 +25,7 @@
 
 /* ============ 0. AT-RULES ============ */
 
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
+@import "https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css";
 
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
