@@ -1,7 +1,8 @@
 {
 	"extends": [
 		"stylelint-config-standard",
-		"stylelint-config-recess-order"
+		"stylelint-config-recess-order",
+		"stylelint-config-prettier"
 	],
 	"rules": {
 		"custom-media-pattern": null,
