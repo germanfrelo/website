@@ -7,15 +7,9 @@
 	"rules": {
 		"custom-media-pattern": null,
 		"custom-property-pattern": null,
-		"font-family-name-quotes": "always-unless-keyword",
 		"indentation": null,
 		"keyframes-name-pattern": null,
-		"max-line-length": [
-			120,
-			{
-				"ignorePattern": []
-			}
-		],
+		"max-line-length": null,
 		"selector-class-pattern": null,
 		"selector-id-pattern": null
 	}
