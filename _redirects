@@ -1,6 +1,8 @@
-# Netlify subdomain
-https://germanfreixinos.netlify.app/*	https://germanfreixinos.com/:splat  301!
+# Netlify default subdomain
+https://germanfrelo.netlify.app/*		https://www.germanfrelo.dev/:splat
 
-# ES domain
-https://germanfreixinos.es/*			https://germanfreixinos.com/:splat  301!
-https://www.germanfreixinos.es/*		https://germanfreixinos.com/:splat  301!
+# Custom domains
+https://www.germanfreixinos.com/*		https://www.germanfrelo.dev/:splat
+https://germanfreixinos.com/*			https://www.germanfrelo.dev/:splat
+https://www.germanfreixinos.es/*		https://www.germanfrelo.dev/:splat
+https://germanfreixinos.es/*			https://www.germanfrelo.dev/:splat
