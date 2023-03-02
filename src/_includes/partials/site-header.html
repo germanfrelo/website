@@ -1,13 +1,27 @@
 <header class="[ site-header ] [ weight-semibold ]">
 	<div class="wrapper">
 		<div class="site-header__inner">
-			<a href="/" aria-label="{{ site.title }} - inicio" class="site-header__logo">Germán Freixinós</a>
+			<a
+				href="/"
+				aria-label="{{ site.title }} - inicio"
+				class="site-header__logo"
+				>Germán Freixinós</a
+			>
 
 			<nav>
 				<ul role="list" class="[ site-nav ] [ l-cluster-md ]">
 					{% for item in navigation.items %}
 					<li>
-						<a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+						<a
+							href="{{ item.url }}"
+							{{
+							helpers.getLinkActiveState(item.url,
+							page.url)
+							|
+							safe
+							}}
+							>{{ item.text }}</a
+						>
 					</li>
 					{% endfor %}
 				</ul>
