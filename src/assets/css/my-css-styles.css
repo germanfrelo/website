@@ -19,8 +19,11 @@
 	--color-scheme: light dark;
 
 	/* Font Family */
-	--ff-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+	--ff-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+		"Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono",
+		"Menlo", monospace;
 
 	/* Font Weight */
 	--fw-700: 700;
@@ -35,8 +38,13 @@
 	--ratio: 1.25;
 
 	/* Size Scale */
-	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
-	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-900: calc(
+		var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+			var(--ratio)
+	);
+	--s-800: calc(
+		var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+	);
 	--s-700: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
 	--s-600: calc(var(--base-size) * var(--ratio) * var(--ratio));
 	--s-500: calc(var(--base-size) * var(--ratio));
@@ -424,11 +432,23 @@ select:focus {
     border-color: revert; */
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
+:is(
+		button,
+		[type="button"],
+		[type="image"],
+		[type="submit"],
+		[type="reset"]
+	):hover {
 	background-color: var(--c-bg-2);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
+:is(
+		button,
+		[type="button"],
+		[type="image"],
+		[type="submit"],
+		[type="reset"]
+	):focus {
 	background-color: var(--c-bg-2);
 }
 
@@ -593,7 +613,7 @@ canvas {
 	align-items: flex-start;
 }
 
-[class*=l-cluster] > * {
+[class*="l-cluster"] > * {
 	margin-block: 0;
 }
 
@@ -629,7 +649,10 @@ canvas {
 	--gap: var(--space, var(--flow-space, 1rem));
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(100%, calc(var(--size) - var(--gap))), 1fr)
+	);
 	gap: var(--gap);
 }
 
