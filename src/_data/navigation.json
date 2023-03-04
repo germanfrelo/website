@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"text": "Inicio",
+			"text": "Home",
 			"url": "/"
 		},
 		{
@@ -9,7 +9,7 @@
 			"url": "/portfolio/"
 		},
 		{
-			"text": "Sobre mí",
+			"text": "About",
 			"url": "/about/"
 		}
 	]
