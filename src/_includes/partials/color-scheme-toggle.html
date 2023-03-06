@@ -4,12 +4,21 @@
 	}
 </style>
 
-<form id="theme-toggle" class="theme-toggle">
+<form
+	id="theme-toggle"
+	class="theme-toggle"
+>
 	<fieldset>
 		<legend class="visually-hidden">Theme</legend>
-		<ul role="list" class="theme-toggle__inner">
+		<ul
+			role="list"
+			class="theme-toggle__inner"
+		>
 			<li>
-				<label for="system" class="theme-toggle__option-wrapper">
+				<label
+					for="system"
+					class="theme-toggle__option-wrapper"
+				>
 					<input
 						type="radio"
 						name="theme"
@@ -18,7 +27,10 @@
 						class="visually-hidden"
 						checked
 					/>
-					<span class="theme-toggle__option-text" title="System">
+					<span
+						class="theme-toggle__option-text"
+						title="System"
+					>
 						<span class="visually-hidden">System</span>
 						<svg
 							class="icon"
@@ -36,7 +48,10 @@
 				</label>
 			</li>
 			<li>
-				<label for="light" class="theme-toggle__option-wrapper">
+				<label
+					for="light"
+					class="theme-toggle__option-wrapper"
+				>
 					<input
 						type="radio"
 						name="theme"
@@ -44,7 +59,10 @@
 						id="light"
 						class="visually-hidden"
 					/>
-					<span class="theme-toggle__option-text" title="Light">
+					<span
+						class="theme-toggle__option-text"
+						title="Light"
+					>
 						<span class="visually-hidden">Light</span>
 						<svg
 							class="icon"
@@ -62,7 +80,10 @@
 				</label>
 			</li>
 			<li>
-				<label for="dark" class="theme-toggle__option-wrapper">
+				<label
+					for="dark"
+					class="theme-toggle__option-wrapper"
+				>
 					<input
 						type="radio"
 						name="theme"
@@ -70,7 +91,10 @@
 						id="dark"
 						class="visually-hidden"
 					/>
-					<span class="theme-toggle__option-text" title="Dark">
+					<span
+						class="theme-toggle__option-text"
+						title="Dark"
+					>
 						<span class="visually-hidden">Dark</span>
 						<svg
 							class="icon"
@@ -136,9 +160,7 @@
 				break;
 
 			case "system":
-				colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-					? "dark light"
-					: "light dark";
+				colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark light" : "light dark";
 				break;
 
 			default:
@@ -157,26 +179,31 @@
 		switch (selectedTheme) {
 			case "light":
 				imagesAndSources.forEach((element) => {
-					if (element.matches("img"))
+					if (element.matches("img")) {
 						element.src = element.src.replace("[dark]", "[light]");
-					if (element.matches("source"))
+					}
+					if (element.matches("source")) {
 						element.srcset = element.srcset.replace("[dark]", "[light]");
+					}
 				});
 				break;
 
 			case "dark":
 				imagesAndSources.forEach((element) => {
-					if (element.matches("img"))
+					if (element.matches("img")) {
 						element.src = element.src.replace("[light]", "[dark]");
-					if (element.matches("source"))
+					}
+					if (element.matches("source")) {
 						element.srcset = element.srcset.replace("[light]", "[dark]");
+					}
 				});
 				break;
 
 			case "system":
 				imagesAndSources.forEach((element) => {
-					if (element.matches("img"))
+					if (element.matches("img")) {
 						element.src = element.src.replace("[dark]", "[light]");
+					}
 					if (element.matches("source")) {
 						if (element.matches("[media*='light']")) {
 							element.srcset = element.srcset.replace("[dark]", "[light]");
