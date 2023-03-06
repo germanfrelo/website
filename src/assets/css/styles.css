@@ -379,10 +379,6 @@ body {
 	text-align: center;
 }
 
-.no-js .theme-toggle {
-	display: none;
-}
-
 .theme-toggle fieldset {
 	padding: 0;
 	border: none;
