@@ -30,13 +30,8 @@
 	--ratio: 1.25;
 
 	/* Size Scale */
-	--s-900: calc(
-		var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
-			var(--ratio)
-	);
-	--s-800: calc(
-		var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
-	);
+	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
 	--s-700: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
 	--s-600: calc(var(--base-size) * var(--ratio) * var(--ratio));
 	--s-500: calc(var(--base-size) * var(--ratio));
