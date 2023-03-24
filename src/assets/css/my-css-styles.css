@@ -340,7 +340,7 @@ tfoot tr {
 	background-color: var(--c-bg-2);
 }
 
-@supports (td: has(+ th)) {
+@supports (td:has(+ th)) {
 	td:has(+ th) {
 		background-color: var(--c-bg-2);
 	}
@@ -378,7 +378,10 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
+	transition:
+		color var(--tr-duration) var(--tr-timing-function),
+		background-color var(--tr-duration) var(--tr-timing-function),
+		border-color var(--tr-duration) var(--tr-timing-function);
 }
 
 select {
@@ -435,11 +438,23 @@ select:focus {
     border-color: revert; */
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
+:is(
+		button,
+		[type="button"],
+		[type="image"],
+		[type="submit"],
+		[type="reset"]
+	):hover {
 	background-color: var(--c-bg-2);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
+:is(
+		button,
+		[type="button"],
+		[type="image"],
+		[type="submit"],
+		[type="reset"]
+	):focus {
 	background-color: var(--c-bg-2);
 }
 
@@ -640,7 +655,10 @@ canvas {
 	--gap: var(--space, var(--flow-space, 1rem));
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(100%, calc(var(--size) - var(--gap))), 1fr)
+	);
 	gap: var(--gap);
 }
 
