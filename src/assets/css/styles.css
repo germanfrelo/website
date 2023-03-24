@@ -283,7 +283,7 @@ body {
    ======================================== */
 
 .site-footer {
-	padding-block: var(--s-600);
+	padding-block: var(--s-700);
 	font-size: var(--s-300);
 	color: var(--c-tx-2);
 	text-align: center;
