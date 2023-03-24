@@ -284,15 +284,9 @@ body {
 
 .site-footer {
 	padding-block: var(--s-600);
-	font-size: var(--s-300);
 	color: var(--c-tx-2);
 	text-align: center;
 	background-color: var(--c-bg-2);
-}
-
-.site-footer p {
-	max-inline-size: 50ch;
-	margin-inline: auto;
 }
 
 .site-footer a {
