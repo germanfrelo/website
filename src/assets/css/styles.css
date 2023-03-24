@@ -70,29 +70,6 @@ body {
 
 /* ============ 3. BLOCKS ============ */
 
-/* Avatar
-   ======================================== */
-
-.avatar {
-	inline-size: 100%;
-	max-inline-size: 8rem;
-	border-radius: 50%;
-}
-
-.avatar--about {
-	max-inline-size: 100%;
-	border-radius: var(--border-radius);
-}
-
-@media screen and (min-width: 23.5rem) {
-	.avatar--about {
-		max-inline-size: 11rem;
-		float: left;
-		margin-block-end: 1em;
-		margin-inline-end: 1em;
-	}
-}
-
 /* Button
    ======================================== */
 
@@ -165,6 +142,31 @@ body {
 	line-height: 0;
 	text-decoration: none;
 	border-radius: var(--border-radius);
+}
+
+/* Photo home
+   ======================================== */
+
+.photo-home {
+	max-inline-size: 8rem;
+	border-radius: 50%;
+}
+
+/* Photo about
+   ======================================== */
+
+.photo-about {
+	inline-size: 100%;
+	border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 23.5rem) {
+	.photo-about {
+		max-inline-size: 11rem;
+		float: left;
+		margin-block-end: 1em;
+		margin-inline-end: 1em;
+	}
 }
 
 /* Portfolio
