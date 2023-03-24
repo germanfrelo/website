@@ -27,7 +27,7 @@
 	--base-size: 1rem;
 
 	/* Scale Ratio */
-	--ratio: 1.25;
+	--ratio: 1.333;
 
 	/* Size Scale */
 	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
@@ -41,7 +41,7 @@
 	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
 
 	/* Line Height */
-	--lh-large: 1.5;
+	--lh-large: 1.6;
 	--lh-small: 1.25;
 
 	/* Inline size */
@@ -553,12 +553,8 @@ canvas {
 	/*     --flow-space: calc(var(--ratio) * 0.5em); */
 }
 
-.flow > h3 {
-	/*     --flow-space: calc(var(--ratio) * 1em); */
-}
-
-.flow > h2 {
-	/*     --flow-space: calc(var(--ratio) * 1em); */
+.flow :is(h2, h3) {
+	--flow-space: 2em;
 }
 
 /* Stack
