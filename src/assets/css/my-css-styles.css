@@ -73,8 +73,6 @@
 	--c-brand: hsl(175deg 100% 45%);
 	--c-accent: hsl(175deg 100% 30%);
 	--c-highlight: hsla(55deg 100% 50% / 25%);
-	--c-warning-tx: hsl(50deg 45% 25%);
-	--c-warning-bg: hsl(50deg 90% 85%);
 
 	/* Border With */
 	--bw-1: 0.0625rem;
@@ -107,8 +105,6 @@
 		--c-brand: hsl(175deg 100% 45%);
 		--c-accent: hsl(175deg 100% 45%);
 		--c-highlight: hsla(55deg 100% 50% / 25%);
-		--c-warning-tx: hsl(38deg 43% 74%);
-		--c-warning-bg: hsl(41deg 45% 22%);
 	}
 }
 
@@ -711,11 +707,6 @@ canvas {
 	overflow: hidden !important;
 	clip-path: inset(50%) !important;
 	white-space: nowrap !important;
-}
-
-.warning {
-	color: var(--c-warning-tx);
-	background-color: var(--c-warning-bg);
 }
 
 .wrapper {
