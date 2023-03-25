@@ -41,7 +41,7 @@
 	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
 
 	/* Line Height */
-	--lh-large: 1.75;
+	--lh-large: 1.666;
 	--lh-small: 1.25;
 
 	/* Inline size */
