@@ -389,7 +389,6 @@ button,
 
 :is(input, textarea, select, button):focus {
 	background-color: var(--c-bg-1);
-	border-color: var(--c-brand);
 }
 
 select:hover {
@@ -463,15 +462,6 @@ select:focus {
 [aria-disabled],
 [aria-disabled="true"] {
 	opacity: 0.333;
-}
-
-:focus-visible {
-	--outline-width: var(--border-width, 1px);
-
-	outline: var(--outline-width) solid var(--c-brand);
-	outline-offset: calc(-1 * var(--outline-width));
-	/* border-color: var(--c-brand);
-	outline: none; */
 }
 
 /* Interactive elements
