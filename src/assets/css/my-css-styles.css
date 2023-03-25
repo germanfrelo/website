@@ -72,8 +72,6 @@
 	--c-lk-tx: hsl(212deg 0% 100%);
 	--c-brand: hsl(175deg 100% 45%);
 	--c-accent: hsl(175deg 100% 30%);
-	--c-selection: hsl(175deg 80% 45% / 50%);
-	--c-selection-text: #000;
 	--c-highlight: hsla(55deg 100% 50% / 25%);
 	--c-warning-tx: hsl(50deg 45% 25%);
 	--c-warning-bg: hsl(50deg 90% 85%);
@@ -92,8 +90,6 @@
 	--c-d-lk-tx: hsl(212deg 15% 10%);
 	--c-d-brand: hsl(175deg 100% 45%);
 	--c-d-accent: hsl(175deg 100% 45%);
-	--c-d-selection: hsl(175deg 80% 45% / 50%);
-	--c-d-selection-text: #fff;
 	--c-d-highlight: hsla(55deg 100% 50% / 25%);
 	--c-d-warning-tx: hsl(38deg 43% 74%);
 	--c-d-warning-bg: hsl(41deg 45% 22%);
@@ -127,8 +123,6 @@
 		--c-lk-tx: var(--c-d-lk-tx);
 		--c-brand: var(--c-d-brand);
 		--c-accent: var(--c-d-accent);
-		--c-selection: var(--c-d-selection);
-		--c-selection-text: var(--c-d-selection-text);
 		--c-highlight: var(--c-d-highlight);
 		--c-warning-tx: var(--c-d-warning-tx);
 		--c-warning-bg: var(--c-d-warning-bg);
@@ -136,14 +130,6 @@
 }
 
 /* ============ 2. GLOBAL AND INHERITED STYLES ============ */
-
-/* All
-   ======================================== */
-
-::selection {
-	color: var(--c-selection-text);
-	background-color: var(--c-selection);
-}
 
 /* Document
    ======================================== */

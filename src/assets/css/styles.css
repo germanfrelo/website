@@ -27,8 +27,6 @@
 	--c-lk-tx: var(--c-d-lk-tx);
 	--c-brand: var(--c-d-brand);
 	--c-accent: var(--c-d-accent);
-	--c-selection: var(--c-d-selection);
-	--c-selection-text: var(--c-d-selection-text);
 	--c-highlight: var(--c-d-highlight);
 	--c-warning-tx: var(--c-d-warning-tx);
 	--c-warning-bg: var(--c-d-warning-bg);
@@ -49,8 +47,6 @@
 		--c-lk-tx: var(--c-d-lk-tx);
 		--c-brand: var(--c-d-brand);
 		--c-accent: var(--c-d-accent);
-		--c-selection: var(--c-d-selection);
-		--c-selection-text: var(--c-d-selection-text);
 		--c-highlight: var(--c-d-highlight);
 		--c-warning-tx: var(--c-d-warning-tx);
 		--c-warning-bg: var(--c-d-warning-bg);
