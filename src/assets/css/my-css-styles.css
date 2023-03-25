@@ -76,24 +76,6 @@
 	--c-warning-tx: hsl(50deg 45% 25%);
 	--c-warning-bg: hsl(50deg 90% 85%);
 
-	/* Colors (dark) */
-	--c-d-tx-1: hsl(212deg 25% 95%);
-	--c-d-tx-2: hsl(212deg 15% 65%);
-	--c-d-bg-1: hsl(212deg 15% 10%);
-	--c-d-bg-2: hsl(212deg 15% 15%);
-	--c-d-bg-3: hsl(212deg 15% 20%);
-	--c-d-bg-a: hsl(212deg 15% 40% / 33.33%);
-	--c-d-bd-1: hsl(212deg 10% 30%);
-	--c-d-bd-2: hsl(212deg 10% 25%);
-	--c-d-lk-1: hsl(212deg 97% 70%);
-	--c-d-lk-2: hsl(212deg 100% 80%);
-	--c-d-lk-tx: hsl(212deg 15% 10%);
-	--c-d-brand: hsl(175deg 100% 45%);
-	--c-d-accent: hsl(175deg 100% 45%);
-	--c-d-highlight: hsla(55deg 100% 50% / 25%);
-	--c-d-warning-tx: hsl(38deg 43% 74%);
-	--c-d-warning-bg: hsl(41deg 45% 22%);
-
 	/* Border With */
 	--bw-1: 0.0625rem;
 	--bw-2: 0.125rem;
@@ -110,22 +92,25 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--c-tx-1: var(--c-d-tx-1);
-		--c-tx-2: var(--c-d-tx-2);
-		--c-bg-1: var(--c-d-bg-1);
-		--c-bg-2: var(--c-d-bg-2);
-		--c-bg-3: var(--c-d-bg-3);
-		--c-bg-a: var(--c-d-bg-a);
-		--c-bd-1: var(--c-d-bd-1);
-		--c-bd-2: var(--c-d-bd-2);
-		--c-lk-1: var(--c-d-lk-1);
-		--c-lk-2: var(--c-d-lk-2);
-		--c-lk-tx: var(--c-d-lk-tx);
-		--c-brand: var(--c-d-brand);
-		--c-accent: var(--c-d-accent);
-		--c-highlight: var(--c-d-highlight);
-		--c-warning-tx: var(--c-d-warning-tx);
-		--c-warning-bg: var(--c-d-warning-bg);
+		/* Colors (dark) */
+		--c-tx-1: hsl(212deg 25% 95%);
+		--c-tx-2: hsl(212deg 15% 65%);
+		--c-bg-1: hsl(212deg 15% 10%);
+		--c-bg-2: hsl(212deg 15% 15%);
+		--c-bg-3: hsl(212deg 15% 20%);
+		--c-bg-a: hsl(212deg 15% 40% / 33.33%);
+		--c-bd-1: hsl(212deg 10% 30%);
+		--c-bd-2: hsl(212deg 10% 25%);
+		--c-lk-1: hsl(212deg 97% 70%);
+		--c-lk-2: hsl(212deg 100% 80%);
+		--c-lk-tx: hsl(212deg 15% 10%);
+		--c-brand: hsl(175deg 100% 45%);
+		--c-accent: hsl(175deg 100% 45%);
+		--c-selection: hsl(175deg 80% 45% / 50%);
+		--c-selection-text: #fff;
+		--c-highlight: hsla(55deg 100% 50% / 25%);
+		--c-warning-tx: hsl(38deg 43% 74%);
+		--c-warning-bg: hsl(41deg 45% 22%);
 	}
 }
 
@@ -326,7 +311,7 @@ tfoot tr {
 	background-color: var(--c-bg-2);
 }
 
-@supports (td:has(+ th)) {
+@supports (td: has(+ th)) {
 	td:has(+ th) {
 		background-color: var(--c-bg-2);
 	}
@@ -364,10 +349,7 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition:
-		color var(--tr-duration) var(--tr-timing-function),
-		background-color var(--tr-duration) var(--tr-timing-function),
-		border-color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
 }
 
 select {
@@ -424,23 +406,11 @@ select:focus {
     border-color: revert; */
 }
 
-:is(
-		button,
-		[type="button"],
-		[type="image"],
-		[type="submit"],
-		[type="reset"]
-	):hover {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
 	background-color: var(--c-bg-2);
 }
 
-:is(
-		button,
-		[type="button"],
-		[type="image"],
-		[type="submit"],
-		[type="reset"]
-	):focus {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
 	background-color: var(--c-bg-2);
 }
 
@@ -637,10 +607,7 @@ canvas {
 	--gap: var(--space, var(--flow-space, 1rem));
 
 	display: grid;
-	grid-template-columns: repeat(
-		auto-fit,
-		minmax(min(100%, calc(var(--size) - var(--gap))), 1fr)
-	);
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
 	gap: var(--gap);
 }
 
