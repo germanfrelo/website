@@ -70,8 +70,7 @@
 	--c-lk-1: hsl(212deg 92% 42%);
 	--c-lk-2: hsl(212deg 100% 32%);
 	--c-lk-tx: hsl(212deg 0% 100%);
-	--c-brand: hsl(175deg 100% 45%);
-	--c-accent: hsl(175deg 100% 30%);
+	--c-accent: hsl(175deg 100% 45%);
 	--c-highlight: hsla(55deg 100% 50% / 25%);
 
 	/* Border With */
@@ -102,7 +101,6 @@
 		--c-lk-1: hsl(212deg 97% 70%);
 		--c-lk-2: hsl(212deg 100% 80%);
 		--c-lk-tx: hsl(212deg 15% 10%);
-		--c-brand: hsl(175deg 100% 45%);
 		--c-accent: hsl(175deg 100% 45%);
 		--c-highlight: hsla(55deg 100% 50% / 25%);
 	}
