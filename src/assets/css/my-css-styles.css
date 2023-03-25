@@ -119,7 +119,6 @@ html {
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
 	accent-color: var(--c-accent);
-	caret-color: var(--c-brand);
 	color-scheme: var(--color-scheme);
 }
 
