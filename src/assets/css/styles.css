@@ -222,7 +222,7 @@ body {
 	display: block;
 	content: "";
 	block-size: var(--underline-thickness);
-	background-color: var(--c-brand);
+	background-color: var(--c-accent);
 }
 
 .site-nav a:hover {
