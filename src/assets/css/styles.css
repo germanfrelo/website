@@ -100,6 +100,10 @@ body {
 	border-radius: var(--border-radius);
 }
 
+.link-icon:hover {
+	background-color: var(--c-bg-a);
+}
+
 /* Photo home
    ======================================== */
 
