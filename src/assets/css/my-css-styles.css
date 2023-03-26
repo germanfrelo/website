@@ -67,8 +67,7 @@
 	--c-bg-a: hsl(212deg 25% 80% / 33.33%);
 	--c-bd-1: hsl(212deg 25% 85%);
 	--c-bd-2: hsl(212deg 25% 90%);
-	--c-lk-1: hsl(212deg 92% 42%);
-	--c-lk-2: hsl(212deg 100% 32%);
+	--c-link: hsl(212deg 92% 42%);
 	--c-accent: hsl(175deg 100% 45%);
 	--c-highlight: hsla(55deg 100% 50% / 25%);
 
@@ -97,8 +96,7 @@
 		--c-bg-a: hsl(212deg 15% 40% / 33.33%);
 		--c-bd-1: hsl(212deg 10% 30%);
 		--c-bd-2: hsl(212deg 10% 25%);
-		--c-lk-1: hsl(212deg 97% 70%);
-		--c-lk-2: hsl(212deg 100% 80%);
+		--c-link: hsl(212deg 97% 70%);
 		--c-accent: hsl(175deg 100% 45%);
 		--c-highlight: hsla(55deg 100% 50% / 25%);
 	}
@@ -217,12 +215,12 @@ dd {
    ======================================== */
 
 a {
-	color: var(--c-lk-1);
+	color: var(--c-link);
 	transition: color var(--tr-duration) var(--tr-timing-function);
 }
 
-a:hover {
-	color: var(--c-lk-2);
+a:is(:hover, :focus) {
+	text-decoration: none;
 }
 
 b,

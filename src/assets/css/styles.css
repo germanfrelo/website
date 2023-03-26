@@ -175,10 +175,6 @@ body {
 	color: var(--c-tx-1);
 }
 
-.project__title a:hover {
-	color: var(--c-lk-2);
-}
-
 /* Site header
    ======================================== */
 
@@ -225,10 +221,6 @@ body {
 	background-color: var(--c-accent);
 }
 
-.site-nav a:hover {
-	color: var(--c-lk-2);
-}
-
 /* Site main
    ======================================== */
 
@@ -249,10 +241,6 @@ body {
 
 .site-footer a {
 	color: inherit;
-}
-
-.site-footer a:hover {
-	color: var(--c-lk-2);
 }
 
 /* Tag
