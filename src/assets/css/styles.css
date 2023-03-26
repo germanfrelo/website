@@ -188,22 +188,28 @@ body {
 .site-header__inner {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-300);
+	row-gap: var(--s-500);
 	column-gap: var(--s-600);
 	align-items: center;
 	justify-content: space-between;
 }
 
 .site-header__logo {
+	font-size: 1.125rem;
 	text-decoration: none;
 }
 
 .site-header a {
+	line-height: var(--lh-small);
 	color: inherit;
 }
 
 /* Site nav
    ======================================== */
+
+.site-nav {
+	column-gap: var(--s-600);
+}
 
 .site-nav a {
 	display: inline-block;
