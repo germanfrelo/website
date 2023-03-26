@@ -8,11 +8,6 @@
 
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
-:root {
-	/* Inline size */
-	--page-max-inline-size: 60rem;
-}
-
 /* ============ 2. GLOBAL AND INHERITED STYLES ============ */
 
 * {
@@ -25,29 +20,6 @@ body {
 }
 
 /* ============ 3. BLOCKS ============ */
-
-/* Avatar
-   ======================================== */
-
-.avatar {
-	inline-size: 100%;
-	max-inline-size: 8rem;
-	border-radius: 50%;
-}
-
-.avatar--about {
-	max-inline-size: 100%;
-	border-radius: var(--border-radius);
-}
-
-@media screen and (min-width: 23.5rem) {
-	.avatar--about {
-		max-inline-size: 11rem;
-		float: left;
-		margin-block-end: 1em;
-		margin-inline-end: 1em;
-	}
-}
 
 /* Button
    ======================================== */
@@ -83,7 +55,7 @@ body {
 
 .card {
 	padding: var(--padding-lg);
-	border: var(--bw-2) solid var(--c-bg-3);
+	border: var(--bw-2) solid var(--c-bd-2);
 	border-radius: var(--border-radius);
 }
 
@@ -123,13 +95,41 @@ body {
 	border-radius: var(--border-radius);
 }
 
+.link-icon:hover {
+	background-color: var(--c-bg-a);
+}
+
+/* Photo home
+   ======================================== */
+
+.photo-home {
+	max-inline-size: 8rem;
+	border-radius: 50%;
+}
+
+/* Photo about
+   ======================================== */
+
+.photo-about {
+	inline-size: 100%;
+	border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 23.5rem) {
+	.photo-about {
+		max-inline-size: 11rem;
+		float: left;
+		margin-block-end: 1em;
+		margin-inline-end: 1em;
+	}
+}
+
 /* Portfolio
    ======================================== */
 
 .portfolio {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
-	gap: var(--s-800);
 }
 
 /* Project
@@ -141,7 +141,6 @@ body {
 	gap: var(--s-400);
 	align-content: flex-start;
 	font-size: 0.875rem;
-	color: var(--c-tx-2);
 }
 
 .project__img {
@@ -171,11 +170,7 @@ body {
 }
 
 .project__title a {
-	color: var(--c-tx-1);
-}
-
-.project__title a:hover {
-	color: var(--c-lk-2);
+	color: inherit;
 }
 
 /* Site header
@@ -188,31 +183,41 @@ body {
 .site-header__inner {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-300);
+	row-gap: var(--s-500);
 	column-gap: var(--s-600);
 	align-items: center;
 	justify-content: space-between;
 }
 
 .site-header__logo {
-	color: inherit;
+	font-size: 1.125rem;
 	text-decoration: none;
+}
+
+.site-header a {
+	line-height: var(--lh-small);
+	color: inherit;
 }
 
 /* Site nav
    ======================================== */
 
+.site-nav {
+	column-gap: var(--s-600);
+}
+
 .site-nav a {
 	display: inline-block;
-	color: inherit;
+	color: var(--c-tx-2);
 	text-decoration: none;
 }
 
-.site-nav [aria-current="page"] {
+.site-nav a[aria-current="page"] {
 	position: relative;
+	color: inherit;
 }
 
-.site-nav [aria-current="page"]::after {
+.site-nav a[aria-current="page"]::after {
 	--underline-thickness: var(--bw-3);
 
 	position: absolute;
@@ -225,21 +230,22 @@ body {
 }
 
 .site-nav a:hover {
-	color: var(--c-lk-2);
+	color: var(--c-tx-1);
 }
 
 /* Site main
    ======================================== */
 
 .site-main {
-	padding-block: var(--s-800);
+	padding-block-start: var(--s-600);
+	padding-block-end: var(--s-900);
 }
 
 /* Site footer
    ======================================== */
 
 .site-footer {
-	padding-block: var(--s-600);
+	padding-block: var(--s-700);
 	color: var(--c-tx-2);
 	text-align: center;
 	background-color: var(--c-bg-2);
@@ -250,7 +256,7 @@ body {
 }
 
 .site-footer a:hover {
-	color: var(--c-lk-2);
+	color: var(--c-tx-1);
 }
 
 /* Tag

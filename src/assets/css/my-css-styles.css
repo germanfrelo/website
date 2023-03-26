@@ -27,7 +27,7 @@
 	--base-size: 1rem;
 
 	/* Scale Ratio */
-	--ratio: 1.25;
+	--ratio: 1.333;
 
 	/* Size Scale */
 	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
@@ -41,11 +41,11 @@
 	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
 
 	/* Line Height */
-	--lh-large: 1.5;
+	--lh-large: 1.666;
 	--lh-small: 1.25;
 
 	/* Inline size */
-	--page-max-inline-size: 50rem;
+	--page-max-inline-size: 60rem;
 
 	/* Padding */
 	--padding-xxxl: 2em;
@@ -59,17 +59,16 @@
 	--padding-xxxs: 0.125em;
 
 	/* Colors (light) */
-	--c-tx-1: hsl(212deg 40% 10%);
-	--c-tx-2: hsl(212deg 20% 40%);
-	--c-bg-1: hsl(212deg 25% 100%);
-	--c-bg-2: hsl(212deg 25% 97%);
-	--c-bg-3: hsl(212deg 25% 95%);
-	--c-bg-a: hsl(212deg 25% 80% / 33.33%);
-	--c-bd-1: hsl(212deg 25% 85%);
-	--c-bd-2: hsl(212deg 25% 90%);
-	--c-lk-1: hsl(212deg 92% 42%);
-	--c-lk-2: hsl(212deg 100% 32%);
-	--c-accent: hsl(175deg 100% 45%);
+	--c-tx-1: hsl(217deg 50% 15%);
+	--c-tx-2: hsl(217deg 15% 45%);
+	--c-bg-1: hsl(217deg 50% 100%);
+	--c-bg-2: hsl(217deg 40% 98%);
+	--c-bg-3: hsl(217deg 25% 95%);
+	--c-bg-a: hsl(217deg 25% 80% / 33.33%);
+	--c-bd-1: hsl(217deg 25% 85%);
+	--c-bd-2: hsl(217deg 25% 90%);
+	--c-link: hsl(217deg 90% 47%);
+	--c-accent: hsl(172deg 100% 45%);
 	--c-highlight: hsla(55deg 100% 50% / 25%);
 
 	/* Border With */
@@ -89,17 +88,16 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		/* Colors (dark) */
-		--c-tx-1: hsl(212deg 25% 95%);
-		--c-tx-2: hsl(212deg 15% 65%);
-		--c-bg-1: hsl(212deg 15% 10%);
-		--c-bg-2: hsl(212deg 15% 15%);
-		--c-bg-3: hsl(212deg 15% 20%);
-		--c-bg-a: hsl(212deg 15% 40% / 33.33%);
-		--c-bd-1: hsl(212deg 10% 30%);
-		--c-bd-2: hsl(212deg 10% 25%);
-		--c-lk-1: hsl(212deg 97% 70%);
-		--c-lk-2: hsl(212deg 100% 80%);
-		--c-accent: hsl(175deg 100% 45%);
+		--c-tx-1: hsl(217deg 25% 90%);
+		--c-tx-2: hsl(217deg 10% 60%);
+		--c-bg-1: hsl(217deg 15% 6%);
+		--c-bg-2: hsl(217deg 15% 9%);
+		--c-bg-3: hsl(217deg 15% 15%);
+		--c-bg-a: hsl(217deg 15% 40% / 33.33%);
+		--c-bd-1: hsl(217deg 10% 30%);
+		--c-bd-2: hsl(217deg 10% 25%);
+		--c-link: hsl(217deg 100% 67%);
+		--c-accent: hsl(172deg 100% 45%);
 		--c-highlight: hsla(55deg 100% 50% / 25%);
 	}
 }
@@ -217,12 +215,12 @@ dd {
    ======================================== */
 
 a {
-	color: var(--c-lk-1);
+	color: var(--c-link);
 	transition: color var(--tr-duration) var(--tr-timing-function);
 }
 
-a:hover {
-	color: var(--c-lk-2);
+a:is(:hover, :focus) {
+	text-decoration: none;
 }
 
 b,
@@ -300,7 +298,7 @@ tfoot tr {
 	background-color: var(--c-bg-2);
 }
 
-@supports (td:has(+ th)) {
+@supports (td: has(+ th)) {
 	td:has(+ th) {
 		background-color: var(--c-bg-2);
 	}
@@ -338,10 +336,7 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition:
-		color var(--tr-duration) var(--tr-timing-function),
-		background-color var(--tr-duration) var(--tr-timing-function),
-		border-color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
 }
 
 select {
@@ -397,23 +392,11 @@ select:focus {
     border-color: revert; */
 }
 
-:is(
-		button,
-		[type="button"],
-		[type="image"],
-		[type="submit"],
-		[type="reset"]
-	):hover {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
 	background-color: var(--c-bg-2);
 }
 
-:is(
-		button,
-		[type="button"],
-		[type="image"],
-		[type="submit"],
-		[type="reset"]
-	):focus {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
 	background-color: var(--c-bg-2);
 }
 
@@ -503,12 +486,8 @@ canvas {
 	/*     --flow-space: calc(var(--ratio) * 0.5em); */
 }
 
-.flow > h3 {
-	/*     --flow-space: calc(var(--ratio) * 1em); */
-}
-
-.flow > h2 {
-	/*     --flow-space: calc(var(--ratio) * 1em); */
+.flow :is(h2, h3) {
+	--flow-space: 2em;
 }
 
 /* Stack
@@ -605,10 +584,7 @@ canvas {
 	--gap: var(--space, var(--flow-space, 1rem));
 
 	display: grid;
-	grid-template-columns: repeat(
-		auto-fit,
-		minmax(min(100%, calc(var(--size) - var(--gap))), 1fr)
-	);
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
 	gap: var(--gap);
 }
 
