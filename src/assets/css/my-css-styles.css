@@ -69,14 +69,8 @@
 	--c-bd-2: hsl(212deg 25% 90%);
 	--c-lk-1: hsl(212deg 92% 42%);
 	--c-lk-2: hsl(212deg 100% 32%);
-	--c-lk-tx: hsl(212deg 0% 100%);
-	--c-brand: hsl(175deg 100% 45%);
-	--c-accent: hsl(175deg 100% 30%);
-	--c-selection: hsl(175deg 80% 45% / 50%);
-	--c-selection-text: #000;
+	--c-accent: hsl(175deg 100% 45%);
 	--c-highlight: hsla(55deg 100% 50% / 25%);
-	--c-warning-tx: hsl(50deg 45% 25%);
-	--c-warning-bg: hsl(50deg 90% 85%);
 
 	/* Border With */
 	--bw-1: 0.0625rem;
@@ -105,26 +99,12 @@
 		--c-bd-2: hsl(212deg 10% 25%);
 		--c-lk-1: hsl(212deg 97% 70%);
 		--c-lk-2: hsl(212deg 100% 80%);
-		--c-lk-tx: hsl(212deg 15% 10%);
-		--c-brand: hsl(175deg 100% 45%);
 		--c-accent: hsl(175deg 100% 45%);
-		--c-selection: hsl(175deg 80% 45% / 50%);
-		--c-selection-text: #fff;
 		--c-highlight: hsla(55deg 100% 50% / 25%);
-		--c-warning-tx: hsl(38deg 43% 74%);
-		--c-warning-bg: hsl(41deg 45% 22%);
 	}
 }
 
 /* ============ 2. GLOBAL AND INHERITED STYLES ============ */
-
-/* All
-   ======================================== */
-
-::selection {
-	color: var(--c-selection-text);
-	background-color: var(--c-selection);
-}
 
 /* Document
    ======================================== */
@@ -135,7 +115,6 @@ html {
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
 	accent-color: var(--c-accent);
-	caret-color: var(--c-brand);
 	color-scheme: var(--color-scheme);
 }
 
@@ -406,7 +385,6 @@ button,
 
 :is(input, textarea, select, button):focus {
 	background-color: var(--c-bg-1);
-	border-color: var(--c-brand);
 }
 
 select:hover {
@@ -480,15 +458,6 @@ select:focus {
 [aria-disabled],
 [aria-disabled="true"] {
 	opacity: 0.333;
-}
-
-:focus-visible {
-	--outline-width: var(--border-width, 1px);
-
-	outline: var(--outline-width) solid var(--c-brand);
-	outline-offset: calc(-1 * var(--outline-width));
-	/* border-color: var(--c-brand);
-	outline: none; */
 }
 
 /* Interactive elements
@@ -723,11 +692,6 @@ canvas {
 	overflow: hidden !important;
 	clip-path: inset(50%) !important;
 	white-space: nowrap !important;
-}
-
-.warning {
-	color: var(--c-warning-tx);
-	background-color: var(--c-warning-bg);
 }
 
 .wrapper {
