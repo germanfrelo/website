@@ -39,19 +39,16 @@ layout: "layouts/base.html"
 
 	<h2>Featured projects</h2>
 
-	<ul
-		role="list"
-		class="[ projects ] [ gap-600 my-xl ]"
-	>
-		<li class="project card">
+	<div class="[ projects ] [ gap-600 my-xl ]">
+		<article class="project card">
 			<div class="project__content l-stack-xs">
-				<p class="project__title">
+				<h3 class="project__title">
 					<a
 						href="https://github.com/germanfrelo/website"
 						rel="external noopener"
 						>My website (this website)</a
 					>
-				</p>
+				</h3>
 				<p>Development of my personal website.</p>
 				<p class="visually-hidden">Technologies and tools:</p>
 				<ul
@@ -65,17 +62,17 @@ layout: "layouts/base.html"
 					<li class="tag">Netlify</li>
 				</ul>
 			</div>
-		</li>
+		</article>
 
-		<li class="project card">
+		<article class="project card">
 			<div class="project__content l-stack-xs">
-				<p class="project__title">
+				<h3 class="project__title">
 					<a
 						href="https://github.com/germanfrelo/base-css-stylesheet"
 						rel="external noopener"
 						>base.css</a
 					>
-				</p>
+				</h3>
 				<p>A work-in-progress base CSS stylesheet, which includes both normalize/reset and opinionated base styles.</p>
 				<p class="visually-hidden">Technologies and tools:</p>
 				<ul
@@ -85,8 +82,8 @@ layout: "layouts/base.html"
 					<li class="tag">CSS</li>
 				</ul>
 			</div>
-		</li>
-	</ul>
+		</article>
+	</div>
 
 	<p>See <a href="/projects">all projects</a>.</p>
 </div>
