@@ -250,6 +250,10 @@ body {
 	color: inherit;
 }
 
+.site-footer a:hover {
+	color: var(--c-tx-1);
+}
+
 /* Tag
    ======================================== */
 
