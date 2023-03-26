@@ -66,12 +66,8 @@ body {
 	text-align: center;
 }
 
-.headline * {
+.headline img {
 	margin-inline: auto;
-}
-
-.headline a {
-	white-space: nowrap;
 }
 
 /* Icon
@@ -141,6 +137,7 @@ body {
 	gap: var(--s-400);
 	align-content: flex-start;
 	font-size: 0.875rem;
+	text-align: start;
 }
 
 .project__img {
