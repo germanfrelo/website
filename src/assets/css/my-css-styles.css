@@ -715,6 +715,44 @@ canvas {
 	gap: var(--s-800);
 }
 
+/* Margin */
+
+.my-xxs {
+	margin-block: var(--s-100);
+}
+
+.my-xs {
+	margin-block: var(--s-200);
+}
+
+.my-sm {
+	margin-block: var(--s-300);
+}
+
+.my-md {
+	margin-block: var(--s-400);
+}
+
+.my-lg {
+	margin-block: var(--s-500);
+}
+
+.my-xl {
+	margin-block: var(--s-600);
+}
+
+.my-xxl {
+	margin-block: var(--s-700);
+}
+
+.my-xxxl {
+	margin-block: var(--s-800);
+}
+
+.my-xxxxl {
+	margin-block: var(--s-900);
+}
+
 .text-200 {
 	font-size: var(--s-200);
 }
