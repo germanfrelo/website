@@ -142,7 +142,6 @@ body {
 	gap: var(--s-400);
 	align-content: flex-start;
 	font-size: 0.875rem;
-	color: var(--c-tx-2);
 }
 
 .project__img {
@@ -172,7 +171,7 @@ body {
 }
 
 .project__title a {
-	color: var(--c-tx-1);
+	color: inherit;
 }
 
 /* Site header
