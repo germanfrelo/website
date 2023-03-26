@@ -8,11 +8,6 @@
 
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
-:root {
-	/* Inline size */
-	--page-max-inline-size: 60rem;
-}
-
 /* ============ 2. GLOBAL AND INHERITED STYLES ============ */
 
 * {
