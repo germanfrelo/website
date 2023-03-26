@@ -191,8 +191,11 @@ body {
 }
 
 .site-header__logo {
-	color: inherit;
 	text-decoration: none;
+}
+
+.site-header a {
+	color: inherit;
 }
 
 /* Site nav
@@ -200,15 +203,16 @@ body {
 
 .site-nav a {
 	display: inline-block;
-	color: inherit;
+	color: var(--c-tx-2);
 	text-decoration: none;
 }
 
-.site-nav [aria-current="page"] {
+.site-nav a[aria-current="page"] {
 	position: relative;
+	color: inherit;
 }
 
-.site-nav [aria-current="page"]::after {
+.site-nav a[aria-current="page"]::after {
 	--underline-thickness: var(--bw-3);
 
 	position: absolute;
@@ -218,6 +222,10 @@ body {
 	content: "";
 	block-size: var(--underline-thickness);
 	background-color: var(--c-accent);
+}
+
+.site-nav a:hover {
+	color: var(--c-tx-1);
 }
 
 /* Site main
