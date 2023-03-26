@@ -137,6 +137,7 @@ body {
 	gap: var(--s-400);
 	align-content: flex-start;
 	font-size: 0.875rem;
+	text-align: start;
 }
 
 .project__img {

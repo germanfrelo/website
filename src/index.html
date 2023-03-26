@@ -5,25 +5,23 @@ layout: "layouts/base.html"
 ---
 
 <div class="[ headline ] [ wrapper flow ]">
-	<div>
-		<picture>
-			<source
-				type="image/webp"
-				srcset="/assets/images/german-freixinos-lopez.webp"
-			/>
-			<source
-				type="image/jpeg"
-				srcset="/assets/images/german-freixinos-lopez.jpg"
-			/>
-			<img
-				class="photo-home"
-				src="/assets/images/german-freixinos-lopez.jpg"
-				alt="Germán Freixinós López"
-				width="640"
-				height="640"
-			/>
-		</picture>
-	</div>
+	<picture>
+		<source
+			type="image/webp"
+			srcset="/assets/images/german-freixinos-lopez.webp"
+		/>
+		<source
+			type="image/jpeg"
+			srcset="/assets/images/german-freixinos-lopez.jpg"
+		/>
+		<img
+			class="photo-home"
+			src="/assets/images/german-freixinos-lopez.jpg"
+			alt="Germán Freixinós López"
+			width="640"
+			height="640"
+		/>
+	</picture>
 
 	<h1>Germán Freixinós López</h1>
 
@@ -38,4 +36,57 @@ layout: "layouts/base.html"
 		>, know more <a href="/about/"><strong>about me</strong></a> and <a href="/about#contact"><strong>contact me</strong></a
 		>.
 	</p>
+
+	<h2>Featured projects</h2>
+
+	<ul
+		role="list"
+		class="[ portfolio ] [ gap-600 ]"
+	>
+		<li class="project card">
+			<div class="project__content l-stack-xs">
+				<p class="project__title">
+					<a
+						href="https://github.com/germanfrelo/website"
+						rel="external noopener"
+						>My website (this website)</a
+					>
+				</p>
+				<p>Development of my personal website.</p>
+				<p class="visually-hidden">Technologies and tools:</p>
+				<ul
+					role="list"
+					class="l-cluster-xxs"
+				>
+					<li class="tag">HTML</li>
+					<li class="tag">CSS</li>
+					<li class="tag">JavaScript</li>
+					<li class="tag">Eleventy</li>
+					<li class="tag">Netlify</li>
+				</ul>
+			</div>
+		</li>
+
+		<li class="project card">
+			<div class="project__content l-stack-xs">
+				<p class="project__title">
+					<a
+						href="https://github.com/germanfrelo/base-css-stylesheet"
+						rel="external noopener"
+						>base.css</a
+					>
+				</p>
+				<p>A work-in-progress base CSS stylesheet, which includes both normalize/reset and opinionated base styles.</p>
+				<p class="visually-hidden">Technologies and tools:</p>
+				<ul
+					role="list"
+					class="l-cluster-xxs"
+				>
+					<li class="tag">CSS</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+	<p>See <a href="/portfolio">all projects</a>.</p>
 </div>
