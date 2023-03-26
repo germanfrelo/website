@@ -60,7 +60,7 @@ body {
 
 .card {
 	padding: var(--padding-lg);
-	border: var(--bw-2) solid var(--c-bg-3);
+	border: var(--bw-2) solid var(--c-bd-2);
 	border-radius: var(--border-radius);
 }
 
