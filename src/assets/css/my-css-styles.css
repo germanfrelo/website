@@ -59,16 +59,16 @@
 	--padding-xxxs: 0.125em;
 
 	/* Colors (light) */
-	--c-tx-1: hsl(212deg 40% 10%);
-	--c-tx-2: hsl(212deg 20% 40%);
-	--c-bg-1: hsl(212deg 25% 100%);
-	--c-bg-2: hsl(212deg 25% 97%);
-	--c-bg-3: hsl(212deg 25% 95%);
-	--c-bg-a: hsl(212deg 25% 80% / 33.33%);
-	--c-bd-1: hsl(212deg 25% 85%);
-	--c-bd-2: hsl(212deg 25% 90%);
-	--c-link: hsl(212deg 92% 42%);
-	--c-accent: hsl(175deg 100% 45%);
+	--c-tx-1: hsl(217deg 50% 15%);
+	--c-tx-2: hsl(217deg 15% 45%);
+	--c-bg-1: hsl(217deg 50% 100%);
+	--c-bg-2: hsl(217deg 40% 98%);
+	--c-bg-3: hsl(217deg 25% 95%);
+	--c-bg-a: hsl(217deg 25% 80% / 33.33%);
+	--c-bd-1: hsl(217deg 25% 85%);
+	--c-bd-2: hsl(217deg 25% 90%);
+	--c-link: hsl(217deg 90% 47%);
+	--c-accent: hsl(172deg 100% 45%);
 	--c-highlight: hsla(55deg 100% 50% / 25%);
 
 	/* Border With */
@@ -88,16 +88,16 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		/* Colors (dark) */
-		--c-tx-1: hsl(212deg 25% 95%);
-		--c-tx-2: hsl(212deg 15% 65%);
-		--c-bg-1: hsl(212deg 15% 10%);
-		--c-bg-2: hsl(212deg 15% 15%);
-		--c-bg-3: hsl(212deg 15% 20%);
-		--c-bg-a: hsl(212deg 15% 40% / 33.33%);
-		--c-bd-1: hsl(212deg 10% 30%);
-		--c-bd-2: hsl(212deg 10% 25%);
-		--c-link: hsl(212deg 97% 70%);
-		--c-accent: hsl(175deg 100% 45%);
+		--c-tx-1: hsl(217deg 25% 90%);
+		--c-tx-2: hsl(217deg 10% 60%);
+		--c-bg-1: hsl(217deg 15% 6%);
+		--c-bg-2: hsl(217deg 15% 9%);
+		--c-bg-3: hsl(217deg 15% 15%);
+		--c-bg-a: hsl(217deg 15% 40% / 33.33%);
+		--c-bd-1: hsl(217deg 10% 30%);
+		--c-bd-2: hsl(217deg 10% 25%);
+		--c-link: hsl(217deg 100% 67%);
+		--c-accent: hsl(172deg 100% 45%);
 		--c-highlight: hsla(55deg 100% 50% / 25%);
 	}
 }
