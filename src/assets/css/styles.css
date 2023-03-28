@@ -140,21 +140,6 @@ body {
 	text-align: start;
 }
 
-.project__img {
-	flex-basis: 13rem;
-	flex-grow: 1;
-	min-block-size: 10rem;
-}
-
-.project img {
-	inline-size: 100%;
-	block-size: 100%;
-	object-fit: cover;
-	object-position: top;
-	border: var(--bw-1) solid var(--c-bg-3);
-	border-radius: var(--border-radius);
-}
-
 .project__content {
 	flex-basis: 0;
 	flex-grow: 999;
