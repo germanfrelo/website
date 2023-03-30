@@ -117,6 +117,7 @@ html {
 
 body {
 	font-family: var(--ff-sans);
+	font-size: 1rem;
 	font-weight: var(--fw-400);
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
