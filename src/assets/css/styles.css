@@ -231,11 +231,11 @@ body {
 
 .tag {
 	display: inline-block;
-	padding-block: var(--padding-xxs);
-	padding-inline: var(--padding-xs);
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
 	font-size: 0.875em;
 	font-weight: var(--fw-500);
-	line-height: var(--lh-small);
+	line-height: 1;
 	white-space: nowrap;
 	background-color: var(--c-bg-3);
 	border-radius: var(--border-radius-sm);
