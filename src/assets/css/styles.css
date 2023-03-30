@@ -150,8 +150,8 @@ body {
 .site-header__inner {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-500);
-	column-gap: var(--s-600);
+	row-gap: var(--s-400);
+	column-gap: var(--s-800);
 	align-items: center;
 	justify-content: space-between;
 }
