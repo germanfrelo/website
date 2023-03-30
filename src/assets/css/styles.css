@@ -37,7 +37,7 @@ body {
 	text-decoration: none;
 	background-color: transparent;
 	border: var(--bw-2) solid var(--c-bd-2);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 .button:hover {
@@ -60,7 +60,7 @@ body {
 	padding: var(--padding-xl);
 	text-align: start;
 	border: var(--bw-2) solid var(--c-bd-2);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-md);
 }
 
 .card > :is(h1, h2, h3, h4, h5, h6) + p {
@@ -100,7 +100,7 @@ body {
 	font-size: var(--s-500);
 	line-height: 0;
 	text-decoration: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 .link-icon:hover {
@@ -120,7 +120,7 @@ body {
 
 .photo-about {
 	inline-size: 100%;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 @media screen and (min-width: 23.5rem) {
@@ -238,7 +238,7 @@ body {
 	line-height: var(--lh-small);
 	white-space: nowrap;
 	background-color: var(--c-bg-3);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 /* ============ 4. EXCEPTIONS ============ */

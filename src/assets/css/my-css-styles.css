@@ -78,7 +78,8 @@
 	--bw-4: 0.25rem;
 
 	/* Border Radius */
-	--border-radius: 0.25rem;
+	--border-radius-sm: 0.25rem;
+	--border-radius-md: 0.5rem;
 
 	/* Transitions */
 	--tr-duration: 0.1s;
@@ -178,7 +179,7 @@ pre {
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
 	background-color: var(--c-bg-3);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 blockquote {
@@ -239,7 +240,7 @@ code {
 	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xxs);
 	background-color: var(--c-bg-a);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 pre code {
@@ -259,7 +260,7 @@ kbd {
 	line-height: 1;
 	white-space: nowrap;
 	border: var(--bw-1) solid var(--c-bd-1);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 	box-shadow: inset 0 calc(-1 * var(--bw-1)) 0 var(--c-bd-1);
 }
 
@@ -314,7 +315,7 @@ caption {
 
 fieldset {
 	border: var(--bw-2) solid var(--c-bd-2);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 }
 
 legend {
@@ -335,7 +336,7 @@ button {
 	color: inherit;
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-sm);
 	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
 }
 
@@ -434,7 +435,7 @@ select:focus {
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
 	border: var(--bw-1) solid var(--c-bd-1);
-	border-radius: calc(var(--border-radius) / 2);
+	border-radius: calc(var(--border-radius-sm) / 2);
 }
 
 :disabled,
