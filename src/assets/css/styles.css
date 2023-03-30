@@ -38,6 +38,9 @@ body {
 	background-color: transparent;
 	border: var(--bw-2) solid var(--c-bd-2);
 	border-radius: var(--border-radius-sm);
+	transition:
+		background-color var(--tr-duration) var(--tr-timing-function),
+		border-color var(--tr-duration) var(--tr-timing-function);
 }
 
 .button:hover {
@@ -101,6 +104,7 @@ body {
 	line-height: 0;
 	text-decoration: none;
 	border-radius: var(--border-radius-sm);
+	transition: background-color var(--tr-duration) var(--tr-timing-function);
 }
 
 .link-icon:hover {
