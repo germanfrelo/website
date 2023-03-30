@@ -109,11 +109,6 @@
    ======================================== */
 
 html {
-	font-family: var(--ff-sans);
-	font-weight: var(--fw-400);
-	line-height: var(--lh-large);
-	color: var(--c-tx-1);
-	accent-color: var(--c-accent);
 	color-scheme: var(--color-scheme);
 }
 
@@ -121,7 +116,12 @@ html {
    ======================================== */
 
 body {
+	font-family: var(--ff-sans);
+	font-weight: var(--fw-400);
+	line-height: var(--lh-large);
+	color: var(--c-tx-1);
 	background-color: var(--c-bg-1);
+	accent-color: var(--c-accent);
 }
 
 h1,
