@@ -179,7 +179,7 @@ pre {
 	padding-inline: var(--padding-lg);
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
-	background-color: var(--c-bg-3);
+	background-color: var(--c-bg-2);
 	border-radius: var(--border-radius-sm);
 }
 
@@ -300,7 +300,7 @@ tfoot tr {
 	background-color: var(--c-bg-2);
 }
 
-@supports (td: has(+ th)) {
+@supports (td:has(+ th)) {
 	td:has(+ th) {
 		background-color: var(--c-bg-2);
 	}
@@ -335,7 +335,7 @@ button {
 	padding-inline: var(--padding-sm);
 	line-height: var(--lh-small);
 	color: inherit;
-	background-color: var(--c-bg-2);
+	background-color: var(--c-bg-3);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius-sm);
 	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
