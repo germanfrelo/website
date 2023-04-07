@@ -38,7 +38,7 @@
 	"scripts": {
 		"start": "eleventy --serve",
 		"build": "eleventy",
-		"format": "prettier --ignore-unknown --write .",
+		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"stylelint-check": "stylelint-config-prettier-check",
 		"lint:css": "stylelint \"src/**/*.css\" --formatter verbose",
@@ -46,7 +46,7 @@
 		"prepare": "husky install"
 	},
 	"lint-staged": {
-		"*": "prettier --ignore-unknown --write",
+		"*": "prettier --write",
 		"*.css": "stylelint",
 		"*.js": "eslint"
 	},
