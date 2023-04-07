@@ -38,7 +38,7 @@
 	"scripts": {
 		"start": "eleventy --serve",
 		"build": "eleventy",
-		"format": "prettier --write .",
+		"format": "prettier --ignore-unknown --write .",
 		"format:check": "prettier --check .",
 		"stylelint-check": "stylelint-config-prettier-check",
 		"lint:css": "stylelint \"src/**/*.css\" --formatter verbose",
