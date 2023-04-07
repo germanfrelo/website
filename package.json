@@ -42,7 +42,8 @@
 		"format:check": "prettier --check .",
 		"stylelint-check": "stylelint-config-prettier-check",
 		"lint:css": "stylelint \"src/**/*.css\" --formatter verbose",
-		"lint:js": "eslint ."
+		"lint:js": "eslint .",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "0.12.1",
