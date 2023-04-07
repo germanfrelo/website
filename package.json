@@ -45,6 +45,11 @@
 		"lint:js": "eslint .",
 		"prepare": "husky install"
 	},
+	"lint-staged": {
+		"*": "prettier --ignore-unknown --write",
+		"*.css": "stylelint",
+		"*.js": "eslint"
+	},
 	"devDependencies": {
 		"@11ty/eleventy": "0.12.1",
 		"eslint": "8.36.0",
