@@ -52,6 +52,7 @@
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "0.12.1",
+		"@prettier/plugin-xml": "2.2.0",
 		"eslint": "8.38.0",
 		"eslint-config-prettier": "8.8.0",
 		"husky": "8.0.3",
