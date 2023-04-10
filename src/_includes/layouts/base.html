@@ -7,7 +7,7 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>{{ title }}</title>
-		<!-- <link
+		<link
 			rel="preconnect"
 			href="https://fonts.googleapis.com"
 		/>
@@ -31,7 +31,7 @@
 		<link
 			rel="stylesheet"
 			href="/assets/css/styles.css"
-		/> -->
+		/>
 		<meta
 			name="author"
 			content="Germán Freixinós López"
@@ -47,16 +47,6 @@
 	</head>
 
 	<body>
-		<aside>
-			<p>
-				<strong>This website isn't broken.</strong> There is no custom styles because <strong>I'm participating in <a href="https://css-naked-day.github.io/">CSS Naked Day</a></strong> (<a
-					href="https://css-naked-day.github.io/2023.html"
-					rel="external noopener"
-					>this is my first time</a
-				>).
-			</p>
-		</aside>
-		<hr />
 		{% include "partials/site-header.html" %}
 		<main class="site-main">{{ content | safe }}</main>
 		{% include "partials/site-footer.html" %}
