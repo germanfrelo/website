@@ -301,10 +301,8 @@ tfoot tr {
 	background-color: var(--c-bg-2);
 }
 
-@supports (td: has(+ th)) {
-	td:has(+ th) {
-		background-color: var(--c-bg-2);
-	}
+td:has(+ th) {
+	background-color: var(--c-bg-2);
 }
 
 caption {
