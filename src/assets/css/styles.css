@@ -144,32 +144,26 @@ h6 {
 
 h1 {
 	font-size: var(--s-700);
-	/* font-size: calc(var(--base-size) * 3); */
 }
 
 h2 {
 	font-size: var(--s-600);
-	/* font-size: calc(var(--base-size) * 2.25); */
 }
 
 h3 {
 	font-size: var(--s-500);
-	/* font-size: calc(var(--base-size) * 1.75); */
 }
 
 h4 {
 	font-size: var(--s-400);
-	/* font-size: calc(var(--base-size) * 1.25); */
 }
 
 h5 {
 	font-size: var(--s-300);
-	/* font-size: calc(var(--base-size) * 1.125); */
 }
 
 h6 {
 	font-size: var(--s-200);
-	/* font-size: calc(var(--base-size) * 1); */
 }
 
 /* Grouping content
@@ -348,13 +342,6 @@ button {
 	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
 }
 
-select {
-	/*     padding: revert;
-    background-color: revert;
-    border: revert;
-    border-radius: revert; */
-}
-
 button,
 [type="button"],
 [type="image"],
@@ -389,16 +376,6 @@ button,
 
 :is(input, textarea, select, button):focus {
 	background-color: var(--c-bg-1);
-}
-
-select:hover {
-	/*     background-color: revert;
-    border-color: revert; */
-}
-
-select:focus {
-	/*     background-color: revert;
-    border-color: revert; */
 }
 
 :is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
@@ -487,12 +464,7 @@ canvas {
    ======================================== */
 
 .flow > * + * {
-	/*     --flow-space: calc(var(--ratio) * 1em); */
 	margin-block-start: var(--flow-space, 1em);
-}
-
-.flow > li + li {
-	/*     --flow-space: calc(var(--ratio) * 0.5em); */
 }
 
 .flow :is(h2, h3) {
@@ -948,6 +920,8 @@ canvas {
 	text-decoration: none;
 }
 
+/* Stylelint: Expected selector ".site-nav a" to come before selector ".card :is(h1, h2, h3, h4, h5, h6) a" */
+/* stylelint-disable-next-line no-descending-specificity */
 .site-header a {
 	line-height: var(--lh-small);
 	color: inherit;
@@ -960,6 +934,8 @@ canvas {
 	column-gap: var(--s-600);
 }
 
+/* Stylelint: Expected selector ".site-nav a" to come before selector ".card :is(h1, h2, h3, h4, h5, h6) a" */
+/* stylelint-disable-next-line no-descending-specificity */
 .site-nav a {
 	display: inline-block;
 	color: var(--c-tx-2);
@@ -1005,6 +981,8 @@ canvas {
 	background-color: var(--c-bg-2);
 }
 
+/* Stylelint: Expected selector ".site-nav a" to come before selector ".card :is(h1, h2, h3, h4, h5, h6) a" */
+/* stylelint-disable-next-line no-descending-specificity */
 .site-footer a {
 	color: inherit;
 }
