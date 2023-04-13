@@ -69,7 +69,7 @@
 	--c-bd-2: hsl(217deg 25% 90%);
 	--c-link: hsl(217deg 90% 47%);
 	--c-accent: hsl(172deg 100% 45%);
-	--c-highlight: hsla(55deg 100% 50% / 25%);
+	--c-mark: hsla(55deg 100% 50% / 25%);
 
 	/* Border With */
 	--bw-1: 0.0625rem;
@@ -98,7 +98,7 @@
 		--c-bd-2: hsl(217deg 10% 25%);
 		--c-link: hsl(217deg 100% 67%);
 		--c-accent: hsl(172deg 100% 45%);
-		--c-highlight: hsla(55deg 100% 50% / 25%);
+		--c-mark: hsla(55deg 100% 50% / 25%);
 	}
 }
 
@@ -269,7 +269,7 @@ kbd {
 mark {
 	padding-inline: var(--padding-xxs);
 	color: inherit;
-	background-color: var(--c-highlight);
+	background-color: var(--c-mark);
 }
 
 /* Embedded content
