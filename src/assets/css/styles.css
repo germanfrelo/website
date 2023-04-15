@@ -2,24 +2,781 @@
 	STRUCTURE:
 	1. Global custom properties
 	2. Global and inherited styles
-	3. Blocks
-	4. Exceptions
+	3. Composition / Layout primitives
+	4. Utility classes
+	5. Blocks
+	6. Exceptions
 */
 
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
+:root {
+	/* Font Family */
+	--ff-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--ff-sans: "Inter", var(--ff-fallback);
+	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+
+	/* Font Weight */
+	--fw-700: 700;
+	--fw-600: 600;
+	--fw-500: 500;
+	--fw-400: 400;
+
+	/* Base Size */
+	--base-size: 1rem;
+
+	/* Scale Ratio */
+	--ratio: 1.333;
+
+	/* Size Scale */
+	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-700: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-600: calc(var(--base-size) * var(--ratio) * var(--ratio));
+	--s-500: calc(var(--base-size) * var(--ratio));
+	--s-400: var(--base-size);
+	--s-300: calc(var(--base-size) / var(--ratio));
+	--s-200: calc(var(--base-size) / var(--ratio) / var(--ratio));
+	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
+
+	/* Line Height */
+	--lh-large: 1.666;
+	--lh-small: 1.25;
+
+	/* Line length */
+	--page-max-inline-size: 60rem;
+
+	/* Padding */
+	--padding-xxxl: 2em;
+	--padding-xxl: 1.75em;
+	--padding-xl: 1.5em;
+	--padding-lg: 1.25em;
+	--padding-md: 1em;
+	--padding-sm: 0.75em;
+	--padding-xs: 0.5em;
+	--padding-xxs: 0.25em;
+	--padding-xxxs: 0.125em;
+
+	/* Colors */
+	--color-scheme: light dark;
+	--c-tx-1: hsl(217deg 50% 15%);
+	--c-tx-2: hsl(217deg 15% 45%);
+	--c-bg-1: hsl(217deg 50% 100%);
+	--c-bg-2: hsl(217deg 40% 98%);
+	--c-bg-3: hsl(217deg 25% 95%);
+	--c-bg-a: hsl(217deg 25% 80% / 33.33%);
+	--c-bd-1: hsl(217deg 25% 85%);
+	--c-bd-2: hsl(217deg 25% 90%);
+	--c-link: hsl(217deg 90% 47%);
+	--c-accent: hsl(172deg 100% 45%);
+	--c-mark: hsla(55deg 100% 50% / 25%);
+
+	/* Border With */
+	--bw-1: 0.0625rem;
+	--bw-2: 0.125rem;
+	--bw-3: 0.1875rem;
+	--bw-4: 0.25rem;
+
+	/* Border Radius */
+	--border-radius: 0.25rem;
+
+	/* Transitions */
+	--tr-duration: 0.1s;
+	--tr-timing-function: ease-in;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Colors */
+		--c-tx-1: hsl(217deg 25% 90%);
+		--c-tx-2: hsl(217deg 10% 60%);
+		--c-bg-1: hsl(217deg 15% 6%);
+		--c-bg-2: hsl(217deg 15% 9%);
+		--c-bg-3: hsl(217deg 15% 15%);
+		--c-bg-a: hsl(217deg 15% 40% / 33.33%);
+		--c-bd-1: hsl(217deg 10% 30%);
+		--c-bd-2: hsl(217deg 10% 25%);
+		--c-link: hsl(217deg 100% 67%);
+		--c-accent: hsl(172deg 100% 45%);
+		--c-mark: hsla(55deg 100% 50% / 25%);
+	}
+}
+
 /* ============ 2. GLOBAL AND INHERITED STYLES ============ */
+
+/* All elements
+   ======================================== */
 
 * {
 	margin: 0;
 }
 
+/* Document
+   ======================================== */
+
+html {
+	font-family: var(--ff-sans);
+	font-weight: var(--fw-400);
+	line-height: var(--lh-large);
+	color: var(--c-tx-1);
+	accent-color: var(--c-accent);
+	color-scheme: var(--color-scheme);
+}
+
+/* Sections
+   ======================================== */
+
 body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	background-color: var(--c-bg-1);
 }
 
-/* ============ 3. BLOCKS ============ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--fw-700);
+	line-height: var(--lh-small);
+}
+
+h1 {
+	font-size: var(--s-700);
+}
+
+h2 {
+	font-size: var(--s-600);
+}
+
+h3 {
+	font-size: var(--s-500);
+}
+
+h4 {
+	font-size: var(--s-400);
+}
+
+h5 {
+	font-size: var(--s-300);
+}
+
+h6 {
+	font-size: var(--s-200);
+}
+
+/* Grouping content
+   ======================================== */
+
+hr {
+	block-size: var(--bw-2);
+	background-color: var(--c-bd-1);
+	border: none;
+}
+
+pre {
+	padding-block: var(--padding-md);
+	padding-inline: var(--padding-lg);
+	font-family: var(--ff-mono);
+	font-size: 0.875em;
+	background-color: var(--c-bg-3);
+	border-radius: var(--border-radius);
+}
+
+blockquote {
+	padding-inline: var(--padding-md);
+	margin-inline: 0;
+	color: var(--c-tx-2);
+	text-align: start;
+	border-inline-start: var(--bw-4) solid var(--c-bd-1);
+}
+
+blockquote > :first-child {
+	margin-block-start: 0;
+}
+
+blockquote > :last-child {
+	margin-block-end: 0;
+}
+
+ol,
+ul,
+menu {
+	padding-inline-start: var(--padding-xxxl);
+}
+
+dt {
+	font-weight: var(--fw-700);
+}
+
+dd {
+	margin-inline-start: var(--padding-xl);
+}
+
+/* Text-level semantics
+   ======================================== */
+
+a {
+	color: var(--c-link);
+	transition: color var(--tr-duration) var(--tr-timing-function);
+}
+
+a:is(:hover, :focus) {
+	text-decoration: none;
+}
+
+b,
+strong {
+	font-weight: var(--fw-700);
+}
+
+code,
+samp,
+kbd {
+	font-family: var(--ff-mono);
+	font-size: 0.875em;
+}
+
+code {
+	padding-block: var(--padding-xxxs);
+	padding-inline: var(--padding-xxs);
+	background-color: var(--c-bg-a);
+	border-radius: var(--border-radius);
+}
+
+pre code {
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+	color: inherit;
+	background: inherit;
+	border-radius: 0;
+}
+
+kbd {
+	display: inline-block;
+	padding-block: var(--padding-xxs);
+	padding-inline: var(--padding-xs);
+	font-family: var(--ff-sans);
+	line-height: 1;
+	white-space: nowrap;
+	border: var(--bw-1) solid var(--c-bd-1);
+	border-radius: var(--border-radius);
+	box-shadow: inset 0 calc(-1 * var(--bw-1)) 0 var(--c-bd-1);
+}
+
+mark {
+	padding-inline: var(--padding-xxs);
+	color: inherit;
+	background-color: var(--c-mark);
+}
+
+/* Embedded content
+   ======================================== */
+
+iframe {
+	border: var(--bw-1) solid var(--c-bd-1);
+}
+
+/* Tabular data
+   ======================================== */
+
+th,
+td {
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
+	border: var(--bw-1) solid var(--c-bd-1);
+}
+
+th,
+thead,
+tfoot {
+	font-weight: var(--fw-600);
+}
+
+th,
+thead :is(tr, td),
+tfoot tr {
+	background-color: var(--c-bg-2);
+}
+
+td:has(+ th) {
+	background-color: var(--c-bg-2);
+}
+
+caption {
+	padding-block: var(--padding-xxs);
+	font-weight: var(--fw-600);
+}
+
+/* Forms
+   ======================================== */
+
+fieldset {
+	border: var(--bw-2) solid var(--c-bd-2);
+	border-radius: var(--border-radius);
+}
+
+legend {
+	font-weight: var(--fw-600);
+}
+
+label {
+	display: inline-block;
+}
+
+input,
+textarea,
+select,
+button {
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
+	line-height: var(--lh-small);
+	color: inherit;
+	background-color: var(--c-bg-2);
+	border: var(--bw-2) solid transparent;
+	border-radius: var(--border-radius);
+	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
+}
+
+button,
+[type="button"],
+[type="image"],
+[type="submit"],
+[type="reset"] {
+	display: inline-flex;
+	gap: 1ch;
+	align-items: center;
+	justify-content: center;
+	padding-inline: var(--padding-md);
+	font-weight: var(--fw-600);
+	text-align: center;
+	background-color: var(--c-bg-1);
+	border-color: var(--c-bd-1);
+}
+
+[type="image"] {
+	padding: revert;
+	background-color: revert;
+	border: revert;
+}
+
+[type="submit"] {
+	color: var(--c-bg-1);
+	background-color: var(--c-tx-1);
+	border-color: var(--c-tx-1);
+}
+
+:is(input, textarea, select, button):hover {
+	border-color: var(--c-bd-1);
+}
+
+:is(input, textarea, select, button):focus {
+	background-color: var(--c-bg-1);
+}
+
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
+	background-color: var(--c-bg-2);
+}
+
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
+	background-color: var(--c-bg-2);
+}
+
+[type="image"]:hover {
+	background-color: revert;
+	border-color: revert;
+}
+
+[type="image"]:focus {
+	background-color: revert;
+	border-color: revert;
+}
+
+[type="submit"]:hover {
+	color: inherit;
+	background-color: var(--c-bg-1);
+	border-color: var(--c-tx-1);
+}
+
+[type="submit"]:focus {
+	color: inherit;
+	background-color: var(--c-bg-1);
+	border-color: var(--c-tx-1);
+}
+
+[type="color"] {
+	inline-size: 3em;
+	block-size: 1.5em;
+	padding: var(--padding-xxs);
+}
+
+[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+[type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
+	border: var(--bw-1) solid var(--c-bd-1);
+	border-radius: calc(var(--border-radius) / 2);
+}
+
+:disabled,
+[aria-disabled],
+[aria-disabled="true"] {
+	opacity: 0.333;
+}
+
+/* Interactive elements
+   ======================================== */
+
+details {
+	padding-inline: var(--padding-xs);
+}
+
+summary {
+	padding-block: var(--padding-xxs);
+	padding-inline: var(--padding-xs);
+	margin-inline: calc(-1 * var(--padding-xs));
+	transition: background-color var(--tr-duration) var(--tr-timing-function);
+}
+
+summary:hover {
+	background-color: var(--c-bg-2);
+}
+
+summary ~ * {
+	margin-block: 0;
+}
+
+/* Scripting
+   ======================================== */
+
+canvas {
+	border: var(--bw-1) solid var(--c-bd-1);
+}
+
+/* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
+
+/* Flow
+   ======================================== */
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+.flow :is(h2, h3) {
+	--flow-space: 2em;
+}
+
+/* Stack
+   ======================================== */
+
+[class*="l-stack"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+[class*="l-stack"] > * {
+	margin-block: 0;
+}
+
+[class*="l-stack"] > * + * {
+	margin-block-start: var(--space, 1rem);
+}
+
+.l-stack-xxxl > * + * {
+	--space: var(--s-800);
+}
+
+.l-stack-xxl > * + * {
+	--space: var(--s-700);
+}
+
+.l-stack-xl > * + * {
+	--space: var(--s-600);
+}
+
+.l-stack-lg > * + * {
+	--space: var(--s-500);
+}
+
+.l-stack-md > * + * {
+	--space: var(--s-400);
+}
+
+.l-stack-sm > * + * {
+	--space: var(--s-300);
+}
+
+.l-stack-xs > * + * {
+	--space: var(--s-200);
+}
+
+.l-stack-xxs > * + * {
+	--space: var(--s-100);
+}
+
+/* Cluster
+   ======================================== */
+
+[class*="l-cluster"] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+[class*="l-cluster"] > * {
+	margin-block: 0;
+}
+
+.l-cluster-xl {
+	gap: var(--s-600);
+}
+
+.l-cluster-lg {
+	gap: var(--s-500);
+}
+
+.l-cluster-md {
+	gap: var(--s-400);
+}
+
+.l-cluster-sm {
+	gap: var(--s-300);
+}
+
+.l-cluster-xs {
+	gap: var(--s-200);
+}
+
+.l-cluster-xxs {
+	gap: var(--s-100);
+}
+
+/* Grid
+   ======================================== */
+
+[class*="l-grid"] {
+	--size: 100%;
+	--gap: var(--space, var(--flow-space, 1rem));
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
+	gap: var(--gap);
+}
+
+.l-grid-2 {
+	--size: calc(var(--page-max-inline-size) / 2);
+}
+
+.l-grid-3 {
+	--size: calc(var(--page-max-inline-size) / 3);
+}
+
+.l-grid-4 {
+	--size: calc(var(--page-max-inline-size) / 4);
+}
+
+.l-grid-5 {
+	--size: calc(var(--page-max-inline-size) / 5);
+}
+
+.l-grid-6 {
+	--size: calc(var(--page-max-inline-size) / 6);
+}
+
+/* Sidebar
+   ======================================== */
+
+[class*="l-with-sidebar-"] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+[class*="l-with-sidebar-"] > * {
+	flex-grow: 1;
+}
+
+.l-with-sidebar-left > :nth-child(2) {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 66.666%;
+}
+
+.l-with-sidebar-right > :nth-child(1) {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 66.666%;
+}
+
+/* Input-Button
+   ======================================== */
+
+.l-input-button {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s-200);
+}
+
+.l-input-button > * {
+	flex-grow: 1;
+}
+
+.l-input-button > input {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 66.666%;
+}
+
+.l-input-button > [type="number"] {
+	min-inline-size: 50%;
+}
+
+/* ============ 4. UTILITY CLASSES ============ */
+
+/* Standard utility classes
+   ======================================== */
+
+.visually-hidden {
+	position: absolute !important;
+	inline-size: 1px !important;
+	block-size: 1px !important;
+	overflow: hidden !important;
+	clip-path: inset(50%) !important;
+	white-space: nowrap !important;
+}
+
+.wrapper {
+	inline-size: 90%;
+	max-inline-size: var(--page-max-inline-size);
+	margin-inline: auto;
+}
+
+/* Design tokens utility classes
+   ======================================== */
+
+.flex-justify-center {
+	justify-content: center;
+}
+
+.gap-100 {
+	gap: var(--s-100);
+}
+
+.gap-200 {
+	gap: var(--s-200);
+}
+
+.gap-300 {
+	gap: var(--s-300);
+}
+
+.gap-400 {
+	gap: var(--s-400);
+}
+
+.gap-500 {
+	gap: var(--s-500);
+}
+
+.gap-600 {
+	gap: var(--s-600);
+}
+
+.gap-700 {
+	gap: var(--s-700);
+}
+
+.gap-800 {
+	gap: var(--s-800);
+}
+
+/* Margin */
+
+.my-xxs {
+	margin-block: var(--s-100);
+}
+
+.my-xs {
+	margin-block: var(--s-200);
+}
+
+.my-sm {
+	margin-block: var(--s-300);
+}
+
+.my-md {
+	margin-block: var(--s-400);
+}
+
+.my-lg {
+	margin-block: var(--s-500);
+}
+
+.my-xl {
+	margin-block: var(--s-600);
+}
+
+.my-xxl {
+	margin-block: var(--s-700);
+}
+
+.my-xxxl {
+	margin-block: var(--s-800);
+}
+
+.my-xxxxl {
+	margin-block: var(--s-900);
+}
+
+.text-200 {
+	font-size: var(--s-200);
+}
+
+.text-300 {
+	font-size: var(--s-300);
+}
+
+.text-400 {
+	font-size: var(--s-400);
+}
+
+.text-500 {
+	font-size: var(--s-500);
+}
+
+.text-600 {
+	font-size: var(--s-600);
+}
+
+.text-700 {
+	font-size: var(--s-700);
+}
+
+.text-800 {
+	font-size: var(--s-800);
+}
+
+.weight-regular {
+	font-weight: var(--fw-400);
+}
+
+.weight-medium {
+	font-weight: var(--fw-500);
+}
+
+.weight-semibold {
+	font-weight: var(--fw-600);
+}
+
+.weight-bold {
+	font-weight: var(--fw-700);
+}
+
+/* ============ 5. BLOCKS ============ */
 
 /* Button
    ======================================== */
@@ -161,6 +918,8 @@ body {
 	text-decoration: none;
 }
 
+/* Stylelint: Expected selector ".site-nav a" to come before selector ".card :is(h1, h2, h3, h4, h5, h6) a" */
+/* stylelint-disable-next-line no-descending-specificity */
 .site-header a {
 	line-height: var(--lh-small);
 	color: inherit;
@@ -173,6 +932,8 @@ body {
 	column-gap: var(--s-600);
 }
 
+/* Stylelint: Expected selector ".site-nav a" to come before selector ".card :is(h1, h2, h3, h4, h5, h6) a" */
+/* stylelint-disable-next-line no-descending-specificity */
 .site-nav a {
 	display: inline-block;
 	color: var(--c-tx-2);
@@ -218,6 +979,8 @@ body {
 	background-color: var(--c-bg-2);
 }
 
+/* Stylelint: Expected selector ".site-nav a" to come before selector ".card :is(h1, h2, h3, h4, h5, h6) a" */
+/* stylelint-disable-next-line no-descending-specificity */
 .site-footer a {
 	color: inherit;
 }
@@ -241,4 +1004,4 @@ body {
 	border-radius: var(--border-radius);
 }
 
-/* ============ 4. EXCEPTIONS ============ */
+/* ============ 6. EXCEPTIONS ============ */
