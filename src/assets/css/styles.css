@@ -11,8 +11,6 @@
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
 :root {
-	--color-scheme: light dark;
-
 	/* Font Family */
 	--ff-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	--ff-sans: "Inter", var(--ff-fallback);
@@ -45,7 +43,7 @@
 	--lh-large: 1.666;
 	--lh-small: 1.25;
 
-	/* Inline size */
+	/* Line length */
 	--page-max-inline-size: 60rem;
 
 	/* Padding */
@@ -59,7 +57,8 @@
 	--padding-xxs: 0.25em;
 	--padding-xxxs: 0.125em;
 
-	/* Colors (light) */
+	/* Colors */
+	--color-scheme: light dark;
 	--c-tx-1: hsl(217deg 50% 15%);
 	--c-tx-2: hsl(217deg 15% 45%);
 	--c-bg-1: hsl(217deg 50% 100%);
@@ -88,7 +87,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		/* Colors (dark) */
+		/* Colors */
 		--c-tx-1: hsl(217deg 25% 90%);
 		--c-tx-2: hsl(217deg 10% 60%);
 		--c-bg-1: hsl(217deg 15% 6%);
