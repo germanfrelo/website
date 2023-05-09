@@ -42,13 +42,15 @@
 		"lint:css": "stylelint \"src/**/*.css\" --formatter verbose",
 		"lint:js": "eslint .",
 		"prepare": "husky install",
+		"sort-package-json": "sort-package-json",
 		"start": "eleventy --serve",
 		"stylelint-check": "stylelint-config-prettier-check"
 	},
 	"lint-staged": {
 		"*": "prettier --write",
 		"*.css": "stylelint",
-		"*.js": "eslint"
+		"*.js": "eslint",
+		"package.json": "sort-package-json"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "0.12.1",
