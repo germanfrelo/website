@@ -28,27 +28,29 @@
 	"bugs": {
 		"url": "https://github.com/germanfrelo/website/issues"
 	},
-	"license": "ISC",
-	"author": "Germán Freixinós López",
-	"main": ".eleventy.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/germanfrelo/website.git"
 	},
+	"license": "ISC",
+	"author": "Germán Freixinós López",
+	"main": ".eleventy.js",
 	"scripts": {
-		"start": "eleventy --serve",
 		"build": "eleventy",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"stylelint-check": "stylelint-config-prettier-check",
 		"lint:css": "stylelint \"src/**/*.css\" --formatter verbose",
 		"lint:js": "eslint .",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"sort-package-json": "sort-package-json",
+		"start": "eleventy --serve",
+		"stylelint-check": "stylelint-config-prettier-check"
 	},
 	"lint-staged": {
 		"*": "prettier --write",
 		"*.css": "stylelint",
-		"*.js": "eslint"
+		"*.js": "eslint",
+		"package.json": "sort-package-json"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "0.12.1",
@@ -59,6 +61,7 @@
 		"lint-staged": "13.2.1",
 		"prettier": "2.8.7",
 		"prettier-plugin-multiline-arrays": "1.1.3",
+		"sort-package-json": "2.4.1",
 		"stylelint": "14.16.1",
 		"stylelint-config-prettier": "9.0.5",
 		"stylelint-config-recess-order": "3.1.0",
