@@ -28,22 +28,22 @@
 	"bugs": {
 		"url": "https://github.com/germanfrelo/website/issues"
 	},
-	"license": "ISC",
-	"author": "Germán Freixinós López",
-	"main": ".eleventy.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/germanfrelo/website.git"
 	},
+	"license": "ISC",
+	"author": "Germán Freixinós López",
+	"main": ".eleventy.js",
 	"scripts": {
-		"start": "eleventy --serve",
 		"build": "eleventy",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"stylelint-check": "stylelint-config-prettier-check",
 		"lint:css": "stylelint \"src/**/*.css\" --formatter verbose",
 		"lint:js": "eslint .",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"start": "eleventy --serve",
+		"stylelint-check": "stylelint-config-prettier-check"
 	},
 	"lint-staged": {
 		"*": "prettier --write",
