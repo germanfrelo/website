@@ -1,5 +1,5 @@
-# Ignore installed npm modules
+# Node.js
 node_modules/
 
-# Ignore the build output directory
-public/
+# Eleventy output directory
+/public/
