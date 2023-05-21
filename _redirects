@@ -1,8 +1,12 @@
 # Netlify default subdomain
-https://germanfrelo.netlify.app/*   https://www.germanfrelo.dev/:splat 301!
+https://germanfrelo.netlify.app/*    https://www.germanfrelo.dev/:splat    301!
 
 # Custom domains
-https://www.germanfreixinos.com/*   https://www.germanfrelo.dev/:splat 301!
-https://germanfreixinos.com/*       https://www.germanfrelo.dev/:splat 301!
-https://www.germanfreixinos.es/*    https://www.germanfrelo.dev/:splat 301!
-https://germanfreixinos.es/*        https://www.germanfrelo.dev/:splat 301!
+# Primary domain is www.germanfrelo.dev, but Netlify automatically redirects between the apex domain and www subdomain
+https://www.germanfreixinos.com/*    https://www.germanfrelo.dev/:splat    301!
+https://germanfreixinos.com/*        https://www.germanfrelo.dev/:splat    301!
+https://www.germanfreixinos.es/*     https://www.germanfrelo.dev/:splat    301!
+https://germanfreixinos.es/*         https://www.germanfrelo.dev/:splat    301!
+
+# Paths
+/portfolio/*                         /projects/:splat                      301!
