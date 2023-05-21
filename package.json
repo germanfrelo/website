@@ -49,10 +49,21 @@
 		"stylelint-check": "stylelint-config-prettier-check"
 	},
 	"lint-staged": {
-		"*": "prettier --write",
-		"*.css": "stylelint",
-		"*.js": "eslint",
-		"package.json": "sort-package-json"
+		"package.json": [
+			"sort-package-json",
+			"prettier --write"
+		],
+		"*.css": [
+			"stylelint --formatter verbose --max-warnings 0",
+			"prettier --write"
+		],
+		"*.js": [
+			"eslint --max-warnings 0",
+			"prettier --write"
+		],
+		"**/!(package.json|*.css|*.js)": [
+			"prettier --write --ignore-unknown"
+		]
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "0.12.1",
