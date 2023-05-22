@@ -880,7 +880,7 @@ canvas {
 	border-radius: var(--border-radius);
 }
 
-@media screen and (min-width: 23.5rem) {
+@media screen and (width >= 23.5rem) {
 	.photo-about {
 		max-inline-size: 11rem;
 		float: left;
