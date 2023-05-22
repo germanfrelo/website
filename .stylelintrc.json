@@ -6,6 +6,7 @@
 	"rules": {
 		"custom-media-pattern": null,
 		"custom-property-pattern": null,
+		"declaration-property-value-no-unknown": true,
 		"keyframes-name-pattern": null,
 		"selector-class-pattern": null,
 		"selector-id-pattern": null
