@@ -855,17 +855,6 @@ canvas {
 	flex: 1;
 }
 
-/* Headline
-   ======================================== */
-
-.headline {
-	text-align: center;
-}
-
-.headline img {
-	margin-inline: auto;
-}
-
 /* Icon
    ======================================== */
 
@@ -897,14 +886,6 @@ canvas {
 
 .logo {
 	font-size: 1.125rem;
-}
-
-/* Photo home
-   ======================================== */
-
-.photo-home {
-	max-inline-size: 8rem;
-	border-radius: 50%;
 }
 
 /* Photo about
