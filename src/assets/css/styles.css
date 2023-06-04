@@ -203,7 +203,7 @@ blockquote > :last-child {
 ol,
 ul,
 menu {
-	padding-inline-start: var(--padding-xxxl);
+	padding-inline-start: 1em;
 }
 
 dt {
