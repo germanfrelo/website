@@ -697,6 +697,8 @@ canvas {
 	justify-content: center;
 }
 
+/* Gap */
+
 .gap-100 {
 	gap: var(--s-100);
 }
@@ -729,7 +731,7 @@ canvas {
 	gap: var(--s-800);
 }
 
-/* Margin */
+/* Margin Block */
 
 .my-xxs {
 	margin-block: var(--s-100);
@@ -767,6 +769,8 @@ canvas {
 	margin-block: var(--s-900);
 }
 
+/* Font Size */
+
 .text-step--1 {
 	font-size: var(--step--1);
 }
@@ -791,19 +795,21 @@ canvas {
 	font-size: var(--step-4);
 }
 
-.weight-regular {
+/* Font Weight */
+
+.font-regular {
 	font-weight: var(--fw-400);
 }
 
-.weight-medium {
+.font-medium {
 	font-weight: var(--fw-500);
 }
 
-.weight-semibold {
+.font-semibold {
 	font-weight: var(--fw-600);
 }
 
-.weight-bold {
+.font-bold {
 	font-weight: var(--fw-700);
 }
 
