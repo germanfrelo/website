@@ -39,6 +39,16 @@
 	--s-200: calc(var(--base-size) / var(--ratio) / var(--ratio));
 	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
 
+	/* Fluid Type Scale */
+
+	/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1440,20,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step--1: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem);
+	--step-0: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.29rem + 0.3vw), 1.56rem);
+	--step-2: clamp(1.62rem, calc(1.52rem + 0.48vw), 1.95rem);
+	--step-3: clamp(1.94rem, calc(1.8rem + 0.71vw), 2.44rem);
+	--step-4: clamp(2.33rem, calc(2.13rem + 1.03vw), 3.05rem);
+
 	/* Line Height */
 	--lh-large: 1.666;
 	--lh-small: 1.25;
@@ -126,6 +136,7 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	font-family: var(--ff-body);
+	font-size: var(--step-0);
 	font-weight: var(--fw-400);
 	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
@@ -145,27 +156,27 @@ h6 {
 }
 
 h1 {
-	font-size: var(--s-700);
+	font-size: var(--step-4);
 }
 
 h2 {
-	font-size: var(--s-600);
+	font-size: var(--step-3);
 }
 
 h3 {
-	font-size: var(--s-500);
+	font-size: var(--step-2);
 }
 
 h4 {
-	font-size: var(--s-400);
+	font-size: var(--step-1);
 }
 
 h5 {
-	font-size: var(--s-300);
+	font-size: var(--step-0);
 }
 
 h6 {
-	font-size: var(--s-200);
+	font-size: var(--step--1);
 }
 
 /* Grouping content
@@ -756,32 +767,28 @@ canvas {
 	margin-block: var(--s-900);
 }
 
-.text-200 {
-	font-size: var(--s-200);
+.text-step--1 {
+	font-size: var(--step--1);
 }
 
-.text-300 {
-	font-size: var(--s-300);
+.text-step-0 {
+	font-size: var(--step-0);
 }
 
-.text-400 {
-	font-size: var(--s-400);
+.text-step-1 {
+	font-size: var(--step-1);
 }
 
-.text-500 {
-	font-size: var(--s-500);
+.text-step-2 {
+	font-size: var(--step-2);
 }
 
-.text-600 {
-	font-size: var(--s-600);
+.text-step-3 {
+	font-size: var(--step-3);
 }
 
-.text-700 {
-	font-size: var(--s-700);
-}
-
-.text-800 {
-	font-size: var(--s-800);
+.text-step-4 {
+	font-size: var(--step-4);
 }
 
 .weight-regular {
@@ -863,7 +870,7 @@ canvas {
 .link-icon {
 	display: inline-block;
 	padding: var(--padding-xxs);
-	font-size: var(--s-500);
+	font-size: var(--step-1);
 	line-height: 0;
 	color: inherit;
 	text-decoration: none;
@@ -872,13 +879,6 @@ canvas {
 
 .link-icon:hover {
 	background-color: var(--c-bg-a);
-}
-
-/* Logo
-   ======================================== */
-
-.logo {
-	font-size: 1.125rem;
 }
 
 /* Photo about
@@ -942,6 +942,7 @@ canvas {
 
 .site-footer {
 	padding-block: var(--s-700);
+	font-size: var(--step--1);
 	color: var(--c-tx-2);
 	text-align: center;
 	background-color: var(--c-bg-2);
@@ -954,7 +955,7 @@ canvas {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-size: 0.875em;
+	font-size: var(--step--1);
 	font-weight: var(--fw-500);
 	line-height: var(--lh-small);
 	white-space: nowrap;
