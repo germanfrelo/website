@@ -12,9 +12,9 @@
 
 :root {
 	/* Font Family */
-	--ff-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	--ff-body: "Asap", var(--ff-fallback);
-	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+	--ff-body-fallback: ui-sans-serif, system-ui, sans-serif;
+	--ff-body: "Asap", var(--ff-body-fallback);
+	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
 	/* Font Weight */
 	--fw-700: 700;
