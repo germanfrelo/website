@@ -50,8 +50,8 @@
 	--step-4: clamp(2.33rem, calc(2.13rem + 1.03vw), 3.05rem);
 
 	/* Line Height */
-	--lh-large: 1.666;
-	--lh-small: 1.25;
+	--lh-large: 1.6;
+	--lh-small: 1.2;
 
 	/* Line length */
 	--page-max-inline-size: 60rem;
