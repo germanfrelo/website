@@ -127,6 +127,7 @@ body {
 	grid-template-rows: auto 1fr auto;
 	font-family: var(--ff-body);
 	font-weight: var(--fw-400);
+	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
 	background-color: var(--c-bg-1);
@@ -139,6 +140,7 @@ h4,
 h5,
 h6 {
 	font-weight: var(--fw-700);
+	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
 }
 
