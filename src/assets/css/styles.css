@@ -282,7 +282,7 @@ kbd {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-family: var(--ff-sans);
+	font-family: var(--ff-body);
 	line-height: 1;
 	white-space: nowrap;
 	border: var(--bw-1) solid var(--c-bd-1);
