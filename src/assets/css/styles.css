@@ -115,10 +115,6 @@
    ======================================== */
 
 html {
-	font-family: var(--ff-body);
-	font-weight: var(--fw-400);
-	line-height: var(--lh-large);
-	color: var(--c-tx-1);
 	accent-color: var(--c-accent);
 	color-scheme: var(--color-scheme);
 }
@@ -129,6 +125,10 @@ html {
 body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	font-family: var(--ff-body);
+	font-weight: var(--fw-400);
+	line-height: var(--lh-large);
+	color: var(--c-tx-1);
 	background-color: var(--c-bg-1);
 }
 
