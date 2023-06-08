@@ -12,7 +12,9 @@
 
 :root {
 	/* Font Family */
-	--ff-body-fallback: ui-sans-serif, system-ui, sans-serif;
+
+	/* https://github.com/system-fonts/modern-font-stacks */
+	--ff-body-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--ff-body: "Asap", var(--ff-body-fallback);
 	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
