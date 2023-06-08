@@ -687,8 +687,8 @@ canvas {
 }
 
 .wrapper {
-	inline-size: 90%;
 	max-inline-size: var(--page-max-inline-size);
+	padding-inline: var(--step-0);
 	margin-inline: auto;
 }
 
