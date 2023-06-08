@@ -893,15 +893,14 @@ canvas {
    ======================================== */
 
 .photo-about {
-	inline-size: 100%;
 	border-radius: var(--border-radius);
 }
 
-@media screen and (width >= 23.5rem) {
+@media screen and (width >= 25rem) {
 	.photo-about {
-		max-inline-size: 11rem;
+		max-inline-size: 10rem;
 		float: left;
-		margin-block-end: 1em;
+		margin-block-end: 0.25em;
 		margin-inline-end: 1em;
 	}
 }
