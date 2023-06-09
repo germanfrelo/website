@@ -502,8 +502,8 @@ canvas {
 	margin-block-start: var(--flow-space, 1em);
 }
 
-.flow :is(h2, h3) {
-	--flow-space: 2em;
+.flow > :is(h1, h2, h3) {
+	--flow-space: 1.5em;
 }
 
 /* Stack
