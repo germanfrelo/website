@@ -147,6 +147,11 @@ body {
 	background-color: var(--c-bg-1);
 }
 
+body > * {
+	/* This prevent long text from overflowing body with grid. Reason: the direct children of `<body>` with `display: grid` are grid items and have a default `min-inline-size` value of `auto` (= `min-content`), allowing long content to overflow the grid items (even with `overflow-wrap: break-word`). More info: https://ishadeed.com/article/min-content-size-css-grid/. */
+	min-inline-size: 0;
+}
+
 h1,
 h2,
 h3,
