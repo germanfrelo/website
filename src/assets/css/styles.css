@@ -44,13 +44,13 @@
 
 	/* Fluid Type Scale */
 
-	/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1440,20,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-	--step--1: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem);
-	--step-0: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
-	--step-1: clamp(1.35rem, calc(1.29rem + 0.3vw), 1.56rem);
-	--step-2: clamp(1.62rem, calc(1.52rem + 0.48vw), 1.95rem);
-	--step-3: clamp(1.94rem, calc(1.8rem + 0.71vw), 2.44rem);
-	--step-4: clamp(2.33rem, calc(2.13rem + 1.03vw), 3.05rem);
+	/* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1440,19,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step--1: clamp(0.89rem, calc(0.87rem + 0.09vw), 0.95rem);
+	--step-0: clamp(1.06rem, calc(1.03rem + 0.18vw), 1.19rem);
+	--step-1: clamp(1.28rem, calc(1.22rem + 0.3vw), 1.48rem);
+	--step-2: clamp(1.53rem, calc(1.44rem + 0.47vw), 1.86rem);
+	--step-3: clamp(1.84rem, calc(1.7rem + 0.69vw), 2.32rem);
+	--step-4: clamp(2.2rem, calc(2rem + 0.99vw), 2.9rem);
 
 	/* Line Height */
 	--lh-large: 1.6;
