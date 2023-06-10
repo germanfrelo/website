@@ -15,7 +15,8 @@
 
 	/* https://github.com/system-fonts/modern-font-stacks */
 	--ff-body-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--ff-body: "Asap", var(--ff-body-fallback);
+	--ff-body: "IBM Plex Sans", var(--ff-body-fallback);
+	--ff-headings: "Fira Sans", var(--ff-body-fallback);
 	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
 	/* Font Weight */
@@ -152,6 +153,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: var(--ff-headings);
 	font-weight: var(--fw-700);
 	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
