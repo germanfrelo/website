@@ -15,15 +15,15 @@
 
 	/* https://github.com/system-fonts/modern-font-stacks */
 	--ff-body-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--ff-body: "IBM Plex Sans", var(--ff-body-fallback);
+	--ff-body: "Asap", var(--ff-body-fallback);
 	--ff-headings: "Fira Sans", var(--ff-body-fallback);
 	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
 	/* Font Weight */
-	--fw-700: 700;
-	--fw-600: 600;
-	--fw-500: 500;
-	--fw-400: 400;
+	--fw-body-regular: 450;
+	--fw-body-medium: 600;
+	--fw-body-bold: 750;
+	--fw-headings: 800;
 
 	/* Base Size */
 	--base-size: 1rem;
@@ -140,7 +140,9 @@ body {
 	grid-template-rows: auto 1fr auto;
 	font-family: var(--ff-body);
 	font-size: var(--step-0);
-	font-weight: var(--fw-400);
+	font-weight: var(--fw-body-regular);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
@@ -159,7 +161,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--ff-headings);
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-headings);
 	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
 }
@@ -220,7 +222,7 @@ menu {
 }
 
 dt {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 dd {
@@ -272,7 +274,7 @@ a:is(:hover, :focus) {
 
 b,
 strong {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 code,
@@ -336,7 +338,7 @@ td {
 th,
 thead,
 tfoot {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-medium);
 }
 
 th,
@@ -351,7 +353,7 @@ td:has(+ th) {
 
 caption {
 	padding-block: var(--padding-xxs);
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-medium);
 }
 
 /* Forms
@@ -363,7 +365,7 @@ fieldset {
 }
 
 legend {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-medium);
 }
 
 label {
@@ -394,7 +396,7 @@ button,
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-medium);
 	text-align: center;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-bd-1);
@@ -807,19 +809,15 @@ canvas {
 /* Font Weight */
 
 .font-regular {
-	font-weight: var(--fw-400);
+	font-weight: var(--fw-body-regular);
 }
 
 .font-medium {
-	font-weight: var(--fw-500);
-}
-
-.font-semibold {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-medium);
 }
 
 .font-bold {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 /* ============ 5. BLOCKS ============ */
@@ -834,7 +832,7 @@ canvas {
 	justify-content: center;
 	padding-block: var(--padding-xs);
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-body-medium);
 	line-height: var(--lh-small);
 	text-align: center;
 	text-decoration: none;
@@ -973,7 +971,7 @@ canvas {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	font-size: var(--step--1);
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-body-medium);
 	line-height: var(--lh-small);
 	white-space: nowrap;
 	background-color: var(--c-bg-3);
