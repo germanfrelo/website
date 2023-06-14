@@ -67,7 +67,6 @@
 	--padding-xxxs: 0.125em;
 
 	/* Colors */
-	--color-scheme: light dark;
 	--c-tx-1: hsl(217deg 50% 15%);
 	--c-tx-2: hsl(217deg 15% 45%);
 	--c-bg-1: hsl(217deg 50% 100%);
@@ -125,7 +124,7 @@
 
 html {
 	accent-color: var(--c-accent);
-	color-scheme: var(--color-scheme);
+	color-scheme: light dark; /* This site supports both light and dark mode */
 }
 
 /* Sections
