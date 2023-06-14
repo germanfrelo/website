@@ -350,7 +350,6 @@ td:has(+ th) {
 
 caption {
 	padding-block: var(--padding-xxs);
-	font-weight: var(--fw-body-medium);
 }
 
 /* Forms
