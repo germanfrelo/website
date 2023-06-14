@@ -186,6 +186,10 @@ h6 {
 	font-size: var(--step--1);
 }
 
+address {
+	font-style: normal;
+}
+
 /* Grouping content
    ======================================== */
 
