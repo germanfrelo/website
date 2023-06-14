@@ -848,10 +848,10 @@ canvas {
 	block-size: 1em;
 }
 
-/* Link icon
+/* Link only icon
    ======================================== */
 
-.link-icon {
+.link-only-icon {
 	display: inline-block;
 	padding: var(--padding-xxs);
 	font-size: var(--step-1);
@@ -861,7 +861,7 @@ canvas {
 	border-radius: var(--br-medium);
 }
 
-.link-icon:hover {
+.link-only-icon:hover {
 	background-color: var(--c-bg-a);
 }
 
