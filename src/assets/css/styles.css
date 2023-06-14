@@ -854,7 +854,7 @@ canvas {
 .link-only-icon {
 	display: inline-block;
 	padding: var(--padding-xxs);
-	font-size: var(--step-1);
+	font-size: var(--step-0);
 	line-height: 0;
 	color: inherit;
 	text-decoration-line: none;
@@ -874,7 +874,7 @@ canvas {
 	align-items: center;
 }
 
-.link-with-icon > :is(svg, .icon) {
+.link-with-icon > .icon {
 	flex: none;
 	color: var(--c-tx-1);
 }
