@@ -376,32 +376,30 @@ button {
 	padding-inline: var(--padding-sm);
 	line-height: var(--lh-small);
 	color: inherit;
-	background-color: var(--c-bg-2);
-	border: var(--bw-2) solid transparent;
+	background-color: var(--c-bg-1);
+	border: var(--bw-2) solid var(--c-bd-1);
 	border-radius: var(--br-medium);
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
 button,
 [type="button"],
-[type="image"],
 [type="submit"],
 [type="reset"] {
 	display: inline-flex;
-	gap: 1ch;
+	gap: 0.5em;
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
 	font-weight: var(--fw-body-medium);
 	text-align: center;
-	background-color: var(--c-bg-1);
-	border-color: var(--c-bd-1);
+	background-color: var(--c-bg-3);
+	border-color: var(--c-bg-3);
 }
 
 [type="image"] {
 	padding: revert;
 	background-color: revert;
-	border: revert;
 }
 
 [type="submit"] {
@@ -410,41 +408,18 @@ button,
 	border-color: var(--c-tx-1);
 }
 
-:is(input, textarea, select, button):hover {
-	border-color: var(--c-bd-1);
+:is(input, textarea, select, button):is(:hover, :focus) {
+	border-color: var(--c-tx-2);
 }
 
-:is(input, textarea, select, button):focus {
-	background-color: var(--c-bg-1);
+:is(button, [type="button"], [type="submit"], [type="reset"]):is(:hover, :focus) {
+	background-color: var(--c-bg-a);
+	border-color: var(--c-bg-a);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
-	background-color: var(--c-bg-2);
-}
-
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
-	background-color: var(--c-bg-2);
-}
-
-[type="image"]:hover {
-	background-color: revert;
-	border-color: revert;
-}
-
-[type="image"]:focus {
-	background-color: revert;
-	border-color: revert;
-}
-
-[type="submit"]:hover {
-	color: inherit;
-	background-color: var(--c-bg-1);
-	border-color: var(--c-tx-1);
-}
-
-[type="submit"]:focus {
-	color: inherit;
-	background-color: var(--c-bg-1);
+[type="submit"]:is(:hover, :focus) {
+	color: var(--c-tx-1);
+	background-color: var(--c-bg-3);
 	border-color: var(--c-tx-1);
 }
 
