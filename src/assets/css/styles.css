@@ -382,6 +382,26 @@ button {
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
+[type="image"] {
+	padding: revert;
+	background-color: revert;
+}
+
+[type="color"] {
+	inline-size: 3em;
+	block-size: 1.5em;
+	padding: var(--padding-xxs);
+}
+
+[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+[type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
+	border: var(--bw-1) solid var(--c-bd-2);
+	border-radius: calc(var(--br-medium) / 2);
+}
+
 button,
 [type="button"],
 [type="submit"],
@@ -395,11 +415,6 @@ button,
 	text-align: center;
 	background-color: var(--c-bg-3);
 	border-color: var(--c-bg-3);
-}
-
-[type="image"] {
-	padding: revert;
-	background-color: revert;
 }
 
 [type="submit"] {
@@ -421,21 +436,6 @@ button,
 	color: var(--c-tx-1);
 	background-color: var(--c-bg-3);
 	border-color: var(--c-tx-1);
-}
-
-[type="color"] {
-	inline-size: 3em;
-	block-size: 1.5em;
-	padding: var(--padding-xxs);
-}
-
-[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
-}
-
-[type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
-	border: var(--bw-1) solid var(--c-bd-1);
-	border-radius: calc(var(--br-medium) / 2);
 }
 
 :disabled,
