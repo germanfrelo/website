@@ -876,7 +876,7 @@ canvas {
 
 .link-with-icon > :is(svg, .icon) {
 	flex: none;
-	color: var(--c-tx-2);
+	color: var(--c-tx-1);
 }
 
 /* Photo about
