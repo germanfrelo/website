@@ -312,8 +312,6 @@ kbd {
 }
 
 mark {
-	padding-inline: var(--padding-xxs);
-	color: inherit;
 	background-color: var(--c-mark);
 }
 
