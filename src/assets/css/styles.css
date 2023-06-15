@@ -86,8 +86,8 @@
 	--bw-4: 0.25rem;
 
 	/* Border Radius */
-	--br-medium: 0.25rem;
-	--br-small: 0.125rem;
+	--br-medium: 0.375rem;
+	--br-small: 0.1875rem;
 
 	/* Transitions */
 	--tr-duration-and-timing-function: 0.1s ease-in;
@@ -353,7 +353,7 @@ caption {
 
 fieldset {
 	border: var(--bw-2) solid var(--c-bd-2);
-	border-radius: var(--br-medium);
+	border-radius: var(--br-small);
 }
 
 legend {
@@ -374,7 +374,7 @@ button {
 	color: inherit;
 	background-color: var(--c-bg-1);
 	border: var(--bw-2) solid var(--c-bd-1);
-	border-radius: var(--br-medium);
+	border-radius: var(--br-small);
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
@@ -395,7 +395,7 @@ button {
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
 	border: var(--bw-1) solid var(--c-bd-2);
-	border-radius: calc(var(--br-medium) / 2);
+	border-radius: calc(var(--br-small) / 2);
 }
 
 button,
@@ -825,7 +825,7 @@ canvas {
 	line-height: 0;
 	color: inherit;
 	text-decoration-line: none;
-	border-radius: var(--br-medium);
+	border-radius: var(--br-small);
 }
 
 .link-only-icon:hover {
