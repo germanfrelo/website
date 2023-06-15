@@ -280,7 +280,7 @@ code,
 samp,
 kbd {
 	font-family: var(--ff-mono);
-	font-size: 0.875em;
+	font-size: var(--step--1);
 }
 
 code {
@@ -292,9 +292,8 @@ code {
 
 pre code {
 	padding: 0;
-	font-size: inherit;
 	background: inherit;
-	border-radius: 0;
+	border-radius: revert;
 }
 
 kbd {
