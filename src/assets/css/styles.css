@@ -20,9 +20,9 @@
 	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
 	/* Font Weight */
-	--fw-body-regular: 450;
-	--fw-body-medium: 600;
-	--fw-body-bold: 750;
+	--fw-body-regular: 400;
+	--fw-body-medium: 550;
+	--fw-body-bold: 700;
 	--fw-headings: 800;
 
 	/* Size Scale */
@@ -136,8 +136,6 @@ body {
 	font-family: var(--ff-body);
 	font-size: var(--step-0);
 	font-weight: var(--fw-body-regular);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
