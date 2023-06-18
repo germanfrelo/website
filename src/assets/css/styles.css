@@ -123,7 +123,6 @@
    ======================================== */
 
 html {
-	accent-color: var(--c-accent);
 	color-scheme: light dark; /* This site supports both light and dark mode */
 }
 
