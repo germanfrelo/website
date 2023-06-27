@@ -1,5 +1,6 @@
 /*
 	STRUCTURE:
+	0. Layers and imports
 	1. Global custom properties
 	2. Global and inherited styles
 	3. Composition / Layout primitives
@@ -7,6 +8,12 @@
 	5. Blocks
 	6. Exceptions
 */
+
+/* ============ 0. LAYERS AND IMPORTS ============ */
+
+@layer base;
+
+@import url("https://germanfrelo.github.io/base-css-stylesheet/base.css") layer(base);
 
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
