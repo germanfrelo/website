@@ -1,5 +1,6 @@
 /*
 	STRUCTURE:
+	0. Layers and imports
 	1. Global custom properties
 	2. Global and inherited styles
 	3. Composition / Layout primitives
@@ -7,6 +8,12 @@
 	5. Blocks
 	6. Exceptions
 */
+
+/* ============ 0. LAYERS AND IMPORTS ============ */
+
+@layer base;
+
+@import url("https://germanfrelo.github.io/base-css-stylesheet/base.css") layer(base);
 
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
@@ -215,6 +222,14 @@ ol,
 ul,
 menu {
 	padding-inline-start: 1em;
+}
+
+/*
+Remove list styles on `ol` and `ul` elements with an explicit ARIA list role added, which prevents VoiceOver from removing the list semantics in Safari.
+*/
+:is(ol, ul)[role="list"] {
+	padding-inline-start: 0;
+	list-style: none;
 }
 
 dt {
