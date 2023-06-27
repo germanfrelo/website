@@ -206,6 +206,14 @@ menu {
 	padding-inline-start: var(--padding-xxxl);
 }
 
+/*
+Remove list styles on `ol` and `ul` elements with an explicit ARIA list role added, which prevents VoiceOver from removing the list semantics in Safari.
+*/
+:is(ol, ul)[role="list"] {
+	padding-inline-start: 0;
+	list-style: none;
+}
+
 dt {
 	font-weight: var(--fw-700);
 }
