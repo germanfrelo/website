@@ -1,34 +1,32 @@
-<header class="[ site-header ] [ font-medium ]">
-	<div class="wrapper">
-		<div class="site-header__inner">
-			<a
-				href="/"
-				aria-label="Homepage"
-				class="text-step-1"
-				>Germán Freixinós López</a
-			>
+<header class="site-header">
+	<div class="wrapper site-header-layout">
+		<a
+			href="/"
+			aria-label="Homepage"
+			class="logo"
+			>Germán Freixinós López</a
+		>
 
-			<nav>
-				<ul
-					role="list"
-					class="[ site-nav ] [ l-cluster-md ]"
-				>
-					{% for item in navigation.items %}
-					<li>
-						<a
-							href="{{ item.url }}"
-							{{
-							helpers.getLinkActiveState(item.url,
-							page.url)
-							|
-							safe
-							}}
-							>{{ item.text }}</a
-						>
-					</li>
-					{% endfor %}
-				</ul>
-			</nav>
-		</div>
+		<nav>
+			<ul
+				role="list"
+				class="site-nav-list"
+			>
+				{% for item in navigation.items %}
+				<li>
+					<a
+						href="{{ item.url }}"
+						{{
+						helpers.getLinkActiveState(item.url,
+						page.url)
+						|
+						safe
+						}}
+						>{{ item.text }}</a
+					>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
 	</div>
 </header>
