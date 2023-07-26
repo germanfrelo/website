@@ -716,6 +716,8 @@ canvas {
 	justify-content: center;
 }
 
+/* Gap */
+
 .gap-100 {
 	gap: var(--s-100);
 }
@@ -748,7 +750,7 @@ canvas {
 	gap: var(--s-800);
 }
 
-/* Margin */
+/* Margin Block */
 
 .my-xxs {
 	margin-block: var(--s-100);
@@ -786,6 +788,8 @@ canvas {
 	margin-block: var(--s-900);
 }
 
+/* Font Size */
+
 .text-step--1 {
 	font-size: var(--step--1);
 }
@@ -817,6 +821,8 @@ canvas {
 	font-size: var(--step-5);
 	line-height: var(--lh-small);
 }
+
+/* Font Weight */
 
 .weight-regular {
 	font-weight: var(--fw-400);
