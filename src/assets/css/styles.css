@@ -176,6 +176,10 @@ h6 {
 /* Grouping content
    ======================================== */
 
+address {
+	font-style: normal;
+}
+
 hr {
 	block-size: var(--bw-2);
 	background-color: var(--c-bd-1);
