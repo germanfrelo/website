@@ -122,11 +122,6 @@
    ======================================== */
 
 html {
-	font-family: var(--ff-sans);
-	font-weight: var(--fw-400);
-	line-height: var(--lh-large);
-	color: var(--c-tx-1);
-	accent-color: var(--c-accent);
 	color-scheme: var(--color-scheme);
 }
 
@@ -136,6 +131,11 @@ html {
 body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	font-family: var(--ff-sans);
+	font-weight: var(--fw-400);
+	line-height: var(--lh-large);
+	color: var(--c-tx-1);
+	accent-color: var(--c-accent);
 	background-color: var(--c-bg-1);
 }
 
@@ -293,9 +293,7 @@ code {
 
 pre code {
 	padding: 0;
-	margin: 0;
 	font-size: inherit;
-	color: inherit;
 	background: inherit;
 	border-radius: 0;
 }
