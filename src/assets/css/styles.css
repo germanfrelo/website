@@ -54,8 +54,8 @@
 	--step-5: clamp(2.64rem, calc(2.37rem + 1.37vw), 3.43rem);
 
 	/* Line Height */
-	--lh-large: 1.666;
-	--lh-small: 1.25;
+	--lh-large: 1.6;
+	--lh-small: 1.2;
 
 	/* Line length */
 	--page-max-inline-size: 60rem;
@@ -255,7 +255,6 @@ a {
 
 .site-header a {
 	display: inline-block;
-	line-height: var(--lh-small);
 	color: inherit;
 	text-decoration: none;
 }
@@ -801,18 +800,22 @@ canvas {
 
 .text-step-2 {
 	font-size: var(--step-2);
+	line-height: var(--lh-small);
 }
 
 .text-step-3 {
 	font-size: var(--step-3);
+	line-height: var(--lh-small);
 }
 
 .text-step-4 {
 	font-size: var(--step-4);
+	line-height: var(--lh-small);
 }
 
 .text-step-5 {
 	font-size: var(--step-5);
+	line-height: var(--lh-small);
 }
 
 .weight-regular {
@@ -935,6 +938,7 @@ canvas {
 
 .site-header {
 	padding-block: var(--s-500);
+	line-height: var(--lh-small);
 }
 
 .site-header__inner {
