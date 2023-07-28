@@ -976,6 +976,7 @@ canvas {
 
 .site-footer {
 	padding-block: var(--s-700);
+	font-size: var(--step--1);
 	color: var(--c-tx-2);
 	text-align: center;
 	background-color: var(--c-bg-2);
