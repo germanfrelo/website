@@ -26,8 +26,6 @@
 
 	/* Font Weight */
 	--fw-700: 700;
-	--fw-600: 600;
-	--fw-500: 500;
 	--fw-400: 400;
 
 	/* Size Scale */
@@ -350,7 +348,7 @@ td {
 th,
 thead,
 tfoot {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-700);
 }
 
 th,
@@ -365,7 +363,6 @@ td:has(+ th) {
 
 caption {
 	padding-block: var(--padding-xxs);
-	font-weight: var(--fw-600);
 }
 
 /* Forms
@@ -377,7 +374,7 @@ fieldset {
 }
 
 legend {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-700);
 }
 
 label {
@@ -408,7 +405,7 @@ button,
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-700);
 	text-align: center;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-bd-1);
@@ -832,14 +829,6 @@ canvas {
 	font-weight: var(--fw-400);
 }
 
-.font-medium {
-	font-weight: var(--fw-500);
-}
-
-.font-semibold {
-	font-weight: var(--fw-600);
-}
-
 .font-bold {
 	font-weight: var(--fw-700);
 }
@@ -856,7 +845,7 @@ canvas {
 	justify-content: center;
 	padding-block: var(--padding-xs);
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-700);
 	line-height: var(--lh-small);
 	text-align: center;
 	text-decoration: none;
@@ -994,7 +983,6 @@ canvas {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	font-size: var(--step--1);
-	font-weight: var(--fw-500);
 	line-height: var(--lh-small);
 	white-space: nowrap;
 	background-color: var(--c-bg-3);
