@@ -18,19 +18,17 @@
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
 :root {
-	/* Font Family */
+	/* Font */
 
 	/* https://github.com/system-fonts/modern-font-stacks */
-	--ff-body-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--ff-body: "Asap", var(--ff-body-fallback);
-	--ff-headings: "Fira Sans", var(--ff-body-fallback);
-	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
-
-	/* Font Weight */
+	--ff-sans-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--ff-body: "Asap", var(--ff-sans-fallback);
 	--fw-body-regular: 400;
 	--fw-body-medium: 550;
 	--fw-body-bold: 700;
-	--fw-headings: 800;
+	--ff-headings: "Fira Sans", var(--ff-sans-fallback);
+	--fw-headings: 700;
+	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
 	/* Size Scale */
 	--base-size: 1rem;
@@ -47,13 +45,14 @@
 
 	/* Fluid Type Scale */
 
-	/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-	--step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem);
-	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-	--step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
-	--step-2: clamp(1.62rem, calc(1.5rem + 0.58vw), 1.95rem);
-	--step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
-	--step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+	/* @link https://utopia.fyi/type/calculator?c=320,18,1.125,1440,20,1.2,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step--1: clamp(1rem, calc(0.99rem + 0.06vw), 1.04rem);
+	--step-0: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
+	--step-1: clamp(1.27rem, calc(1.2rem + 0.33vw), 1.5rem);
+	--step-2: clamp(1.42rem, calc(1.32rem + 0.54vw), 1.8rem);
+	--step-3: clamp(1.6rem, calc(1.44rem + 0.8vw), 2.16rem);
+	--step-4: clamp(1.8rem, calc(1.58rem + 1.13vw), 2.59rem);
+	--step-5: clamp(2.03rem, calc(1.72rem + 1.55vw), 3.11rem);
 
 	/* Line Height */
 	--lh-large: 1.6;
@@ -166,27 +165,27 @@ h6 {
 }
 
 h1 {
-	font-size: var(--step-4);
+	font-size: var(--step-5);
 }
 
 h2 {
-	font-size: var(--step-3);
+	font-size: var(--step-4);
 }
 
 h3 {
-	font-size: var(--step-2);
+	font-size: var(--step-3);
 }
 
 h4 {
-	font-size: var(--step-1);
+	font-size: var(--step-2);
 }
 
 h5 {
-	font-size: var(--step-0);
+	font-size: var(--step-1);
 }
 
 h6 {
-	font-size: var(--step--1);
+	font-size: var(--step-0);
 }
 
 address {
@@ -346,7 +345,7 @@ td {
 th,
 thead,
 tfoot {
-	font-weight: var(--fw-body-medium);
+	font-weight: var(--fw-body-bold);
 }
 
 th,
@@ -372,7 +371,7 @@ fieldset {
 }
 
 legend {
-	font-weight: var(--fw-body-medium);
+	font-weight: var(--fw-body-bold);
 }
 
 label {
@@ -422,7 +421,7 @@ button,
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-body-medium);
+	font-weight: var(--fw-body-bold);
 	text-align: center;
 	background-color: var(--c-bg-3);
 	border-color: var(--c-bg-3);
@@ -778,14 +777,22 @@ canvas {
 
 .text-step-2 {
 	font-size: var(--step-2);
+	line-height: var(--lh-small);
 }
 
 .text-step-3 {
 	font-size: var(--step-3);
+	line-height: var(--lh-small);
 }
 
 .text-step-4 {
 	font-size: var(--step-4);
+	line-height: var(--lh-small);
+}
+
+.text-step-5 {
+	font-size: var(--step-5);
+	line-height: var(--lh-small);
 }
 
 /* Font Weight */
@@ -836,7 +843,7 @@ canvas {
 .link-only-icon {
 	display: inline-block;
 	padding: var(--padding-xxs);
-	font-size: var(--step-0);
+	font-size: var(--step-1);
 	line-height: 0;
 	color: inherit;
 	text-decoration-line: none;
@@ -956,7 +963,6 @@ canvas {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	font-size: var(--step--1);
-	font-weight: var(--fw-body-medium);
 	line-height: var(--lh-small);
 	background-color: var(--c-bg-3);
 	border-radius: var(--br-small);
