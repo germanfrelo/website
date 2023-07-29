@@ -18,24 +18,19 @@
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
 :root {
-	/* Font Family */
-	--ff-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	--ff-sans: "Inter", var(--ff-fallback);
+	/* Font */
+	--ff-sans-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--ff-body: "Asap", var(--ff-sans-fallback);
+	--fw-body-regular: 400;
+	--fw-body-medium: 550;
+	--fw-body-bold: 700;
+	--ff-headings: "Fira Sans", var(--ff-sans-fallback);
+	--fw-headings: 700;
 	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
 
-	/* Font Weight */
-	--fw-700: 700;
-	--fw-600: 600;
-	--fw-500: 500;
-	--fw-400: 400;
-
-	/* Base Size */
-	--base-size: 1rem;
-
-	/* Scale Ratio */
-	--ratio: 1.333;
-
 	/* Size Scale */
+	--base-size: 1rem;
+	--ratio: 1.333;
 	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
 	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
 	--s-700: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
@@ -46,9 +41,20 @@
 	--s-200: calc(var(--base-size) / var(--ratio) / var(--ratio));
 	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
 
+	/* Fluid Type Scale */
+
+	/* @link https://utopia.fyi/type/calculator?c=320,18,1.125,1440,20,1.2,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step--1: clamp(1rem, calc(0.99rem + 0.06vw), 1.04rem);
+	--step-0: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
+	--step-1: clamp(1.27rem, calc(1.2rem + 0.33vw), 1.5rem);
+	--step-2: clamp(1.42rem, calc(1.32rem + 0.54vw), 1.8rem);
+	--step-3: clamp(1.6rem, calc(1.44rem + 0.8vw), 2.16rem);
+	--step-4: clamp(1.8rem, calc(1.58rem + 1.13vw), 2.59rem);
+	--step-5: clamp(2.03rem, calc(1.72rem + 1.55vw), 3.11rem);
+
 	/* Line Height */
-	--lh-large: 1.666;
-	--lh-small: 1.25;
+	--lh-large: 1.6;
+	--lh-small: 1.2;
 
 	/* Line length */
 	--page-max-inline-size: 60rem;
@@ -131,8 +137,10 @@ html {
 body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	font-family: var(--ff-sans);
-	font-weight: var(--fw-400);
+	font-family: var(--ff-body);
+	font-size: var(--step-0);
+	font-weight: var(--fw-body-regular);
+	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
 	accent-color: var(--c-accent);
@@ -145,36 +153,42 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: var(--fw-700);
+	font-family: var(--ff-headings);
+	font-weight: var(--fw-headings);
+	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
 }
 
 h1 {
-	font-size: var(--s-700);
+	font-size: var(--step-5);
 }
 
 h2 {
-	font-size: var(--s-600);
+	font-size: var(--step-4);
 }
 
 h3 {
-	font-size: var(--s-500);
+	font-size: var(--step-3);
 }
 
 h4 {
-	font-size: var(--s-400);
+	font-size: var(--step-2);
 }
 
 h5 {
-	font-size: var(--s-300);
+	font-size: var(--step-1);
 }
 
 h6 {
-	font-size: var(--s-200);
+	font-size: var(--step-0);
 }
 
 /* Grouping content
    ======================================== */
+
+address {
+	font-style: normal;
+}
 
 hr {
 	block-size: var(--bw-2);
@@ -222,7 +236,7 @@ Remove list styles on `ol` and `ul` elements with an explicit ARIA list role add
 }
 
 dt {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 dd {
@@ -243,7 +257,6 @@ a {
 
 .site-header a {
 	display: inline-block;
-	line-height: var(--lh-small);
 	color: inherit;
 	text-decoration: none;
 }
@@ -274,14 +287,14 @@ a:is(:hover, :focus) {
 
 b,
 strong {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 code,
 samp,
 kbd {
 	font-family: var(--ff-mono);
-	font-size: 0.875em;
+	font-size: var(--step--1);
 }
 
 code {
@@ -293,7 +306,6 @@ code {
 
 pre code {
 	padding: 0;
-	font-size: inherit;
 	background: inherit;
 	border-radius: 0;
 }
@@ -302,7 +314,7 @@ kbd {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-family: var(--ff-sans);
+	font-family: var(--ff-body);
 	line-height: 1;
 	white-space: nowrap;
 	border: var(--bw-1) solid var(--c-bd-1);
@@ -336,7 +348,7 @@ td {
 th,
 thead,
 tfoot {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-bold);
 }
 
 th,
@@ -351,7 +363,6 @@ td:has(+ th) {
 
 caption {
 	padding-block: var(--padding-xxs);
-	font-weight: var(--fw-600);
 }
 
 /* Forms
@@ -363,7 +374,7 @@ fieldset {
 }
 
 legend {
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-bold);
 }
 
 label {
@@ -394,7 +405,7 @@ button,
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-600);
+	font-weight: var(--fw-body-bold);
 	text-align: center;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-bd-1);
@@ -706,6 +717,8 @@ canvas {
 	justify-content: center;
 }
 
+/* Gap */
+
 .gap-100 {
 	gap: var(--s-100);
 }
@@ -738,7 +751,7 @@ canvas {
 	gap: var(--s-800);
 }
 
-/* Margin */
+/* Margin Block */
 
 .my-xxs {
 	margin-block: var(--s-100);
@@ -776,48 +789,52 @@ canvas {
 	margin-block: var(--s-900);
 }
 
-.text-200 {
-	font-size: var(--s-200);
+/* Font Size */
+
+.text-step--1 {
+	font-size: var(--step--1);
 }
 
-.text-300 {
-	font-size: var(--s-300);
+.text-step-0 {
+	font-size: var(--step-0);
 }
 
-.text-400 {
-	font-size: var(--s-400);
+.text-step-1 {
+	font-size: var(--step-1);
 }
 
-.text-500 {
-	font-size: var(--s-500);
+.text-step-2 {
+	font-size: var(--step-2);
+	line-height: var(--lh-small);
 }
 
-.text-600 {
-	font-size: var(--s-600);
+.text-step-3 {
+	font-size: var(--step-3);
+	line-height: var(--lh-small);
 }
 
-.text-700 {
-	font-size: var(--s-700);
+.text-step-4 {
+	font-size: var(--step-4);
+	line-height: var(--lh-small);
 }
 
-.text-800 {
-	font-size: var(--s-800);
+.text-step-5 {
+	font-size: var(--step-5);
+	line-height: var(--lh-small);
 }
 
-.weight-regular {
-	font-weight: var(--fw-400);
+/* Font Weight */
+
+.font-regular {
+	font-weight: var(--fw-body-regular);
 }
 
-.weight-medium {
-	font-weight: var(--fw-500);
+.font-medium {
+	font-weight: var(--fw-body-medium);
 }
 
-.weight-semibold {
-	font-weight: var(--fw-600);
-}
-
-.weight-bold {
-	font-weight: var(--fw-700);
+.font-bold {
+	font-weight: var(--fw-body-bold);
 }
 
 /* ============ 5. BLOCKS ============ */
@@ -832,7 +849,7 @@ canvas {
 	justify-content: center;
 	padding-block: var(--padding-xs);
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-body-bold);
 	line-height: var(--lh-small);
 	text-align: center;
 	text-decoration: none;
@@ -883,7 +900,7 @@ canvas {
 .link-icon {
 	display: inline-block;
 	padding: var(--padding-xxs);
-	font-size: var(--s-500);
+	font-size: var(--step-1);
 	line-height: 0;
 	color: inherit;
 	text-decoration: none;
@@ -892,13 +909,6 @@ canvas {
 
 .link-icon:hover {
 	background-color: var(--c-bg-a);
-}
-
-/* Logo
-   ======================================== */
-
-.logo {
-	font-size: 1.125rem;
 }
 
 /* Photo about
@@ -931,6 +941,7 @@ canvas {
 
 .site-header {
 	padding-block: var(--s-500);
+	line-height: var(--lh-small);
 }
 
 .site-header__inner {
@@ -962,6 +973,7 @@ canvas {
 
 .site-footer {
 	padding-block: var(--s-700);
+	font-size: var(--step--1);
 	color: var(--c-tx-2);
 	text-align: center;
 	background-color: var(--c-bg-2);
@@ -974,8 +986,7 @@ canvas {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-size: 0.875em;
-	font-weight: var(--fw-500);
+	font-size: var(--step--1);
 	line-height: var(--lh-small);
 	white-space: nowrap;
 	background-color: var(--c-bg-3);
