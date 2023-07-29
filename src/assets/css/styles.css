@@ -868,15 +868,6 @@ canvas {
 	color: var(--c-tx-1);
 }
 
-/* Logo
-   ======================================== */
-
-.logo {
-	display: block;
-	font-weight: var(--fw-body-bold);
-	line-height: 1;
-}
-
 /* Photo about
    ======================================== */
 
