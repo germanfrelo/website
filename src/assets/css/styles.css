@@ -261,11 +261,11 @@ a:is(:hover, :focus) {
 	text-decoration-line: none;
 }
 
-.site-nav-list li {
+.site-nav-layout li {
 	position: relative;
 }
 
-.site-nav-list li::after {
+.site-nav-layout li::after {
 	--underline-thickness: var(--bw-3);
 
 	position: absolute;
@@ -277,11 +277,11 @@ a:is(:hover, :focus) {
 	background-color: transparent;
 }
 
-.site-nav-list li:hover::after {
+.site-nav-layout li:hover::after {
 	background-color: var(--c-bd-1);
 }
 
-.site-nav-list li:has([aria-current="page"])::after {
+.site-nav-layout li:has([aria-current="page"])::after {
 	background-color: var(--c-accent);
 }
 
@@ -916,10 +916,10 @@ canvas {
 	justify-content: space-between;
 }
 
-/* Site nav list
+/* Site nav layout
    ======================================== */
 
-.site-nav-list {
+.site-nav-layout {
 	display: flex;
 	flex-wrap: wrap;
 	row-gap: var(--s-400);
