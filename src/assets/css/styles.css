@@ -19,7 +19,9 @@
 
 :root {
 	/* Font */
-	--ff-sans-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+	/* https://github.com/system-fonts/modern-font-stacks */
+	--ff-sans-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--ff-body: "Asap", var(--ff-sans-fallback);
 	--fw-body-regular: 400;
 	--fw-body-medium: 500;
@@ -27,7 +29,7 @@
 	--fw-body-bold: 700;
 	--ff-headings: "Fira Sans", var(--ff-sans-fallback);
 	--fw-headings: 700;
-	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+	--ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
 
 	/* Line Height */
 	--lh-base: 1.7;
