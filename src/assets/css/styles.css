@@ -142,6 +142,7 @@ body {
 	font-family: var(--ff-body);
 	font-size: var(--step-0);
 	font-weight: var(--fw-400);
+	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
 	accent-color: var(--c-accent);
@@ -156,6 +157,7 @@ h5,
 h6 {
 	font-family: var(--ff-headings);
 	font-weight: var(--fw-700);
+	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
 }
 
