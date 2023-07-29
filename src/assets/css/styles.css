@@ -20,7 +20,8 @@
 :root {
 	/* Font Family */
 	--ff-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	--ff-sans: "Inter", var(--ff-fallback);
+	--ff-body: "Asap", var(--ff-fallback);
+	--ff-headings: "Fira Sans", var(--ff-fallback);
 	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
 
 	/* Font Weight */
@@ -138,7 +139,7 @@ html {
 body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	font-family: var(--ff-sans);
+	font-family: var(--ff-body);
 	font-size: var(--step-0);
 	font-weight: var(--fw-400);
 	line-height: var(--lh-large);
@@ -153,6 +154,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: var(--ff-headings);
 	font-weight: var(--fw-700);
 	line-height: var(--lh-small);
 }
@@ -312,7 +314,7 @@ kbd {
 	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-family: var(--ff-sans);
+	font-family: var(--ff-body);
 	line-height: 1;
 	white-space: nowrap;
 	border: var(--bw-1) solid var(--c-bd-1);
