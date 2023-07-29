@@ -958,7 +958,6 @@ canvas {
 	font-size: var(--step--1);
 	font-weight: var(--fw-body-medium);
 	line-height: var(--lh-small);
-	white-space: nowrap;
 	background-color: var(--c-bg-3);
 	border-radius: var(--br-small);
 }
