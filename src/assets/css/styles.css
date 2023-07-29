@@ -22,6 +22,7 @@
 	--ff-sans-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	--ff-body: "Asap", var(--ff-sans-fallback);
 	--fw-body-regular: 400;
+	--fw-body-medium: 550;
 	--fw-body-bold: 700;
 	--ff-headings: "Fira Sans", var(--ff-sans-fallback);
 	--fw-headings: 700;
@@ -826,6 +827,10 @@ canvas {
 
 .font-regular {
 	font-weight: var(--fw-body-regular);
+}
+
+.font-medium {
+	font-weight: var(--fw-body-medium);
 }
 
 .font-bold {
