@@ -18,15 +18,14 @@
 /* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
 
 :root {
-	/* Font Family */
-	--ff-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	--ff-body: "Asap", var(--ff-fallback);
-	--ff-headings: "Fira Sans", var(--ff-fallback);
+	/* Font */
+	--ff-sans-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--ff-body: "Asap", var(--ff-sans-fallback);
+	--fw-body-regular: 400;
+	--fw-body-bold: 700;
+	--ff-headings: "Fira Sans", var(--ff-sans-fallback);
+	--fw-headings: 700;
 	--ff-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
-
-	/* Font Weight */
-	--fw-700: 700;
-	--fw-400: 400;
 
 	/* Size Scale */
 	--base-size: 1rem;
@@ -139,7 +138,7 @@ body {
 	grid-template-rows: auto 1fr auto;
 	font-family: var(--ff-body);
 	font-size: var(--step-0);
-	font-weight: var(--fw-400);
+	font-weight: var(--fw-body-regular);
 	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
 	color: var(--c-tx-1);
@@ -154,7 +153,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--ff-headings);
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-headings);
 	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
 }
@@ -236,7 +235,7 @@ Remove list styles on `ol` and `ul` elements with an explicit ARIA list role add
 }
 
 dt {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 dd {
@@ -287,7 +286,7 @@ a:is(:hover, :focus) {
 
 b,
 strong {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 code,
@@ -348,7 +347,7 @@ td {
 th,
 thead,
 tfoot {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 th,
@@ -374,7 +373,7 @@ fieldset {
 }
 
 legend {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 label {
@@ -405,7 +404,7 @@ button,
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 	text-align: center;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-bd-1);
@@ -826,11 +825,11 @@ canvas {
 /* Font Weight */
 
 .font-regular {
-	font-weight: var(--fw-400);
+	font-weight: var(--fw-body-regular);
 }
 
 .font-bold {
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 }
 
 /* ============ 5. BLOCKS ============ */
@@ -845,7 +844,7 @@ canvas {
 	justify-content: center;
 	padding-block: var(--padding-xs);
 	padding-inline: var(--padding-md);
-	font-weight: var(--fw-700);
+	font-weight: var(--fw-body-bold);
 	line-height: var(--lh-small);
 	text-align: center;
 	text-decoration: none;
