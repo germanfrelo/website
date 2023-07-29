@@ -53,7 +53,7 @@
 	--step-5: clamp(2.03rem, calc(1.72rem + 1.55vw), 3.11rem);
 
 	/* Line Height */
-	--lh-large: 1.7;
+	--lh-large: 1.6;
 	--lh-small: 1.2;
 
 	/* Line length */
