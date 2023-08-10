@@ -1,11 +1,14 @@
 <header class="site-header">
-	<div class="wrapper site-header-layout">
-		<a
-			href="/"
-			aria-label="Homepage"
-			class="text-step-1 font-bold"
-			>Germán Freixinós López</a
-		>
+	<div class="site-header-layout wrapper">
+		<div>
+			<a
+				href="/"
+				aria-label="Homepage"
+				rel="me"
+				class="logo"
+				>Germán Freixinós López</a
+			>
+		</div>
 
 		<nav>
 			<ul
@@ -16,6 +19,7 @@
 				<li>
 					<a
 						href="{{ item.url }}"
+						class="site-nav-link"
 						{{
 						helpers.getLinkActiveState(item.url,
 						page.url)

@@ -7,6 +7,99 @@ layout: "layouts/base.html"
 <div class="wrapper flow">
 	<h1>Projects</h1>
 
+	<fieldset>
+		<legend>Controls</legend>
+		<select
+			name=""
+			id=""
+		>
+			<option value="Option">Option</option>
+		</select>
+		<input type="text" />
+		<button>Email</button>
+		<button type="submit">Submit</button>
+	</fieldset>
+
+	<details>
+		<summary>Summary</summary>
+		<p>Type the key <kbd>Esc</kbd>. Libero <code>deserunt</code> ducimus laudantium consectetur magni laboriosam! Laudantium sed blanditiis iure possimus, ab autem laboriosam, ad esse quisquam soluta odio eos omnis!</p>
+
+		<details>
+			<summary>Summary</summary>
+			<p>Lorem ipsum dolor sit amet <kbd>Esc</kbd> adipisicing elit. Libero <code>deserunt</code> ducimus laudantium consectetur magni laboriosam! Laudantium sed blanditiis iure possimus, ab autem laboriosam, ad esse quisquam soluta odio eos omnis!</p>
+		</details>
+	</details>
+
+	<pre>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi illum nisi, error illo voluptas odit aliquam aliquid voluptatem, unde obcaecati consectetur incidunt cum voluptatibus consequuntur et. Eveniet ipsam corporis incidunt?</pre>
+
+	<pre><code>pre {
+	padding-block: var(--padding-md);
+	padding-inline: var(--padding-lg);
+	font-family: var(--ff-mono);
+	font-size: 0.875em;
+	background-color: var(--c-bg-2);
+	border: var(--bw-1) solid var(--c-bg-a);
+	border-radius: var(--br-small);
+}
+</code></pre>
+
+	<blockquote cite="https://en.wikipedia.org/wiki/Block_quotation">
+		<p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
+		<p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
+		<cite><a href="#!">Said no one, ever.</a></cite>
+	</blockquote>
+
+	<table>
+		<caption>
+			How I chose to spend my money
+		</caption>
+		<thead>
+			<tr>
+				<th scope="col">Purchase</th>
+				<th scope="col">Location</th>
+				<th scope="col">Date</th>
+				<th scope="col">Evaluation</th>
+				<th scope="col">Cost (€)</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="4">SUM</td>
+				<td>118</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<th scope="row">Haircut</th>
+				<td>Hairdresser</td>
+				<td>12/09</td>
+				<td>Great idea</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<th scope="row">Lasagna</th>
+				<td>Restaurant</td>
+				<td>12/09</td>
+				<td>Regrets</td>
+				<td>18</td>
+			</tr>
+			<tr>
+				<th scope="row">Shoes</th>
+				<td>Shoeshop</td>
+				<td>13/09</td>
+				<td>Big regrets</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<th scope="row">Toothpaste</th>
+				<td>Supermarket</td>
+				<td>13/09</td>
+				<td>Good</td>
+				<td>5</td>
+			</tr>
+		</tbody>
+	</table>
+
 	<p>These are some of the projects that I've been making throughout my self-learning experience.</p>
 	<p>
 		See more on my
@@ -24,10 +117,10 @@ layout: "layouts/base.html"
 		profiles.
 	</p>
 
-	<div class="[ projects ] [ gap-600 my-xl ]">
-		<article class="[ card gap-400 ]">
+	<div class="projects gap-600 my-xl">
+		<article class="card gap-400">
 			<h2 class="text-step-1">My website</h2>
-			<p>Development of my personal website (this site).</p>
+			<p class="card__content">Development of my personal website (this site).</p>
 			<p>
 				<a
 					href="https://github.com/germanfrelo/website"
@@ -49,7 +142,7 @@ layout: "layouts/base.html"
 			</ul>
 		</article>
 
-		<article class="[ card gap-400 ]">
+		<article class="card gap-400">
 			<h2 class="text-step-1">
 				<a
 					href="https://github.com/germanfrelo/base-css-stylesheet"
@@ -57,7 +150,7 @@ layout: "layouts/base.html"
 					>base.css</a
 				>
 			</h2>
-			<p>A work-in-progress base CSS stylesheet, which includes both normalize/reset and opinionated base styles.</p>
+			<p class="card__content">A work-in-progress base CSS stylesheet, which includes both normalize/reset and opinionated base styles.</p>
 			<p>
 				<a
 					href="https://github.com/germanfrelo/base-css-stylesheet"
@@ -75,7 +168,7 @@ layout: "layouts/base.html"
 			</ul>
 		</article>
 
-		<article class="[ card gap-400 ]">
+		<article class="card gap-400">
 			<h2 class="text-step-1">
 				<a
 					href="https://germanfrelo.github.io/robofriends"
@@ -83,7 +176,7 @@ layout: "layouts/base.html"
 					>Robofriends</a
 				>
 			</h2>
-			<p>A simple project I created using Create React App in the "The Complete Web Developer in 2022: Zero to Mastery" online course.</p>
+			<p class="card__content">A simple project I created using Create React App in the "The Complete Web Developer in 2022: Zero to Mastery" online course.</p>
 			<p>
 				<a
 					href="https://github.com/germanfrelo/robofriends"
@@ -104,7 +197,7 @@ layout: "layouts/base.html"
 			</ul>
 		</article>
 
-		<article class="[ card gap-400 ]">
+		<article class="card gap-400">
 			<h2 class="text-step-1">
 				<a
 					href="https://codepen.io/germanfrelo/pen/mdrLXwx"
@@ -112,7 +205,7 @@ layout: "layouts/base.html"
 					>To-do list</a
 				>
 			</h2>
-			<p>A simple to-do list where you can add, rename, duplicate, complete and delete to-dos. It will be improved soon by rewriting it using React.</p>
+			<p class="card__content">A simple to-do list where you can add, rename, duplicate, complete and delete to-dos. It will be improved soon by rewriting it using React.</p>
 			<p>
 				<a
 					href="https://codepen.io/germanfrelo/pen/mdrLXwx"
@@ -132,7 +225,7 @@ layout: "layouts/base.html"
 			</ul>
 		</article>
 
-		<article class="[ card gap-400 ]">
+		<article class="card gap-400">
 			<h2 class="text-step-1">
 				<a
 					href="https://codepen.io/germanfrelo/pen/ZEpxNEz"
@@ -140,7 +233,7 @@ layout: "layouts/base.html"
 					>Pokédex</a
 				>
 			</h2>
-			<p>
+			<p class="card__content">
 				Search Pokémon by its number or show a random one. It uses
 				<a
 					href="https://pokeapi.co/"
@@ -176,7 +269,7 @@ layout: "layouts/base.html"
 					>Guess the number!</a
 				>
 			</h2>
-			<p>Try to guess the number in 10 turns or fewer.</p>
+			<p class="card__content">Try to guess the number in 10 turns or fewer.</p>
 			<p>
 				<a
 					href="https://codepen.io/germanfrelo/pen/abBJMyr"
