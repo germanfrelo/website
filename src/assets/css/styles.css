@@ -351,11 +351,8 @@ tfoot {
 }
 
 th,
-thead :is(tr, td),
-tfoot tr {
-	background-color: var(--c-bg-2);
-}
-
+thead,
+tfoot,
 td:has(+ th) {
 	background-color: var(--c-bg-2);
 }
