@@ -427,31 +427,16 @@ button,
 	background-color: var(--c-bg-1);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):is(:hover, :focus) {
 	background-color: var(--c-bg-2);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
-	background-color: var(--c-bg-2);
-}
-
-[type="image"]:hover {
+[type="image"]:is(:hover, :focus) {
 	background-color: revert;
 	border-color: revert;
 }
 
-[type="image"]:focus {
-	background-color: revert;
-	border-color: revert;
-}
-
-[type="submit"]:hover {
-	color: inherit;
-	background-color: var(--c-bg-1);
-	border-color: var(--c-tx-1);
-}
-
-[type="submit"]:focus {
+[type="submit"]:is(:hover, :focus) {
 	color: inherit;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-tx-1);
