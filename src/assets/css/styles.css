@@ -182,12 +182,12 @@ h6 {
 	font-size: var(--step-0);
 }
 
-/* Grouping content
-   ======================================== */
-
 address {
 	font-style: normal;
 }
+
+/* Grouping content
+   ======================================== */
 
 hr {
 	block-size: var(--bw-2);
