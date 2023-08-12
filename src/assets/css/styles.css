@@ -342,11 +342,11 @@ a {
 
 .site-nav-link {
 	display: block;
-	padding-block: var(--padding-xxs);
+	padding-block: var(--padding-xxxs);
 	/* padding-inline: var(--padding-sm); */
 	/* font-weight: var(--fw-body-semibold); */
 	/* color: var(--c-tx-2); */
-	/* border-block-end: var(--bw-3) solid transparent; */
+	border-block-end: var(--bw-2) solid transparent;
 	/* border-radius: var(--br-small); */
 }
 
@@ -355,16 +355,16 @@ a:is(:hover, :focus) {
 }
 
 .site-nav-link:hover {
-	/* color: var(--c-tx-1); */
+	color: var(--c-tx-1);
 	/* background-color: var(--c-bg-a); */
 	/* border-block-end-color: var(--c-bd-3); */
 }
 
 .site-nav-link[aria-current="page"] {
-	font-weight: var(--fw-body-semibold);
-	/* color: var(--c-accent-tx); */
+	/* font-weight: var(--fw-body-semibold); */
+	color: var(--c-tx-1);
 	/* background-color: var(--c-accent-bg); */
-	/* border-block-end-color: var(--c-accent-bg); */
+	border-block-end-color: var(--c-accent-bg);
 }
 
 /* a[href^="https://"]:not([class])::after {
@@ -1081,7 +1081,7 @@ Can be any acceptable flexbox alignment value.
 .site-header {
 	padding-block: var(--padding-md);
 	/* font-size: var(--step--1); */
-	/* font-weight: var(--fw-body-semibold); */
+	font-weight: var(--fw-body-semibold);
 	line-height: var(--lh-small);
 	background-color: var(--c-bg-2);
 	/* border-block-end: var(--bw-1) solid var(--c-bd-3); */
@@ -1093,10 +1093,17 @@ Can be any acceptable flexbox alignment value.
 .site-header-layout {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-400);
+	row-gap: var(--s-300);
 	column-gap: var(--s-800);
 	align-items: baseline;
 	justify-content: space-between;
+}
+
+/* Site nav
+   ======================================== */
+
+.site-nav {
+	color: var(--c-tx-2);
 }
 
 /* Site nav layout
