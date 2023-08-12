@@ -94,8 +94,7 @@
 	--border-radius: 0.25rem;
 
 	/* Transitions */
-	--tr-duration: 0.1s;
-	--tr-timing-function: ease-in;
+	--tr-duration-and-timing-function: 0.1s ease-in;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -248,7 +247,7 @@ dd {
 
 a {
 	color: var(--c-link);
-	transition: color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration-and-timing-function);
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
@@ -392,7 +391,7 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
 button,
@@ -493,7 +492,7 @@ summary {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	margin-inline: calc(-1 * var(--padding-xs));
-	transition: background-color var(--tr-duration) var(--tr-timing-function);
+	transition: background-color var(--tr-duration-and-timing-function);
 }
 
 summary:hover {
