@@ -94,8 +94,7 @@
 	--border-radius: 0.25rem;
 
 	/* Transitions */
-	--tr-duration: 0.1s;
-	--tr-timing-function: ease-in;
+	--tr-duration-and-timing-function: 0.1s ease-in;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,7 +130,7 @@ html {
 	color-scheme: var(--color-scheme);
 }
 
-/* Sections
+/* Sections and headings
    ======================================== */
 
 body {
@@ -183,12 +182,12 @@ h6 {
 	font-size: var(--step-0);
 }
 
-/* Grouping content
-   ======================================== */
-
 address {
 	font-style: normal;
 }
+
+/* Grouping content
+   ======================================== */
 
 hr {
 	block-size: var(--bw-2);
@@ -248,7 +247,7 @@ dd {
 
 a {
 	color: var(--c-link);
-	transition: color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration-and-timing-function);
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
@@ -258,11 +257,11 @@ a {
 .site-header a {
 	display: inline-block;
 	color: inherit;
-	text-decoration: none;
+	text-decoration-line: none;
 }
 
 a:is(:hover, :focus) {
-	text-decoration: none;
+	text-decoration-line: none;
 }
 
 .site-nav a {
@@ -352,11 +351,8 @@ tfoot {
 }
 
 th,
-thead :is(tr, td),
-tfoot tr {
-	background-color: var(--c-bg-2);
-}
-
+thead,
+tfoot,
 td:has(+ th) {
 	background-color: var(--c-bg-2);
 }
@@ -392,7 +388,7 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
 button,
@@ -431,31 +427,16 @@ button,
 	background-color: var(--c-bg-1);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):is(:hover, :focus) {
 	background-color: var(--c-bg-2);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
-	background-color: var(--c-bg-2);
-}
-
-[type="image"]:hover {
+[type="image"]:is(:hover, :focus) {
 	background-color: revert;
 	border-color: revert;
 }
 
-[type="image"]:focus {
-	background-color: revert;
-	border-color: revert;
-}
-
-[type="submit"]:hover {
-	color: inherit;
-	background-color: var(--c-bg-1);
-	border-color: var(--c-tx-1);
-}
-
-[type="submit"]:focus {
+[type="submit"]:is(:hover, :focus) {
 	color: inherit;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-tx-1);
@@ -493,7 +474,7 @@ summary {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	margin-inline: calc(-1 * var(--padding-xs));
-	transition: background-color var(--tr-duration) var(--tr-timing-function);
+	transition: background-color var(--tr-duration-and-timing-function);
 }
 
 summary:hover {
@@ -852,7 +833,7 @@ canvas {
 	font-weight: var(--fw-body-bold);
 	line-height: var(--lh-small);
 	text-align: center;
-	text-decoration: none;
+	text-decoration-line: none;
 	background-color: transparent;
 	border: var(--bw-2) solid var(--c-bd-2);
 	border-radius: var(--border-radius);
@@ -903,7 +884,7 @@ canvas {
 	font-size: var(--step-1);
 	line-height: 0;
 	color: inherit;
-	text-decoration: none;
+	text-decoration-line: none;
 	border-radius: var(--border-radius);
 }
 
