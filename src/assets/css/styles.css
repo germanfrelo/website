@@ -234,6 +234,7 @@ h6 {
 	font-variant-ligatures: normal;
 	line-height: var(--lh-small);
 	text-wrap: balance;
+	overflow-wrap: normal; /* For using with `text-wrap: balance` to prevent cases like this one: https://codepen.io/germanfrelo/pen/zYMOvWv */
 }
 
 .card :is(h1, h2, h3, h4, h5, h6) {
