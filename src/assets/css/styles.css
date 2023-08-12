@@ -297,14 +297,6 @@ blockquote {
 	border-inline-start: var(--bw-4) solid var(--c-bd-2);
 }
 
-blockquote > :first-child {
-	margin-block-start: 0;
-}
-
-blockquote > :last-child {
-	margin-block-end: 0;
-}
-
 ol,
 ul,
 menu {
