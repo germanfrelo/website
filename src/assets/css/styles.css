@@ -408,10 +408,8 @@ kbd {
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
 	border: var(--bw-1) solid var(--c-bd-3);
-	/* border-block-end-width: var(--bw-2); */
-	/* border-block-end: var(--bw-2) solid var(--c-bd-2); */
+	border-block-end-width: var(--bw-2);
 	border-radius: var(--br-medium);
-	box-shadow: inset 0 calc(-1 * var(--bw-1)) var(--c-bd-3);
 }
 
 /* Embedded content
@@ -476,7 +474,6 @@ select,
 button {
 	padding-block: var(--padding-xs);
 	padding-inline: var(--padding-xs);
-	/* font-size: var(--step--1); */
 	line-height: var(--lh-small);
 	color: inherit;
 	background-color: var(--c-bg-1);
@@ -519,7 +516,7 @@ button,
 
 	/* font-weight: var(--fw-body-semibold); */
 	text-align: center;
-	background-color: var(--c-bg-2);
+	background-color: var(--c-bg-3);
 }
 
 [type="submit"] {
@@ -533,7 +530,7 @@ button,
 }
 
 :is(button, [type="button"], [type="submit"], [type="reset"], [type="color"]):is(:hover, :focus) {
-	background-color: var(--c-bg-3);
+	background-color: var(--c-bg-4);
 }
 
 [type="submit"]:is(:hover, :focus) {
