@@ -114,7 +114,8 @@
 	--color-scrollbar-thumb: var(--color-surface-5); */
 
 	/* Mine */
-	--c-neutral-a: hsla(217deg 10% 50% / 10%);
+	--c-neutral-darker: hsla(217deg 10% 50% / 10%);
+	--c-neutral-lighter: hsla(217deg 10% 100% / 10%);
 	--c-neutral-100: hsl(217deg 15% 100%);
 	--c-neutral-98: hsl(217deg 25% 98%);
 	--c-neutral-94: hsl(217deg 15% 94%);
@@ -145,7 +146,7 @@
 	--c-bg-2: var(--c-neutral-98);
 	--c-bg-3: var(--c-neutral-94);
 	--c-bg-4: var(--c-neutral-90);
-	--c-bg-a: var(--c-neutral-a);
+	--c-bg-a: var(--c-neutral-darker);
 	--c-bd-1: var(--c-neutral-40);
 	--c-bd-2: var(--c-neutral-70);
 	--c-bd-3: var(--c-neutral-85);
@@ -187,7 +188,7 @@
 		--c-bg-2: var(--c-neutral-13);
 		--c-bg-3: var(--c-neutral-23);
 		--c-bg-4: var(--c-neutral-30);
-		--c-bg-a: var(--c-neutral-a);
+		--c-bg-a: var(--c-neutral-lighter);
 		--c-bd-1: var(--c-neutral-94);
 		--c-bd-2: var(--c-neutral-60);
 		--c-bd-3: var(--c-neutral-30);
