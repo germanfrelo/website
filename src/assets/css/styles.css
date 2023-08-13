@@ -585,12 +585,14 @@ canvas {
 /* Flow
    ======================================== */
 
-.flow > * + * {
-	margin-block-start: var(--flow-space, 1em);
+h1,
+h2,
+h3 {
+	--flow-space: 1.5em;
 }
 
-.flow > :is(h1, h2, h3) {
-	--flow-space: 1.5em;
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
 }
 
 /* Stack
