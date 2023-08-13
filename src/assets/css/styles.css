@@ -145,8 +145,7 @@
 	--c-bd-2: var(--c-neutral-70);
 	--c-bd-3: var(--c-neutral-90);
 	--c-link: var(--c-blue-on-light);
-	--c-accent-bg: hsl(172deg 90% 66%);
-	--c-accent-tx: hsl(172deg 90% 10%);
+	--c-accent: hsl(172deg 100% 45%);
 
 	/* --c-link-a: hsl(217deg 90% 48% / 50%); */
 
