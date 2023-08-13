@@ -275,6 +275,16 @@ a {
 	text-decoration-line: none;
 }
 
+a[href^="https://"]:not([class])::after
+{
+	padding-inline-end: 0.25em;
+	font-size: 0.875em;
+	font-style: normal;
+	color: var(--color-underline);
+	content: "\00A0↗";
+	transition: color var(--tr-duration-and-timing-function);
+}
+
 a:is(:hover, :focus) {
 	--color-underline: currentcolor;
 }
