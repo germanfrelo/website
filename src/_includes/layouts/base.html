@@ -4,14 +4,83 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{ title }}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap:wght@400..700&family=Fira+Sans:wght@700&display=swap" />
-		<link rel="stylesheet" href="/assets/css/styles.css" />
-		<meta name="author" content="Germán Freixinós López" />
-		<meta name="description" content="{{ description }}" />
-		<meta name="color-scheme" content="light dark" />
-		<meta name="generator" content="{{ eleventy.generator }}" />
+		<!-- <link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Asap:wght@400..700&family=Fira+Sans:wght@700&display=swap"
+		/> -->
+		<!--
+  - 1. Preemptively warm up the fonts’ origin.
+  -
+  - 2. Initiate a high-priority, asynchronous fetch for the CSS file. Works in
+  -    most modern browsers.
+  -
+  - 3. Initiate a low-priority, asynchronous fetch that gets applied to the page
+  -    only after it’s arrived. Works in all browsers with JavaScript enabled.
+  -
+  - 4. In the unlikely event that a visitor has intentionally disabled
+  -    JavaScript, fall back to the original method. The good news is that,
+  -    although this is a render-blocking request, it can still make use of the
+  -    preconnect which makes it marginally faster than the default.
+  -->
+
+		<!-- [1] -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+
+		<!-- [2] -->
+		<link
+			rel="preload"
+			as="style"
+			href="{{ fonts.fontLink }}"
+		/>
+
+		<!-- [3] -->
+		<link
+			rel="stylesheet"
+			href="{{ fonts.fontLink }}"
+			media="print"
+			onload="this.media='all'"
+		/>
+
+		<!-- [4] -->
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="{{ fonts.fontLink }}"
+			/>
+		</noscript>
+		<link
+			rel="stylesheet"
+			href="/assets/css/styles.css"
+		/>
+		<meta
+			name="author"
+			content="Germán Freixinós López"
+		/>
+		<meta
+			name="description"
+			content="{{ description }}"
+		/>
+		<meta
+			name="color-scheme"
+			content="light dark"
+		/>
 	</head>
 
 	<body class="site-layout">
