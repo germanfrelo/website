@@ -293,15 +293,18 @@ hr {
 }
 
 pre {
+	padding-inline: var(--padding-xxxs);
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
 	text-align: start;
-}
-
-pre:not(:has(> code)) {
-	padding-inline: var(--padding-xxxs);
 	border: var(--bw-1) solid var(--c-bd-3);
 	border-radius: var(--br-small);
+}
+
+pre:has(> code) {
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
+	background-color: var(--c-bg-2);
 }
 
 blockquote {
@@ -392,11 +395,9 @@ code {
 }
 
 pre > code {
-	display: block;
-	padding-block: var(--padding-xs);
-	padding-inline: var(--padding-sm);
-	background-color: var(--c-bg-2);
-	border-color: var(--c-bd-3);
+	padding: revert;
+	background-color: revert;
+	border: revert;
 }
 
 kbd {
