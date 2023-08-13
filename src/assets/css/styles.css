@@ -115,6 +115,7 @@
 	--c-neutral-98: hsl(217deg 30% 98%);
 	--c-neutral-94: hsl(217deg 15% 94%);
 	--c-neutral-90: hsl(217deg 10% 90%);
+	--c-neutral-85: hsl(217deg 10% 85%);
 	--c-neutral-80: hsl(217deg 10% 80%);
 	--c-neutral-70: hsl(217deg 10% 70%);
 	--c-neutral-60: hsl(217deg 10% 60%);
@@ -143,7 +144,7 @@
 	--c-bg-a: var(--c-neutral-55a);
 	--c-bd-1: var(--c-neutral-40);
 	--c-bd-2: var(--c-neutral-70);
-	--c-bd-3: var(--c-neutral-90);
+	--c-bd-3: var(--c-neutral-85);
 	--c-link: var(--c-blue-on-light);
 	--c-accent: hsl(172deg 100% 45%);
 
