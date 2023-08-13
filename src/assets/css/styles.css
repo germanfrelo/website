@@ -73,7 +73,9 @@
 	/* Colors */
 	--color-scheme: light dark;
 	--c-tx-1: hsl(217deg 50% 15%);
+	--c-tx-1-a: hsl(217deg 50% 15% / 50%);
 	--c-tx-2: hsl(217deg 15% 45%);
+	--c-tx-2-a: hsl(217deg 15% 45% / 50%);
 	--c-bg-1: hsl(217deg 50% 100%);
 	--c-bg-2: hsl(217deg 40% 98%);
 	--c-bg-3: hsl(217deg 25% 95%);
@@ -81,6 +83,7 @@
 	--c-bd-1: hsl(217deg 25% 85%);
 	--c-bd-2: hsl(217deg 25% 90%);
 	--c-link: hsl(217deg 90% 47%);
+	--c-link-a: hsl(217deg 90% 47% / 50%);
 	--c-accent: hsl(172deg 100% 45%);
 	--c-mark: hsla(55deg 100% 50% / 25%);
 
@@ -101,7 +104,9 @@
 	:root {
 		/* Colors */
 		--c-tx-1: hsl(217deg 25% 90%);
+		--c-tx-1-a: hsl(117deg 250% 90% / 50%);
 		--c-tx-2: hsl(217deg 10% 60%);
+		--c-tx-2-a: hsl(217deg 10% 60% / 50%);
 		--c-bg-1: hsl(217deg 15% 6%);
 		--c-bg-2: hsl(217deg 15% 9%);
 		--c-bg-3: hsl(217deg 15% 15%);
@@ -109,6 +114,7 @@
 		--c-bd-1: hsl(217deg 10% 30%);
 		--c-bd-2: hsl(217deg 10% 25%);
 		--c-link: hsl(217deg 100% 67%);
+		--c-link-a: hsl(217deg 100% 67% / 50%);
 		--c-accent: hsl(172deg 100% 45%);
 		--c-mark: hsla(55deg 100% 50% / 25%);
 	}
@@ -134,6 +140,9 @@ html {
    ======================================== */
 
 body {
+	--color: var(--c-tx-1);
+	--color-underline: var(--c-tx-1-a);
+
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	font-family: var(--ff-body);
@@ -141,7 +150,7 @@ body {
 	font-weight: var(--fw-body-regular);
 	font-variant-ligatures: no-common-ligatures;
 	line-height: var(--lh-large);
-	color: var(--c-tx-1);
+	color: var(--color);
 	accent-color: var(--c-accent);
 	background-color: var(--c-bg-1);
 }
@@ -246,12 +255,18 @@ dd {
    ======================================== */
 
 a {
-	color: var(--c-link);
-	transition: color var(--tr-duration-and-timing-function);
+	--color: var(--c-link);
+	--color-underline: var(--c-link-a);
+
+	color: var(--color);
+	text-decoration-color: var(--color-underline);
+	text-underline-offset: 0.2em;
+	transition: text-decoration-color var(--tr-duration-and-timing-function), color var(--tr-duration-and-timing-function);
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
-	color: inherit;
+	--color: inherit;
+	--color-underline: inherit;
 }
 
 .site-header a {
@@ -261,7 +276,7 @@ a {
 }
 
 a:is(:hover, :focus) {
-	text-decoration-line: none;
+	--color-underline: currentcolor;
 }
 
 .site-nav a {
