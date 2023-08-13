@@ -3,33 +3,33 @@ layout: "layouts/base.html"
 ---
 
 <style>
-	body {
-		padding: 1rem;
+	* {
+		margin: revert;
 	}
 
-	label {
-		display: block;
-		max-inline-size: max-content;
+	.heading {
+		/* background-color: tomato; */
+	}
+
+	.element-container {
+		/* background-color: bisque; */
+	}
+
+	.category-name {
+		/* background-color: aqua; */
 	}
 
 	.element-name {
-		display: flex;
-		flex-wrap: wrap;
-		row-gap: 0.25em;
-		column-gap: 0.5em;
-		align-items: center;
+		background-color: gold;
 	}
 
-	.element-name code::before {
-		content: "<";
-	}
-
-	.element-name code::after {
-		content: ">";
-	}
+	.element-type > label {
+		display: block;
+		max-inline-size: max-content;
+	} */
 </style>
 
-<body class="l-stack-lg">
+<body class="">
 	<div>
 		<h1>HTML elements test page</h1>
 
@@ -299,7 +299,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="sections"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Sections</h2>
 
@@ -308,10 +308,7 @@ layout: "layouts/base.html"
 			id="headings"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>: </span>
-				<span>Section Headings</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code>: Section Headings</h3>
 			<div class="element">
 				<h1>Heading level 1</h1>
 				<h2>Heading level 2</h2>
@@ -327,10 +324,7 @@ layout: "layouts/base.html"
 			id="address"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>address</code>: </span>
-				<span>Contact Address</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;address&gt;</code>: Contact Address</h3>
 			<div class="element">
 				<address>
 					Infinite Loop,<br />
@@ -345,7 +339,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="grouping-content"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Grouping content</h2>
 
@@ -354,10 +348,7 @@ layout: "layouts/base.html"
 			id="p"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>p</code>: </span>
-				<span>Paragraph</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;p&gt;</code>: Paragraph</h3>
 			<div class="element">
 				<p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
 			</div>
@@ -368,10 +359,7 @@ layout: "layouts/base.html"
 			id="hr"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>hr</code>: </span>
-				<span>Thematic Break (Horizontal Rule)</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;hr&gt;</code>: Thematic Break (Horizontal Rule</h3>
 			<div class="element">
 				<hr />
 			</div>
@@ -382,23 +370,27 @@ layout: "layouts/base.html"
 			id="pre"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>pre</code>: </span>
-				<span>Preformatted Text</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;pre&gt;</code>: Preformatted Text</h3>
 			<div class="element">
 				<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Hello World&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Hello World.&lt;/h1&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</pre
+My Bonnie lies over the ocean.
+
+My Bonnie lies over the sea.
+
+My Bonnie lies over the ocean.
+
+Oh, bring back my Bonnie to me.
+</pre
 				>
+
+				<pre><code>pre {
+	display: block;
+	font-family: monospace;
+	white-space-collapse: preserve;
+	text-wrap: nowrap;
+	margin: 1em 0px;
+}
+</code></pre>
 			</div>
 		</div>
 
@@ -407,10 +399,7 @@ layout: "layouts/base.html"
 			id="blockquote"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>blockquote</code>: </span>
-				<span>Block Quotation</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;blockquote&gt;</code>: Block Quotation</h3>
 			<div class="element">
 				<blockquote cite="https://en.wikipedia.org/wiki/Block_quotation">
 					<p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
@@ -425,10 +414,7 @@ layout: "layouts/base.html"
 			id="ol"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>ol</code>: </span>
-				<span>Ordered List</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;ol&gt;</code>: Ordered List</h3>
 			<div class="element">
 				<ol>
 					<li>List Item 1</li>
@@ -443,10 +429,7 @@ layout: "layouts/base.html"
 			id="ul"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>ul</code>: </span>
-				<span>Unordered List</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;ul&gt;</code>: Unordered List</h3>
 			<div class="element">
 				<ul>
 					<li>List Item 1</li>
@@ -461,10 +444,7 @@ layout: "layouts/base.html"
 			id="dl"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>dl</code>: </span>
-				<span>Description List</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;dl&gt;</code>: Description List</h3>
 			<div class="element">
 				<dl>
 					<dt>Term 1</dt>
@@ -484,10 +464,7 @@ layout: "layouts/base.html"
 			id="figure"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>figure</code>: </span>
-				<span>Figure with Optional Caption</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;figure&gt;</code>: Figure with Optional Caption</h3>
 			<div class="element">
 				<figure>
 					<img
@@ -504,7 +481,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="text-level-semantics"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Text-level semantics</h2>
 
@@ -513,10 +490,7 @@ layout: "layouts/base.html"
 			id="a"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>a</code>: </span>
-				<span>Anchor</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;a&gt;</code>: Anchor</h3>
 			<div class="element">
 				<p>This is <a href="#!">a text link</a>.</p>
 			</div>
@@ -527,10 +501,7 @@ layout: "layouts/base.html"
 			id="em"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>em</code>: </span>
-				<span>Emphasis</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;em&gt;</code>: Emphasis</h3>
 			<div class="element">
 				<p>The <em>em element</em> is used to add emphasis.</p>
 			</div>
@@ -541,10 +512,7 @@ layout: "layouts/base.html"
 			id="strong"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>strong</code>: </span>
-				<span>Strong Importance</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;strong&gt;</code>: Strong Importance</h3>
 			<div class="element">
 				<p>The <strong>strong element</strong> is used to indicate strong importance.</p>
 			</div>
@@ -555,10 +523,7 @@ layout: "layouts/base.html"
 			id="small"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>small</code>: </span>
-				<span>Side Comment</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;small&gt;</code>: Side Comment</h3>
 			<div class="element">
 				<p>This text is normal. <small>This text is small; it is used to convey something that has very little prominence, that is not important, but still need to be here.</small></p>
 				<p>Fine/small print (copyright and legal text): <small>The content is licensed under a Creative Commons License.</small></p>
@@ -571,10 +536,7 @@ layout: "layouts/base.html"
 			id="s"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>s</code>: </span>
-				<span>Strikethrough</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;s&gt;</code>: Strikethrough</h3>
 			<div class="element">
 				<p><s>This text has a strikethrough</s>.</p>
 			</div>
@@ -585,10 +547,7 @@ layout: "layouts/base.html"
 			id="cite"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>cite</code>: </span>
-				<span>Citation</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;cite&gt;</code>: Citation</h3>
 			<div class="element">
 				<p>More information can be found in <cite>[ISO-0000]</cite>.</p>
 			</div>
@@ -599,10 +558,7 @@ layout: "layouts/base.html"
 			id="q"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>q</code>: </span>
-				<span>Inline Quotation</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;q&gt;</code>: Inline Quotation</h3>
 			<div class="element">
 				<p>
 					Jeremy Keith said:
@@ -617,10 +573,7 @@ layout: "layouts/base.html"
 			id="dfn"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>dfn</code>: </span>
-				<span>Definition</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;dfn&gt;</code>: Definition</h3>
 			<div class="element">
 				<p>The HTML Definition element (<dfn>&lt;dfn&gt;</dfn>) is used to indicate the term being defined within the context of a definition phrase or sentence.</p>
 			</div>
@@ -631,10 +584,7 @@ layout: "layouts/base.html"
 			id="abbr"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>abbr</code>: </span>
-				<span>Abbreviation</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;abbr&gt;</code>: Abbreviation</h3>
 			<div class="element">
 				<p><abbr title="HyperText Markup Language">HTML</abbr></p>
 			</div>
@@ -645,10 +595,7 @@ layout: "layouts/base.html"
 			id="ruby"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>ruby</code>: </span>
-				<span>Ruby Annotation</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;ruby&gt;</code>: Ruby Annotation</h3>
 			<div class="element">
 				<ruby>
 					漢 <rp>(</rp>
@@ -666,10 +613,7 @@ layout: "layouts/base.html"
 			id="time"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>time</code>: </span>
-				<span>(Date) Time</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;time&gt;</code>: (Date) Time</h3>
 			<div class="element">
 				<p>
 					A date: Unix time began
@@ -703,10 +647,7 @@ layout: "layouts/base.html"
 			id="code"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>code</code>: </span>
-				<span>Inline Code</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;code&gt;</code>: Inline Code</h3>
 			<div class="element">
 				<p>Lorem ipsum <code>&lt;code&gt;</code> sit amet</p>
 			</div>
@@ -717,10 +658,7 @@ layout: "layouts/base.html"
 			id="var"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>var</code>: </span>
-				<span>Variable</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;var&gt;</code>: Variable</h3>
 			<div class="element">
 				<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
 			</div>
@@ -731,10 +669,7 @@ layout: "layouts/base.html"
 			id="samp"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>samp</code>: </span>
-				<span>Sample Output</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;samp&gt;</code>: Sample Output</h3>
 			<div class="element">
 				<div>
 					I was trying to boot my computer, but I got this hilarious message:<br />
@@ -748,10 +683,7 @@ layout: "layouts/base.html"
 			id="kbd"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>kbd</code>: </span>
-				<span>Keyboard Input</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;kbd&gt;</code>: Keyboard Input</h3>
 			<div class="element">
 				<p>
 					Keyboard keys:
@@ -779,10 +711,7 @@ layout: "layouts/base.html"
 			id="sub"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>sub</code>: </span>
-				<span>Subscript</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;sub&gt;</code>: Subscript</h3>
 			<div class="element">
 				<p>Footnotes: Lorem<sub>1</sub></p>
 				<p>
@@ -798,10 +727,7 @@ layout: "layouts/base.html"
 			id="sup"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>sup</code>: </span>
-				<span>Superscript</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;sup&gt;</code>: Superscript</h3>
 			<div class="element">
 				<p>Exponents: <var>E</var>=<var>m</var><var>c</var><sup>2</sup></p>
 				<p>Superior lettering: Lorem ipsum<sup>®</sup></p>
@@ -814,10 +740,7 @@ layout: "layouts/base.html"
 			id="i"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>i</code>: </span>
-				<span>Idiomatic Text</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;i&gt;</code>: Idiomatic Text</h3>
 			<div class="element">
 				<p>The <i>i element</i> is text that is offset from the normal text.</p>
 			</div>
@@ -828,10 +751,7 @@ layout: "layouts/base.html"
 			id="b"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>b</code>: </span>
-				<span>Bring Attention To</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;b&gt;</code>: Bring Attention To</h3>
 			<div class="element">
 				<p>The <b>b element</b> is stylistically different text from normal text, without any special importance.</p>
 			</div>
@@ -842,10 +762,7 @@ layout: "layouts/base.html"
 			id="u"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>u</code>: </span>
-				<span>Unarticulated Annotation (Underline)</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;u&gt;</code>: Unarticulated Annotation (Underline</h3>
 			<div class="element">
 				<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</p>
 			</div>
@@ -856,10 +773,7 @@ layout: "layouts/base.html"
 			id="mark"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>mark</code>: </span>
-				<span>Mark Text</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;mark&gt;</code>: Mark Text</h3>
 			<div class="element">
 				<p>The <mark>mark element</mark> indicates a highlight.</p>
 			</div>
@@ -870,10 +784,7 @@ layout: "layouts/base.html"
 			id="bdi"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>bdi</code>: </span>
-				<span>Bidirectional Isolate</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;bdi&gt;</code>: Bidirectional Isolate</h3>
 			<div class="element">
 				<p><bdi class="name">اَلأَعْشَى</bdi> - 1st place</p>
 				<p><bdi class="name">Jerry Cruncher</bdi> - 2nd place</p>
@@ -885,10 +796,7 @@ layout: "layouts/base.html"
 			id="bdo"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>bdo</code>: </span>
-				<span>Bidirectional Text Override</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;bdo&gt;</code>: Bidirectional Text Override</h3>
 			<div class="element">
 				<p><bdo dir="rtl">This text will go right to left.</bdo></p>
 			</div>
@@ -899,10 +807,7 @@ layout: "layouts/base.html"
 			id="wbr"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>wbr</code>: </span>
-				<span>Line Break Opportunity</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;wbr&gt;</code>: Line Break Opportunity</h3>
 			<div
 				class="element"
 				style="inline-size: 15em; overflow: hidden; resize: horizontal"
@@ -918,7 +823,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="edits"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Edits</h2>
 
@@ -927,10 +832,7 @@ layout: "layouts/base.html"
 			id="del-ins"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>del</code>, <code>ins</code>: </span>
-				<span>Deleted and Inserted Text</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>: Deleted and Inserted Text</h3>
 			<div class="element">
 				<p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
 			</div>
@@ -941,7 +843,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="embedded-content"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Embedded content</h2>
 
@@ -950,10 +852,7 @@ layout: "layouts/base.html"
 			id="picture"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>picture</code>: </span>
-				<span>Picture</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;picture&gt;</code>: Picture</h3>
 			<div class="element">
 				<picture>
 					<source
@@ -973,10 +872,7 @@ layout: "layouts/base.html"
 			id="img"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>img</code>: </span>
-				<span>Image Embed</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;img&gt;</code>: Image Embed</h3>
 			<div class="element">
 				<img
 					src="https://placedog.net/1000?random"
@@ -990,10 +886,7 @@ layout: "layouts/base.html"
 			id="iframe"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>iframe</code>: </span>
-				<span>Inline Frame</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;iframe&gt;</code>: Inline Frame</h3>
 			<div class="element">
 				<iframe src="index.html">If you see this, your browser does not support the iframe element.</iframe>
 			</div>
@@ -1004,10 +897,7 @@ layout: "layouts/base.html"
 			id="object"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>object</code>: </span>
-				<span>External Object</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;object&gt;</code>: External Object</h3>
 			<div class="element">
 				<object
 					type="image/jpeg"
@@ -1021,10 +911,7 @@ layout: "layouts/base.html"
 			id="video"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>video</code>: </span>
-				<span>Video Embed</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;video&gt;</code>: Video Embed</h3>
 			<div class="element">
 				<video
 					src="assets/video.mp4"
@@ -1038,10 +925,7 @@ layout: "layouts/base.html"
 			id="audio"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>audio</code>: </span>
-				<span>Embed Audio</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;audio&gt;</code>: Embed Audio</h3>
 			<div class="element">
 				<audio
 					src="assets/audio.mp3"
@@ -1055,10 +939,7 @@ layout: "layouts/base.html"
 			id="map-area"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>map</code>, <code>area</code>: </span>
-				<span>Image Map Area</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;map&gt;</code>, <code>&lt;area&gt;</code>: Image Map Area</h3>
 			<div class="element">
 				<img
 					src="assets/world-continents.png"
@@ -1115,10 +996,7 @@ layout: "layouts/base.html"
 			id="math"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>math</code>: </span>
-				<span>MathML</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;math&gt;</code>: MathML</h3>
 			<div class="element">
 				<math>
 					<mrow>
@@ -1148,10 +1026,7 @@ layout: "layouts/base.html"
 			id="svg"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>svg</code>: </span>
-				<span>Scalable Vector Graphics</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;svg&gt;</code>: Scalable Vector Graphics</h3>
 			<div class="element">
 				<svg
 					width="100px"
@@ -1172,7 +1047,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="tabular-data"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Tabular data</h2>
 
@@ -1181,10 +1056,7 @@ layout: "layouts/base.html"
 			id="table"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>table</code>: </span>
-				<span>Table</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;table&gt;</code>: Table</h3>
 			<div class="element">
 				<table>
 					<caption>
@@ -1230,7 +1102,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="forms"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Forms</h2>
 
@@ -1239,10 +1111,7 @@ layout: "layouts/base.html"
 			id="fieldset-legend"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>fieldset</code>, <code>legend</code>: </span>
-				<span>Fieldset Set, Legend</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>: Fieldset Set, Legend</h3>
 			<div class="element">
 				<fieldset>
 					<legend>Field Set Legend</legend>
@@ -1255,10 +1124,7 @@ layout: "layouts/base.html"
 			id="label"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>label</code>: </span>
-				<span>Input Label</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;label&gt;</code>: Input Label</h3>
 			<div class="element">
 				<label for="form-input-label">Label</label>
 				<input
@@ -1273,12 +1139,9 @@ layout: "layouts/base.html"
 			id="input"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>input</code>: </span>
-				<span>Input (Form Input)</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;input&gt;</code>: Input (Form Input</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<!-- type="hidden" -->
 				<div class="element-type">
 					<label for="form-input-hidden">hidden</label>
@@ -1564,12 +1427,9 @@ layout: "layouts/base.html"
 			id="button"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>button</code>: </span>
-				<span>Button</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;button&gt;</code>: Button</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<!-- type="button" -->
 				<div class="element-type">
 					<label>&lt;button type=button&gt;</label>
@@ -1636,12 +1496,9 @@ layout: "layouts/base.html"
 			id="select"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>select</code>: </span>
-				<span>Select</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;select&gt;</code>: Select</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<!-- simple -->
 				<div class="element-type">
 					<label for="form-select-simple">Select</label>
@@ -1696,12 +1553,9 @@ layout: "layouts/base.html"
 			id="datalist"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>datalist</code>: </span>
-				<span>Data List</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;datalist&gt;</code>: Data List</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<div class="element-type">
 					<label for="form-datalist">Data List</label>
 					<input
@@ -1726,12 +1580,9 @@ layout: "layouts/base.html"
 			id="textarea"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>textarea</code>: </span>
-				<span>Textarea</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;textarea&gt;</code>: Textarea</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<div class="element-type">
 					<label for="form-textarea">Textarea</label>
 					<textarea
@@ -1747,12 +1598,9 @@ layout: "layouts/base.html"
 			id="output"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>output</code>: </span>
-				<span>Output</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;output&gt;</code>: Output</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
 					<input
 						type="number"
@@ -1780,12 +1628,9 @@ layout: "layouts/base.html"
 			id="progress"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>progress</code>: </span>
-				<span>Progress Indicator</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;progress&gt;</code>: Progress Indicator</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<div class="element-type">
 					<label for="progress-1">No value:</label>
 					<progress id="progress-2">No value</progress>
@@ -1839,12 +1684,9 @@ layout: "layouts/base.html"
 			id="meter"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>meter</code>: </span>
-				<span>Meter</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;meter&gt;</code>: Meter</h3>
 
-			<div class="element l-stack-md">
+			<div class="element">
 				<div class="element-type">
 					<label for="fuel-1">Low level:</label>
 					<meter
@@ -1912,7 +1754,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="interactive-elements"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Interactive elements</h2>
 
@@ -1921,11 +1763,8 @@ layout: "layouts/base.html"
 			id="details"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>details</code>: </span>
-				<span>Details disclosure or Disclosure widget</span>
-			</h3>
-			<div class="element l-stack-md">
+			<h3 class="heading element-name"><code>&lt;details&gt;</code>: Details disclosure or Disclosure widget</h3>
+			<div class="element">
 				<div class="element-type">
 					<h4 class="heading">No <code>summary</code>:</h4>
 					<details>
@@ -1938,6 +1777,10 @@ layout: "layouts/base.html"
 					<details>
 						<summary>System Requirements</summary>
 						<p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.</p>
+						<details>
+							<summary>System Requirements</summary>
+							<p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.</p>
+						</details>
 					</details>
 				</div>
 			</div>
@@ -1948,10 +1791,7 @@ layout: "layouts/base.html"
 			id="dialog"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>dialog</code>: </span>
-				<span>Dialog</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;dialog&gt;</code>: Dialog</h3>
 			<div class="element">
 				<dialog open>
 					<p>Greetings, one and all!</p>
@@ -1964,7 +1804,7 @@ layout: "layouts/base.html"
 
 	<section
 		id="scripting"
-		class="category l-stack-md"
+		class="category"
 	>
 		<h2 class="heading category-name">Scripting</h2>
 
@@ -1973,10 +1813,7 @@ layout: "layouts/base.html"
 			id="canvas"
 			class="element-container"
 		>
-			<h3 class="heading element-name">
-				<span><code>canvas</code>: </span>
-				<span>Graphics Canvas</span>
-			</h3>
+			<h3 class="heading element-name"><code>&lt;canvas&gt;</code>: Graphics Canvas</h3>
 			<div class="element">
 				<canvas>Canvas</canvas>
 			</div>
