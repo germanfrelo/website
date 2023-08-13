@@ -54,8 +54,13 @@
 	--step-5: clamp(1.91rem, calc(1.62rem + 1.49vw), 2.96rem);
 
 	/* Line Height */
-	--lh-large: 1.6;
-	--lh-small: 1.2;
+	--lh-base: 1.6;
+	--lh-medium: 1.3;
+	--lh-1: calc(var(--lh-base) - 0.1);
+	--lh-2: calc(var(--lh-base) - 0.2);
+	--lh-3: calc(var(--lh-base) - 0.3);
+	--lh-4: calc(var(--lh-base) - 0.4);
+	--lh-5: calc(var(--lh-base) - 0.5);
 
 	/* Line length */
 	--page-max-inline-size: 60rem;
@@ -218,7 +223,7 @@ body {
 	font-size: var(--step-0);
 	font-weight: var(--fw-body-regular);
 	font-variant-ligatures: no-common-ligatures;
-	line-height: var(--lh-large);
+	line-height: var(--lh-base);
 	color: var(--c-tx-1);
 	background-color: var(--c-bg-1);
 }
@@ -237,7 +242,6 @@ h6 {
 	font-family: var(--ff-headings);
 	font-weight: var(--fw-headings);
 	font-variant-ligatures: normal;
-	line-height: var(--lh-small);
 	text-wrap: balance;
 	overflow-wrap: normal; /* For using with `text-wrap: balance` to prevent cases like this one: https://codepen.io/germanfrelo/pen/zYMOvWv */
 }
@@ -248,22 +252,27 @@ h6 {
 
 h1 {
 	font-size: var(--step-5);
+	line-height: var(--lh-5);
 }
 
 h2 {
 	font-size: var(--step-4);
+	line-height: var(--lh-4);
 }
 
 h3 {
 	font-size: var(--step-3);
+	line-height: var(--lh-3);
 }
 
 h4 {
 	font-size: var(--step-2);
+	line-height: var(--lh-2);
 }
 
 h5 {
 	font-size: var(--step-1);
+	line-height: var(--lh-1);
 }
 
 h6 {
@@ -415,7 +424,7 @@ iframe {
 
 table {
 	font-size: var(--step--1);
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 }
 
 th,
@@ -465,7 +474,7 @@ select,
 button {
 	padding-block: var(--padding-xs);
 	padding-inline: var(--padding-xs);
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 	color: inherit;
 	background-color: var(--c-bg-1);
 	border: var(--bw-1) solid var(--c-bd-2);
@@ -913,34 +922,37 @@ Can be any acceptable flexbox alignment value.
 
 .text-step--1 {
 	font-size: var(--step--1);
+	line-height: var(--lh-base);
 }
 
 .text-step-0 {
 	font-size: var(--step-0);
+	line-height: var(--lh-base);
 }
 
 .text-step-1 {
 	font-size: var(--step-1);
+	line-height: var(--lh-1);
 }
 
 .text-step-2 {
 	font-size: var(--step-2);
-	line-height: var(--lh-small);
+	line-height: var(--lh-2);
 }
 
 .text-step-3 {
 	font-size: var(--step-3);
-	line-height: var(--lh-small);
+	line-height: var(--lh-3);
 }
 
 .text-step-4 {
 	font-size: var(--step-4);
-	line-height: var(--lh-small);
+	line-height: var(--lh-4);
 }
 
 .text-step-5 {
 	font-size: var(--step-5);
-	line-height: var(--lh-small);
+	line-height: var(--lh-5);
 }
 
 /* Font Weight */
@@ -1021,7 +1033,7 @@ Can be any acceptable flexbox alignment value.
 	gap: var(--padding-xs);
 	align-items: center;
 	justify-content: center;
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 }
 
 .link-with-icon > .icon {
@@ -1037,7 +1049,7 @@ Can be any acceptable flexbox alignment value.
 	font-family: var(--ff-headings);
 	font-size: var(--step-0);
 	font-weight: var(--fw-headings);
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 }
 
 a.logo {
@@ -1077,7 +1089,7 @@ a.logo {
 
 .site-header {
 	padding-block: var(--padding-lg);
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 	background-color: var(--c-bg-2);
 }
 
@@ -1111,7 +1123,7 @@ a.logo {
 	display: block;
 	padding-block: var(--padding-xxxs);
 	font-weight: var(--fw-body-medium);
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 	color: inherit;
 	text-decoration-line: none;
 	border-block-end: var(--bw-2) solid transparent;
@@ -1157,7 +1169,7 @@ a.logo {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	font-size: var(--step--1);
-	line-height: var(--lh-small);
+	line-height: var(--lh-medium);
 	background-color: var(--c-bg-3);
 	border-radius: var(--br-small);
 }
