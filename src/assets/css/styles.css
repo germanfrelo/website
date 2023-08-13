@@ -110,9 +110,9 @@
 	--color-scrollbar-thumb: var(--color-surface-5); */
 
 	/* Mine */
-	--c-neutral-55a: hsl(217deg 20% 80% / 20%);
+	--c-neutral-a: hsla(217deg 10% 50% / 10%);
 	--c-neutral-100: hsl(217deg 15% 100%);
-	--c-neutral-98: hsl(217deg 30% 98%);
+	--c-neutral-98: hsl(217deg 25% 98%);
 	--c-neutral-94: hsl(217deg 15% 94%);
 	--c-neutral-90: hsl(217deg 10% 90%);
 	--c-neutral-85: hsl(217deg 10% 85%);
@@ -141,7 +141,7 @@
 	--c-bg-2: var(--c-neutral-98);
 	--c-bg-3: var(--c-neutral-94);
 	--c-bg-4: var(--c-neutral-90);
-	--c-bg-a: var(--c-neutral-55a);
+	--c-bg-a: var(--c-neutral-a);
 	--c-bd-1: var(--c-neutral-40);
 	--c-bd-2: var(--c-neutral-70);
 	--c-bd-3: var(--c-neutral-85);
@@ -156,10 +156,10 @@
 	--bw-2: 0.125rem;
 	--bw-3: 0.1875rem;
 	--bw-4: 0.25rem; */
-	--bw-1: calc(1.5em / 17);
-	--bw-2: calc(2.5em / 17);
-	--bw-3: calc(3.5em / 17);
-	--bw-4: calc(4.5em / 17);
+	--bw-1: calc(1.5em / 19);
+	--bw-2: calc(2.5em / 19);
+	--bw-3: calc(3.5em / 19);
+	--bw-4: calc(4.5em / 19);
 
 	/* Border Radius */
 	--br-medium: 0.3125em;
@@ -183,7 +183,7 @@
 		--c-bg-2: var(--c-neutral-13);
 		--c-bg-3: var(--c-neutral-23);
 		--c-bg-4: var(--c-neutral-30);
-		--c-bg-a: var(--c-neutral-55a);
+		--c-bg-a: var(--c-neutral-a);
 		--c-bd-1: var(--c-neutral-94);
 		--c-bd-2: var(--c-neutral-60);
 		--c-bd-3: var(--c-neutral-30);
@@ -279,29 +279,29 @@ address {
    ======================================== */
 
 hr {
-	block-size: var(--bw-2);
+	block-size: var(--bw-3);
 	background-color: var(--c-bd-3);
 	border: none;
 }
 
 pre {
-	padding-block: var(--padding-xs);
-	padding-inline: var(--padding-sm);
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
-	background-color: var(--c-bg-2);
+	text-align: start;
+}
+
+pre:not(:has(> code)) {
+	padding-inline: var(--padding-xxxs);
 	border: var(--bw-1) solid var(--c-bd-3);
 	border-radius: var(--br-small);
 }
 
 blockquote {
-	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-md);
 	margin-inline: 0;
-	color: var(--c-tx-2);
 	text-align: start;
 	text-wrap: balance;
-	border-inline-start: var(--bw-4) solid var(--c-bd-2);
+	border-inline-start: var(--bw-4) solid;
 }
 
 ol,
@@ -382,29 +382,41 @@ code,
 samp,
 kbd {
 	font-family: var(--ff-mono);
-	font-size: var(--step--1);
+	font-size: 0.875em;
+}
+
+pre :is(code, samp, kbd) {
+	font-size: inherit;
 }
 
 code {
 	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xxs);
-	vertical-align: middle;
-	background-color: var(--c-bg-2);
-	border: var(--bw-1) solid var(--c-bd-3);
+	white-space: break-spaces;
+	background-color: var(--c-bg-a);
+	border: var(--bw-1) solid var(--c-bg-a);
 	border-radius: var(--br-small);
 }
 
-pre code {
-	padding: revert;
-	background-color: revert;
+:is(h1, h2, h3, h4, h5, h6) code {
+	padding-block: revert;
 	border: revert;
-	border-radius: revert;
+}
+
+pre > code {
+	display: block;
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
+	background-color: var(--c-bg-2);
+	border-color: var(--c-bd-3);
 }
 
 kbd {
+	display: inline-block;
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
-	font-size: var(--step--2);
+	font-family: var(--ff-sans-fallback);
+	line-height: 1;
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
 	border: var(--bw-1) solid var(--c-bd-3);
