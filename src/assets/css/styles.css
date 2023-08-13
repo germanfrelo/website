@@ -104,7 +104,7 @@
 	:root {
 		/* Colors */
 		--c-tx-1: hsl(217deg 25% 90%);
-		--c-tx-1-a: hsl(117deg 250% 90% / 50%);
+		--c-tx-1-a: hsl(117deg 25% 90% / 50%);
 		--c-tx-2: hsl(217deg 10% 60%);
 		--c-tx-2-a: hsl(217deg 10% 60% / 50%);
 		--c-bg-1: hsl(217deg 15% 6%);
