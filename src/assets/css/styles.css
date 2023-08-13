@@ -156,10 +156,10 @@
 	--bw-2: 0.125rem;
 	--bw-3: 0.1875rem;
 	--bw-4: 0.25rem; */
-	--bw-1: calc(1.5em / 16);
-	--bw-2: calc(2.5em / 16);
-	--bw-3: calc(3.5em / 16);
-	--bw-4: calc(4.5em / 16);
+	--bw-1: calc(1.5em / 17);
+	--bw-2: calc(2.5em / 17);
+	--bw-3: calc(3.5em / 17);
+	--bw-4: calc(4.5em / 17);
 
 	/* Border Radius */
 	--br-medium: 0.3125em;
