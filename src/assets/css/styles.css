@@ -288,7 +288,7 @@ address {
 
 hr {
 	block-size: var(--bw-3);
-	background-color: var(--c-bd-3);
+	background-color: var(--c-bd-2);
 	border: none;
 }
 
@@ -455,8 +455,7 @@ caption {
    ======================================== */
 
 fieldset {
-	/* background-color: var(--c-bg-2); */
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 	border-radius: var(--br-small);
 }
 
