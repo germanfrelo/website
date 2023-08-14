@@ -167,7 +167,7 @@
 	--br-small: 0.125em;
 
 	/* Transitions */
-	--tr-duration-and-timing-function: 0.1s ease-in-out;
+	--tr-duration-and-timing-function: 0.2s ease-out; /* ✨ */
 }
 
 @media (prefers-color-scheme: dark) {
