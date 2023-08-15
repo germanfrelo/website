@@ -1071,7 +1071,7 @@ a.logo {
 .site-header-layout {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-400);
+	row-gap: var(--s-300);
 	column-gap: var(--s-800);
 	align-items: baseline;
 	justify-content: space-between;
@@ -1096,16 +1096,17 @@ a.logo {
 	padding-block: var(--padding-xxxs);
 	font-weight: var(--fw-body-semibold);
 	line-height: var(--lh-medium);
-	color: inherit;
+	color: var(--c-tx-2);
 	text-decoration-line: none;
 	border-block-end: var(--bw-2) solid transparent;
 }
 
 .site-nav-link:hover {
-	border-block-end-color: var(--c-bd-2);
+	color: var(--c-tx-1);
 }
 
 .site-nav-link[aria-current="page"] {
+	color: var(--c-tx-1);
 	border-block-end-color: var(--c-accent);
 }
 
