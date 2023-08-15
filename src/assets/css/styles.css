@@ -429,7 +429,7 @@ caption {
    ======================================== */
 
 fieldset {
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-bd-1);
 	border-radius: var(--br-small);
 }
 
@@ -451,7 +451,7 @@ button {
 	line-height: var(--lh-medium);
 	color: inherit;
 	background-color: var(--c-bg-1);
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-bd-1);
 	border-radius: var(--br-small);
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
@@ -474,7 +474,7 @@ button {
 }
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-bd-1);
 	border-radius: calc(var(--br-small) / 2);
 }
 
