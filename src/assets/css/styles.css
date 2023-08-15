@@ -989,7 +989,7 @@ Can be any acceptable flexbox alignment value.
 	line-height: 0;
 	color: inherit;
 	text-decoration-line: none;
-	border-radius: var(--br-small);
+	border-radius: var(--br-medium);
 }
 
 .link-only-icon:hover {
