@@ -1139,9 +1139,9 @@ a.logo {
 
 .tag {
 	display: inline-block;
-	padding-block: var(--padding-xxs);
+	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xs);
-	font-size: var(--step--1);
+	font-size: 0.875em;
 	line-height: var(--lh-medium);
 	background-color: var(--c-bg-3);
 	border-radius: var(--br-small);
