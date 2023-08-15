@@ -22,7 +22,6 @@
 	--ff-sans-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	--ff-body: "Asap", var(--ff-sans-fallback);
 	--fw-body-regular: 400;
-	--fw-body-medium: 500;
 	--fw-body-semibold: 600;
 	--fw-body-bold: 700;
 	--ff-headings: "Fira Sans", var(--ff-sans-fallback);
@@ -491,8 +490,6 @@ button,
 	align-items: center;
 	justify-content: center;
 	padding-inline: var(--padding-md);
-
-	/* font-weight: var(--fw-body-semibold); */
 	text-align: center;
 	background-color: var(--c-bg-3);
 }
@@ -941,10 +938,6 @@ Can be any acceptable flexbox alignment value.
 	font-weight: var(--fw-body-regular);
 }
 
-.font-medium {
-	font-weight: var(--fw-body-medium);
-}
-
 .font-semibold {
 	font-weight: var(--fw-body-semibold);
 }
@@ -1103,7 +1096,7 @@ a.logo {
 .site-nav-link {
 	display: block;
 	padding-block: var(--padding-xxxs);
-	font-weight: var(--fw-body-medium);
+	font-weight: var(--fw-body-semibold);
 	line-height: var(--lh-medium);
 	color: inherit;
 	text-decoration-line: none;
