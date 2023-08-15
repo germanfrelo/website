@@ -151,14 +151,9 @@
 
 	/* Border With */
 
-	/* --bw-1: 0.0625rem;
-	--bw-2: 0.125rem;
-	--bw-3: 0.1875rem;
-	--bw-4: 0.25rem; */
-	--bw-1: calc(1.5em / 18);
-	--bw-2: calc(2.5em / 18);
-	--bw-3: calc(3.5em / 18);
-	--bw-4: calc(4.5em / 18);
+	--bw-1: 0.0937em;
+	--bw-2: 0.1875em;
+	--bw-3: 0.3125em;
 
 	/* Border Radius */
 	--br-medium: 0.3125em;
@@ -272,7 +267,7 @@ address {
    ======================================== */
 
 hr {
-	block-size: var(--bw-3);
+	block-size: var(--bw-2);
 	background-color: var(--c-bd-1);
 	border: none;
 }
@@ -297,7 +292,7 @@ blockquote {
 	margin-inline: 0;
 	text-align: start;
 	text-wrap: balance;
-	border-inline-start: var(--bw-4) solid;
+	border-inline-start: var(--bw-3) solid;
 }
 
 ol,
@@ -384,7 +379,7 @@ kbd {
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
 	border: var(--bw-1) solid var(--c-bd-2);
-	border-block-end-width: var(--bw-2);
+	border-block-end-width: calc(var(--bw-1) * 2);
 	border-radius: var(--br-medium);
 }
 
