@@ -359,13 +359,13 @@ code {
 	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xxs);
 	white-space: break-spaces;
-	background-color: var(--c-bg-a);
-	border: var(--bw-1) solid var(--c-bg-a);
+	background-color: var(--c-bg-2);
+	border: var(--bw-1) solid var(--c-bd-2);
 	border-radius: var(--br-small);
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
-	padding-block: revert;
+	background-color: var(--c-bg-a);
 	border: revert;
 }
 
@@ -410,8 +410,7 @@ td {
 }
 
 th,
-thead,
-tfoot {
+thead {
 	font-weight: var(--fw-body-semibold);
 }
 
