@@ -144,9 +144,8 @@
 	--c-bg-3: var(--c-neutral-94);
 	--c-bg-4: var(--c-neutral-90);
 	--c-bg-a: var(--c-neutral-darker);
-	--c-bd-1: var(--c-neutral-40);
-	--c-bd-2: var(--c-neutral-70);
-	--c-bd-3: var(--c-neutral-85);
+	--c-bd-1: var(--c-neutral-70);
+	--c-bd-2: var(--c-neutral-85);
 	--c-link: var(--c-blue-on-light);
 	--c-accent: hsl(172deg 100% 45%);
 
@@ -182,9 +181,8 @@
 		--c-bg-3: var(--c-neutral-23);
 		--c-bg-4: var(--c-neutral-30);
 		--c-bg-a: var(--c-neutral-lighter);
-		--c-bd-1: var(--c-neutral-94);
-		--c-bd-2: var(--c-neutral-60);
-		--c-bd-3: var(--c-neutral-30);
+		--c-bd-1: var(--c-neutral-60);
+		--c-bd-2: var(--c-neutral-30);
 		--c-link: var(--c-blue-on-dark);
 	}
 }
@@ -275,7 +273,7 @@ address {
 
 hr {
 	block-size: var(--bw-3);
-	background-color: var(--c-bd-2);
+	background-color: var(--c-bd-1);
 	border: none;
 }
 
@@ -284,7 +282,7 @@ pre {
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
 	text-align: start;
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 	border-radius: var(--br-small);
 }
 
@@ -385,7 +383,7 @@ kbd {
 	line-height: 1;
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 	border-block-end-width: var(--bw-2);
 	border-radius: var(--br-medium);
 }
@@ -394,7 +392,7 @@ kbd {
    ======================================== */
 
 iframe {
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 }
 
 /* Tabular data
@@ -408,7 +406,7 @@ table {
 th,
 td {
 	padding: var(--padding-sm);
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 }
 
 th,
@@ -501,7 +499,7 @@ button,
 }
 
 :is(input, textarea, select, button):is(:hover, :focus) {
-	border-color: var(--c-bd-1);
+	border-color: currentcolor;
 }
 
 :is(button, [type="button"], [type="submit"], [type="reset"], [type="color"]):is(:hover, :focus) {
@@ -523,7 +521,7 @@ button,
    ======================================== */
 
 details {
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 	border-radius: var(--br-small);
 }
 
@@ -545,14 +543,14 @@ details[open] {
 details[open] > summary {
 	margin-inline: calc(-1 * var(--padding-sm));
 	font-weight: var(--fw-body-semibold);
-	border-block-end: var(--bw-1) solid var(--c-bd-3);
+	border-block-end: var(--bw-1) solid var(--c-bd-2);
 }
 
 /* Scripting
    ======================================== */
 
 canvas {
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 }
 
 /* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
@@ -965,7 +963,7 @@ Can be any acceptable flexbox alignment value.
 	padding-block: var(--padding-md);
 	padding-inline: var(--padding-lg);
 	text-align: start;
-	border: var(--bw-1) solid var(--c-bd-3);
+	border: var(--bw-1) solid var(--c-bd-2);
 	border-radius: var(--br-medium);
 }
 
@@ -1104,7 +1102,7 @@ a.logo {
 }
 
 .site-nav-link:hover {
-	border-block-end-color: var(--c-bd-3);
+	border-block-end-color: var(--c-bd-2);
 }
 
 .site-nav-link[aria-current="page"] {
