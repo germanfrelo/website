@@ -1019,7 +1019,7 @@ Can be any acceptable flexbox alignment value.
 .logo {
 	display: inline-block;
 	font-family: var(--ff-headings);
-	font-size: var(--step-0);
+	font-size: 1.0625em;
 	font-weight: var(--fw-headings);
 	line-height: var(--lh-medium);
 }
