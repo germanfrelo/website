@@ -1001,11 +1001,11 @@ Can be any acceptable flexbox alignment value.
    ======================================== */
 
 .link-with-icon {
-	display: inline-flex;
+	display: flex;
 	gap: var(--padding-xs);
 	align-items: center;
 	justify-content: center;
-	line-height: var(--lh-medium);
+	line-height: 1;
 }
 
 .link-with-icon > .icon {
