@@ -298,7 +298,7 @@ blockquote {
 ol,
 ul,
 menu {
-	padding-inline-start: var(--padding-xl);
+	padding-inline-start: 1em;
 }
 
 /*
