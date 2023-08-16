@@ -552,10 +552,8 @@ canvas {
 /* Flow
    ======================================== */
 
-h1,
-h2,
-h3 {
-	--flow-space: 1.5em;
+.flow > :is(h1, h2, h3, h4, h5, h6) {
+	--flow-space: calc(var(--lh-base) * 1em);
 }
 
 .flow > * + * {
