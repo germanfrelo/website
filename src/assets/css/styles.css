@@ -274,9 +274,12 @@ hr {
 
 pre {
 	padding-inline: var(--padding-xxxs);
+	overflow: auto;
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
 	text-align: start;
+	overflow-wrap: normal;
+	white-space: pre;
 	border: var(--bw-1) solid var(--c-bd-2);
 	border-radius: var(--br-small);
 }
@@ -366,6 +369,7 @@ code {
 
 pre > code {
 	padding: revert;
+	white-space: revert;
 	background-color: revert;
 	border: revert;
 }
