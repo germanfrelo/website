@@ -379,7 +379,7 @@ kbd {
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
 	border: var(--bw-1) solid var(--c-bd-2);
-	border-block-end-width: calc(var(--bw-1) * 2);
+	border-block-end-width: var(--bw-2);
 	border-radius: var(--br-medium);
 }
 
