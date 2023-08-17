@@ -277,6 +277,7 @@ pre {
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
 	text-align: start;
+	word-break: normal;
 	overflow-wrap: normal;
 	white-space: pre;
 	border: var(--bw-1) solid var(--c-border);
@@ -366,9 +367,12 @@ samp {
 }
 
 pre > :is(code, samp) {
-	padding: revert;
-	white-space: revert;
-	background-color: revert;
+	padding: 0;
+	text-align: start;
+	word-break: normal;
+	overflow-wrap: normal;
+	white-space: pre;
+	background-color: transparent;
 }
 
 kbd {
