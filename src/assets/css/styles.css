@@ -137,7 +137,6 @@
 	--c-tx-btn-submit: var(--c-neutral-100);
 	--c-bg-btn-submit: var(--c-neutral-08);
 	--c-bg-btn-submit-hovered: var(--c-neutral-23);
-	--c-bd-btn-submit-hovered: var(--c-neutral-08);
 	--c-bg-1: var(--c-neutral-100);
 	--c-bg-2: var(--c-neutral-98);
 	--c-bg-3: var(--c-neutral-94);
@@ -503,7 +502,7 @@ button,
 
 [type="submit"]:is(:hover, :focus) {
 	background-color: var(--c-bg-btn-submit-hovered);
-	border-color: var(--c-bd-btn-submit-hovered);
+	border-color: var(--c-bg-btn-submit-hovered);
 }
 
 :disabled,
