@@ -273,7 +273,6 @@ hr {
 }
 
 pre {
-	padding-inline: var(--padding-xxxs);
 	overflow: auto;
 	font-family: var(--ff-mono);
 	font-size: 0.875em;
@@ -284,9 +283,9 @@ pre {
 	border-radius: var(--border-radius);
 }
 
-pre:has(> code) {
-	padding-block: var(--padding-xs);
-	padding-inline: var(--padding-sm);
+pre:has(> :is(code, samp, kbd)) {
+	padding-block: var(--padding-sm);
+	padding-inline: var(--padding-md);
 	background-color: var(--c-bg-2);
 }
 
