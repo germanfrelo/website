@@ -117,7 +117,7 @@
 	--c-neutral-lighter: hsla(217deg 10% 100% / 10%);
 	--c-neutral-100: hsl(217deg 15% 100%);
 	--c-neutral-98: hsl(217deg 25% 98%);
-	--c-neutral-94: hsl(217deg 15% 94%);
+	--c-neutral-95: hsl(217deg 15% 95%);
 	--c-neutral-90: hsl(217deg 10% 90%);
 	--c-neutral-80: hsl(217deg 10% 80%);
 	--c-neutral-70: hsl(217deg 10% 70%);
@@ -139,7 +139,7 @@
 	--c-bg-btn-submit-hovered: var(--c-neutral-23);
 	--c-bg-1: var(--c-neutral-100);
 	--c-bg-2: var(--c-neutral-98);
-	--c-bg-3: var(--c-neutral-94);
+	--c-bg-3: var(--c-neutral-95);
 	--c-bg-4: var(--c-neutral-90);
 	--c-bg-a: var(--c-neutral-darker);
 	--c-border: var(--c-neutral-80);
@@ -166,7 +166,7 @@
 		--c-tx-1: var(--c-neutral-98);
 		--c-tx-2: var(--c-neutral-70);
 		--c-tx-btn-submit: var(--c-neutral-08);
-		--c-bg-btn-submit: var(--c-neutral-94);
+		--c-bg-btn-submit: var(--c-neutral-95);
 		--c-bg-btn-submit-hovered: var(--c-neutral-100);
 		--c-bg-1: var(--c-neutral-08);
 		--c-bg-2: var(--c-neutral-13);
