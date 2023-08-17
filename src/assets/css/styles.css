@@ -199,7 +199,7 @@ html {
 
 body {
 	display: grid;
-	grid-template-rows: auto minmax(0, 1fr) auto; /* The `minmax(0, ...)` part prevents long content from overflowing the container with grid. More info: (1) https://ishadeed.com/article/min-content-size-css-grid/, (2) https://css-tricks.com/preventing-a-grid-blowout/, and (3) https://css-tricks.com/you-want-minmax10px-1fr-not-1fr/. */
+	grid-template-rows: auto minmax(0, 1fr) auto;
 	font-family: var(--ff-body);
 	font-size: var(--step-0);
 	font-weight: var(--fw-body-regular);
@@ -207,6 +207,10 @@ body {
 	line-height: var(--lh-base);
 	color: var(--c-tx-1);
 	background-color: var(--c-bg-1);
+}
+
+body > * {
+	min-inline-size: 0;
 }
 
 h1,
