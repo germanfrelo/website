@@ -558,66 +558,6 @@ canvas {
 
 /* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
 
-/* Flow
-   ======================================== */
-
-.flow > :is(h1, h2, h3, h4, h5, h6) {
-	--flow-space: calc(var(--lh-base) * 1em);
-}
-
-.flow > * + * {
-	margin-block-start: var(--flow-space, 1em);
-}
-
-/* Stack
-   ======================================== */
-
-[class*="stack"] {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-}
-
-[class*="stack"] > * {
-	margin-block: 0;
-}
-
-[class*="stack"] > * + * {
-	margin-block-start: var(--space, 1rem);
-}
-
-.stack-3xl > * + * {
-	--space: var(--s-800);
-}
-
-.stack-2xl > * + * {
-	--space: var(--s-700);
-}
-
-.stack-xl > * + * {
-	--space: var(--s-600);
-}
-
-.stack-l > * + * {
-	--space: var(--s-500);
-}
-
-.stack-m > * + * {
-	--space: var(--s-400);
-}
-
-.stack-s > * + * {
-	--space: var(--s-300);
-}
-
-.stack-xs > * + * {
-	--space: var(--s-200);
-}
-
-.stack-2xs > * + * {
-	--space: var(--s-100);
-}
-
 /* Cluster
 
 A layout that lets you distribute items with consistent
@@ -674,6 +614,17 @@ Can be any acceptable flexbox alignment value.
 	gap: var(--s-100);
 }
 
+/* Flow
+   ======================================== */
+
+.flow > :is(h1, h2, h3, h4, h5, h6) {
+	--flow-space: calc(var(--lh-base) * 1em);
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
 /* Grid
    ======================================== */
 
@@ -704,31 +655,6 @@ Can be any acceptable flexbox alignment value.
 
 .grid-6 {
 	--size: calc(var(--page-max-inline-size) / 6);
-}
-
-/* Sidebar
-   ======================================== */
-
-[class*="with-sidebar-"] {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-}
-
-[class*="with-sidebar-"] > * {
-	flex-grow: 1;
-}
-
-.with-sidebar-left > :nth-child(2) {
-	flex-basis: 0;
-	flex-grow: 999;
-	min-inline-size: 66.666%;
-}
-
-.with-sidebar-right > :nth-child(1) {
-	flex-basis: 0;
-	flex-grow: 999;
-	min-inline-size: 66.666%;
 }
 
 /* Input-Button
@@ -776,6 +702,80 @@ Can be any acceptable flexbox alignment value.
 	flex-wrap: nowrap;
 }
 
+/* Sidebar
+   ======================================== */
+
+[class*="with-sidebar-"] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+[class*="with-sidebar-"] > * {
+	flex-grow: 1;
+}
+
+.with-sidebar-left > :nth-child(2) {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 66.666%;
+}
+
+.with-sidebar-right > :nth-child(1) {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 66.666%;
+}
+
+/* Stack
+   ======================================== */
+
+[class*="stack"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+[class*="stack"] > * {
+	margin-block: 0;
+}
+
+[class*="stack"] > * + * {
+	margin-block-start: var(--space, 1rem);
+}
+
+.stack-3xl > * + * {
+	--space: var(--s-800);
+}
+
+.stack-2xl > * + * {
+	--space: var(--s-700);
+}
+
+.stack-xl > * + * {
+	--space: var(--s-600);
+}
+
+.stack-l > * + * {
+	--space: var(--s-500);
+}
+
+.stack-m > * + * {
+	--space: var(--s-400);
+}
+
+.stack-s > * + * {
+	--space: var(--s-300);
+}
+
+.stack-xs > * + * {
+	--space: var(--s-200);
+}
+
+.stack-2xs > * + * {
+	--space: var(--s-100);
+}
+
 /* Switcher
    ======================================== */
 
@@ -818,11 +818,11 @@ Can be any acceptable flexbox alignment value.
 /* Design tokens utility classes
    ======================================== */
 
+/* Layout */
+
 .flex-justify-center {
 	justify-content: center;
 }
-
-/* Gap */
 
 .gap-100 {
 	gap: var(--s-100);
@@ -855,8 +855,6 @@ Can be any acceptable flexbox alignment value.
 .gap-800 {
 	gap: var(--s-800);
 }
-
-/* Margin Block */
 
 .my-2xs {
 	margin-block: var(--s-100);
@@ -894,7 +892,24 @@ Can be any acceptable flexbox alignment value.
 	margin-block: var(--s-900);
 }
 
-/* Font Size */
+/* Text */
+
+.balanced {
+	text-wrap: balance;
+	white-space: unset;
+}
+
+.font-regular {
+	font-weight: var(--fw-body-regular);
+}
+
+.font-semibold {
+	font-weight: var(--fw-body-semibold);
+}
+
+.font-bold {
+	font-weight: var(--fw-body-bold);
+}
 
 .text-step--1 {
 	font-size: var(--step--1);
@@ -929,27 +944,6 @@ Can be any acceptable flexbox alignment value.
 .text-step-5 {
 	font-size: var(--step-5);
 	line-height: var(--lh-5);
-}
-
-/* Font Weight */
-
-.font-regular {
-	font-weight: var(--fw-body-regular);
-}
-
-.font-semibold {
-	font-weight: var(--fw-body-semibold);
-}
-
-.font-bold {
-	font-weight: var(--fw-body-bold);
-}
-
-/* Balanced */
-
-.balanced {
-	text-wrap: balance;
-	white-space: unset;
 }
 
 /* ============ 5. BLOCKS ============ */
