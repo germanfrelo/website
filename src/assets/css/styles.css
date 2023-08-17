@@ -353,7 +353,8 @@ pre :is(code, samp, kbd) {
 	font-size: inherit;
 }
 
-code {
+code,
+samp {
 	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xxs);
 	white-space: break-spaces;
@@ -367,7 +368,7 @@ code {
 	border: revert;
 }
 
-pre > code {
+pre > :is(code, samp) {
 	padding: revert;
 	white-space: revert;
 	background-color: revert;
