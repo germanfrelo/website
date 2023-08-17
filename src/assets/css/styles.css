@@ -358,21 +358,18 @@ samp {
 	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xxs);
 	white-space: break-spaces;
-	background-color: var(--c-bg-2);
-	border: var(--bw-1) solid var(--c-border);
+	background-color: var(--c-bg-3);
 	border-radius: var(--border-radius);
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
 	background-color: var(--c-bg-a);
-	border: revert;
 }
 
 pre > :is(code, samp) {
 	padding: revert;
 	white-space: revert;
 	background-color: revert;
-	border: revert;
 }
 
 kbd {
