@@ -402,6 +402,10 @@ table {
 	line-height: var(--lh-medium);
 }
 
+*:has(> table) {
+	overflow: auto;
+}
+
 th,
 td {
 	padding: var(--padding-sm);
