@@ -153,8 +153,7 @@
 	--bw-3: 0.3125em;
 
 	/* Border Radius */
-	--br-medium: 0.3125em;
-	--br-small: 0.125em;
+	--border-radius: 0.1875em;
 
 	/* Transitions */
 	--tr-duration-and-timing-function: 0.1s ease-out;
@@ -281,7 +280,7 @@ pre {
 	overflow-wrap: normal;
 	white-space: pre;
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 }
 
 pre:has(> code) {
@@ -359,7 +358,7 @@ code {
 	white-space: break-spaces;
 	background-color: var(--c-bg-2);
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
@@ -384,7 +383,7 @@ kbd {
 	background-color: var(--c-bg-2);
 	border: var(--bw-1) solid var(--c-border);
 	border-block-end-width: var(--bw-2);
-	border-radius: var(--br-medium);
+	border-radius: var(--border-radius);
 }
 
 /* Embedded content
@@ -433,7 +432,7 @@ caption {
 
 fieldset {
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 }
 
 legend {
@@ -455,7 +454,7 @@ button {
 	color: inherit;
 	background-color: var(--c-bg-1);
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
@@ -478,7 +477,7 @@ button {
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: calc(var(--br-small) / 2);
+	border-radius: calc(var(--border-radius) / 2);
 }
 
 button,
@@ -524,7 +523,7 @@ button,
 
 details {
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 }
 
 summary {
@@ -964,7 +963,7 @@ Can be any acceptable flexbox alignment value.
 	padding-inline: var(--padding-lg);
 	text-align: start;
 	border: var(--bw-1) solid var(--c-border);
-	border-radius: var(--br-medium);
+	border-radius: var(--border-radius);
 }
 
 .card__content {
@@ -990,7 +989,7 @@ Can be any acceptable flexbox alignment value.
 	line-height: 0;
 	color: inherit;
 	text-decoration-line: none;
-	border-radius: var(--br-medium);
+	border-radius: var(--border-radius);
 }
 
 .link-only-icon:hover {
@@ -1034,7 +1033,7 @@ a.logo {
 
 .photo-about {
 	max-inline-size: min(10rem, 100%);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 	transition: border-radius var(--tr-duration-and-timing-function);
 }
 
@@ -1144,7 +1143,7 @@ a.logo {
 	font-size: 0.875em;
 	line-height: var(--lh-medium);
 	background-color: var(--c-bg-3);
-	border-radius: var(--br-small);
+	border-radius: var(--border-radius);
 }
 
 /* ============ 6. EXCEPTIONS ============ */
