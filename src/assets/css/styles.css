@@ -148,6 +148,7 @@
 
 	/* Border With */
 
+	--bw-0: 0.0625em;
 	--bw-1: 0.0937em;
 	--bw-2: 0.1875em;
 	--bw-3: 0.3125em;
@@ -375,15 +376,15 @@ pre > code {
 
 kbd {
 	display: inline-block;
-	padding-block: var(--padding-xxs);
+	padding-block: var(--padding-xxxs);
 	padding-inline: var(--padding-xs);
 	font-family: var(--ff-sans-fallback);
-	line-height: 1;
+	line-height: var(--lh-medium);
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
-	border: var(--bw-1) solid var(--c-border);
-	border-block-end-width: var(--bw-2);
+	border: var(--bw-0) solid var(--c-border);
 	border-radius: var(--border-radius);
+	box-shadow: 0 calc(var(--bw-0) / 2) 0 var(--c-border), 0 0 0 var(--bw-1) var(--c-bg-1) inset;
 }
 
 /* Embedded content
