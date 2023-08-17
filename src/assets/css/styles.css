@@ -119,7 +119,6 @@
 	--c-neutral-98: hsl(217deg 25% 98%);
 	--c-neutral-94: hsl(217deg 15% 94%);
 	--c-neutral-90: hsl(217deg 10% 90%);
-	--c-neutral-85: hsl(217deg 10% 85%);
 	--c-neutral-80: hsl(217deg 10% 80%);
 	--c-neutral-70: hsl(217deg 10% 70%);
 	--c-neutral-60: hsl(217deg 10% 60%);
@@ -144,8 +143,7 @@
 	--c-bg-3: var(--c-neutral-94);
 	--c-bg-4: var(--c-neutral-90);
 	--c-bg-a: var(--c-neutral-darker);
-	--c-bd-1: var(--c-neutral-70);
-	--c-bd-2: var(--c-neutral-85);
+	--c-border: var(--c-neutral-80);
 	--c-link: var(--c-blue-on-light);
 	--c-accent: hsl(172deg 100% 45%);
 
@@ -176,8 +174,7 @@
 		--c-bg-3: var(--c-neutral-23);
 		--c-bg-4: var(--c-neutral-30);
 		--c-bg-a: var(--c-neutral-lighter);
-		--c-bd-1: var(--c-neutral-60);
-		--c-bd-2: var(--c-neutral-30);
+		--c-border: var(--c-neutral-40);
 		--c-link: var(--c-blue-on-dark);
 	}
 }
@@ -268,7 +265,7 @@ address {
 
 hr {
 	block-size: var(--bw-2);
-	background-color: var(--c-bd-1);
+	background-color: var(--c-border);
 	border: none;
 }
 
@@ -280,7 +277,7 @@ pre {
 	text-align: start;
 	overflow-wrap: normal;
 	white-space: pre;
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: var(--br-small);
 }
 
@@ -358,7 +355,7 @@ code {
 	padding-inline: var(--padding-xxs);
 	white-space: break-spaces;
 	background-color: var(--c-bg-2);
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: var(--br-small);
 }
 
@@ -382,7 +379,7 @@ kbd {
 	line-height: 1;
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 	border-block-end-width: var(--bw-2);
 	border-radius: var(--br-medium);
 }
@@ -391,7 +388,7 @@ kbd {
    ======================================== */
 
 iframe {
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 }
 
 /* Tabular data
@@ -405,7 +402,7 @@ table {
 th,
 td {
 	padding: var(--padding-sm);
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 }
 
 th,
@@ -428,7 +425,7 @@ caption {
    ======================================== */
 
 fieldset {
-	border: var(--bw-1) solid var(--c-bd-1);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: var(--br-small);
 }
 
@@ -450,7 +447,7 @@ button {
 	line-height: var(--lh-medium);
 	color: inherit;
 	background-color: var(--c-bg-1);
-	border: var(--bw-1) solid var(--c-bd-1);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: var(--br-small);
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
@@ -473,7 +470,7 @@ button {
 }
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
-	border: var(--bw-1) solid var(--c-bd-1);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: calc(var(--br-small) / 2);
 }
 
@@ -519,7 +516,7 @@ button,
    ======================================== */
 
 details {
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: var(--br-small);
 }
 
@@ -541,14 +538,14 @@ details[open] {
 details[open] > summary {
 	margin-inline: calc(-1 * var(--padding-sm));
 	font-weight: var(--fw-body-semibold);
-	border-block-end: var(--bw-1) solid var(--c-bd-2);
+	border-block-end: var(--bw-1) solid var(--c-border);
 }
 
 /* Scripting
    ======================================== */
 
 canvas {
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 }
 
 /* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
@@ -959,7 +956,7 @@ Can be any acceptable flexbox alignment value.
 	padding-block: var(--padding-md);
 	padding-inline: var(--padding-lg);
 	text-align: start;
-	border: var(--bw-1) solid var(--c-bd-2);
+	border: var(--bw-1) solid var(--c-border);
 	border-radius: var(--br-medium);
 }
 
