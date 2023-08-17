@@ -68,9 +68,9 @@
 	--padding-3xl: 2em;
 	--padding-2xl: 1.75em;
 	--padding-xl: 1.5em;
-	--padding-lg: 1.25em;
-	--padding-md: 1em;
-	--padding-sm: 0.75em;
+	--padding-l: 1.25em;
+	--padding-m: 1em;
+	--padding-s: 0.75em;
 	--padding-xs: 0.5em;
 	--padding-2xs: 0.25em;
 	--padding-3xs: 0.125em;
@@ -285,13 +285,13 @@ pre {
 }
 
 pre:has(> :is(code, samp, kbd)) {
-	padding-block: var(--padding-sm);
-	padding-inline: var(--padding-md);
+	padding-block: var(--padding-s);
+	padding-inline: var(--padding-m);
 	background-color: var(--c-bg-2);
 }
 
 blockquote {
-	padding-inline: var(--padding-md);
+	padding-inline: var(--padding-m);
 	margin-inline: 0;
 	text-align: start;
 	text-wrap: balance;
@@ -409,7 +409,7 @@ table {
 
 th,
 td {
-	padding: var(--padding-sm);
+	padding: var(--padding-s);
 	border: var(--bw-s) solid var(--c-border);
 }
 
@@ -490,7 +490,7 @@ button,
 	gap: var(--padding-xs);
 	align-items: center;
 	justify-content: center;
-	padding-inline: var(--padding-md);
+	padding-inline: var(--padding-m);
 	text-align: center;
 	background-color: var(--c-bg-3);
 }
@@ -530,7 +530,7 @@ details {
 
 summary {
 	padding-block: var(--padding-2xs);
-	padding-inline: var(--padding-sm);
+	padding-inline: var(--padding-s);
 	transition: background-color var(--tr-duration-and-timing-function);
 }
 
@@ -539,12 +539,12 @@ summary:hover {
 }
 
 details[open] {
-	padding: var(--padding-sm);
+	padding: var(--padding-s);
 	padding-block-start: 0;
 }
 
 details[open] > summary {
-	margin-inline: calc(-1 * var(--padding-sm));
+	margin-inline: calc(-1 * var(--padding-s));
 	font-weight: var(--fw-body-semibold);
 	border-block-end: var(--bw-s) solid var(--c-border);
 }
@@ -598,15 +598,15 @@ canvas {
 	--space: var(--s-600);
 }
 
-.l-stack-lg > * + * {
+.l-stack-l > * + * {
 	--space: var(--s-500);
 }
 
-.l-stack-md > * + * {
+.l-stack-m > * + * {
 	--space: var(--s-400);
 }
 
-.l-stack-sm > * + * {
+.l-stack-s > * + * {
 	--space: var(--s-300);
 }
 
@@ -654,15 +654,15 @@ Can be any acceptable flexbox alignment value.
 	gap: var(--s-600);
 }
 
-.l-cluster-lg {
+.l-cluster-l {
 	gap: var(--s-500);
 }
 
-.l-cluster-md {
+.l-cluster-m {
 	gap: var(--s-400);
 }
 
-.l-cluster-sm {
+.l-cluster-s {
 	gap: var(--s-300);
 }
 
@@ -866,15 +866,15 @@ Can be any acceptable flexbox alignment value.
 	margin-block: var(--s-200);
 }
 
-.my-sm {
+.my-s {
 	margin-block: var(--s-300);
 }
 
-.my-md {
+.my-m {
 	margin-block: var(--s-400);
 }
 
-.my-lg {
+.my-l {
 	margin-block: var(--s-500);
 }
 
@@ -961,8 +961,8 @@ Can be any acceptable flexbox alignment value.
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-block: var(--padding-md);
-	padding-inline: var(--padding-lg);
+	padding-block: var(--padding-m);
+	padding-inline: var(--padding-l);
 	text-align: start;
 	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
@@ -1061,7 +1061,7 @@ a.logo {
    ======================================== */
 
 .site-header {
-	padding-block: var(--padding-lg);
+	padding-block: var(--padding-l);
 	line-height: var(--lh-medium);
 	background-color: var(--c-bg-2);
 }
