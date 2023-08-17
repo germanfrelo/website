@@ -148,10 +148,10 @@
 
 	/* Border With */
 
-	--bw-0: 0.0625em;
-	--bw-1: 0.0937em;
-	--bw-2: 0.1875em;
-	--bw-3: 0.3125em;
+	--bw-xs: calc(1em / 16);
+	--bw-s: calc(1.5em / 16);
+	--bw-m: calc(3em / 16);
+	--bw-l: calc(5em / 16);
 
 	/* Border Radius */
 	--border-radius: 0.1875em;
@@ -267,7 +267,7 @@ address {
    ======================================== */
 
 hr {
-	block-size: var(--bw-2);
+	block-size: var(--bw-m);
 	background-color: var(--c-border);
 	border: none;
 }
@@ -280,7 +280,7 @@ pre {
 	word-break: normal;
 	overflow-wrap: normal;
 	white-space: pre;
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
 }
 
@@ -295,7 +295,7 @@ blockquote {
 	margin-inline: 0;
 	text-align: start;
 	text-wrap: balance;
-	border-inline-start: var(--bw-3) solid;
+	border-inline-start: var(--bw-l) solid;
 }
 
 ol,
@@ -383,16 +383,16 @@ kbd {
 	line-height: var(--lh-medium);
 	vertical-align: middle;
 	background-color: var(--c-bg-2);
-	border: var(--bw-0) solid var(--c-border);
+	border: var(--bw-xs) solid var(--c-border);
 	border-radius: var(--border-radius);
-	box-shadow: 0 calc(var(--bw-0) / 2) 0 var(--c-border), 0 0 0 var(--bw-1) var(--c-bg-1) inset;
+	box-shadow: 0 calc(var(--bw-xs) / 2) 0 var(--c-border), 0 0 0 var(--bw-s) var(--c-bg-1) inset;
 }
 
 /* Embedded content
    ======================================== */
 
 iframe {
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 }
 
 /* Tabular data
@@ -410,7 +410,7 @@ table {
 th,
 td {
 	padding: var(--padding-sm);
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 }
 
 th,
@@ -433,7 +433,7 @@ caption {
    ======================================== */
 
 fieldset {
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
 }
 
@@ -455,7 +455,7 @@ button {
 	line-height: var(--lh-medium);
 	color: inherit;
 	background-color: var(--c-bg-1);
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
 	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
@@ -478,7 +478,7 @@ button {
 }
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 	border-radius: calc(var(--border-radius) / 2);
 }
 
@@ -524,7 +524,7 @@ button,
    ======================================== */
 
 details {
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
 }
 
@@ -546,14 +546,14 @@ details[open] {
 details[open] > summary {
 	margin-inline: calc(-1 * var(--padding-sm));
 	font-weight: var(--fw-body-semibold);
-	border-block-end: var(--bw-1) solid var(--c-border);
+	border-block-end: var(--bw-s) solid var(--c-border);
 }
 
 /* Scripting
    ======================================== */
 
 canvas {
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 }
 
 /* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
@@ -964,7 +964,7 @@ Can be any acceptable flexbox alignment value.
 	padding-block: var(--padding-md);
 	padding-inline: var(--padding-lg);
 	text-align: start;
-	border: var(--bw-1) solid var(--c-border);
+	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
 }
 
@@ -1099,7 +1099,7 @@ a.logo {
 	line-height: var(--lh-medium);
 	color: var(--c-tx-2);
 	text-decoration-line: none;
-	border-block-end: var(--bw-2) solid transparent;
+	border-block-end: var(--bw-m) solid transparent;
 }
 
 .site-nav-link:hover {
