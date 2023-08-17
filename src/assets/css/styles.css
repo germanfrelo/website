@@ -572,49 +572,49 @@ canvas {
 /* Stack
    ======================================== */
 
-[class*="l-stack"] {
+[class*="stack"] {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
-[class*="l-stack"] > * {
+[class*="stack"] > * {
 	margin-block: 0;
 }
 
-[class*="l-stack"] > * + * {
+[class*="stack"] > * + * {
 	margin-block-start: var(--space, 1rem);
 }
 
-.l-stack-3xl > * + * {
+.stack-3xl > * + * {
 	--space: var(--s-800);
 }
 
-.l-stack-2xl > * + * {
+.stack-2xl > * + * {
 	--space: var(--s-700);
 }
 
-.l-stack-xl > * + * {
+.stack-xl > * + * {
 	--space: var(--s-600);
 }
 
-.l-stack-l > * + * {
+.stack-l > * + * {
 	--space: var(--s-500);
 }
 
-.l-stack-m > * + * {
+.stack-m > * + * {
 	--space: var(--s-400);
 }
 
-.l-stack-s > * + * {
+.stack-s > * + * {
 	--space: var(--s-300);
 }
 
-.l-stack-xs > * + * {
+.stack-xs > * + * {
 	--space: var(--s-200);
 }
 
-.l-stack-2xs > * + * {
+.stack-2xs > * + * {
 	--space: var(--s-100);
 }
 
@@ -637,7 +637,7 @@ Can be any acceptable flexbox alignment value.
 
    ======================================== */
 
-[class*="l-cluster"] {
+[class*="cluster"] {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--gutter, var(--space-s-l));
@@ -646,38 +646,38 @@ Can be any acceptable flexbox alignment value.
 	justify-content: var(--cluster-horizontal-alignment, flex-start);
 }
 
-[class*="l-cluster"] > * {
+[class*="cluster"] > * {
 	margin: 0;
 }
 
-.l-cluster-xl {
+.cluster-xl {
 	gap: var(--s-600);
 }
 
-.l-cluster-l {
+.cluster-l {
 	gap: var(--s-500);
 }
 
-.l-cluster-m {
+.cluster-m {
 	gap: var(--s-400);
 }
 
-.l-cluster-s {
+.cluster-s {
 	gap: var(--s-300);
 }
 
-.l-cluster-xs {
+.cluster-xs {
 	gap: var(--s-200);
 }
 
-.l-cluster-2xs {
+.cluster-2xs {
 	gap: var(--s-100);
 }
 
 /* Grid
    ======================================== */
 
-[class*="l-grid"] {
+[class*="grid"] {
 	--size: 100%;
 	--gap: var(--space, var(--flow-space, 1rem));
 
@@ -686,46 +686,46 @@ Can be any acceptable flexbox alignment value.
 	gap: var(--gap);
 }
 
-.l-grid-2 {
+.grid-2 {
 	--size: calc(var(--page-max-inline-size) / 2);
 }
 
-.l-grid-3 {
+.grid-3 {
 	--size: calc(var(--page-max-inline-size) / 3);
 }
 
-.l-grid-4 {
+.grid-4 {
 	--size: calc(var(--page-max-inline-size) / 4);
 }
 
-.l-grid-5 {
+.grid-5 {
 	--size: calc(var(--page-max-inline-size) / 5);
 }
 
-.l-grid-6 {
+.grid-6 {
 	--size: calc(var(--page-max-inline-size) / 6);
 }
 
 /* Sidebar
    ======================================== */
 
-[class*="l-with-sidebar-"] {
+[class*="with-sidebar-"] {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
 }
 
-[class*="l-with-sidebar-"] > * {
+[class*="with-sidebar-"] > * {
 	flex-grow: 1;
 }
 
-.l-with-sidebar-left > :nth-child(2) {
+.with-sidebar-left > :nth-child(2) {
 	flex-basis: 0;
 	flex-grow: 999;
 	min-inline-size: 66.666%;
 }
 
-.l-with-sidebar-right > :nth-child(1) {
+.with-sidebar-right > :nth-child(1) {
 	flex-basis: 0;
 	flex-grow: 999;
 	min-inline-size: 66.666%;
@@ -734,23 +734,23 @@ Can be any acceptable flexbox alignment value.
 /* Input-Button
    ======================================== */
 
-.l-input-button {
+.input-button {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--s-200);
 }
 
-.l-input-button > * {
+.input-button > * {
 	flex-grow: 1;
 }
 
-.l-input-button > input {
+.input-button > input {
 	flex-basis: 0;
 	flex-grow: 999;
 	min-inline-size: 66.666%;
 }
 
-.l-input-button > [type="number"] {
+.input-button > [type="number"] {
 	min-inline-size: 50%;
 }
 
