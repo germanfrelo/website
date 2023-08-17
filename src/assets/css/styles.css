@@ -65,15 +65,15 @@
 	--page-max-inline-size: 60rem;
 
 	/* Padding */
-	--padding-xxxl: 2em;
-	--padding-xxl: 1.75em;
+	--padding-3xl: 2em;
+	--padding-2xl: 1.75em;
 	--padding-xl: 1.5em;
 	--padding-lg: 1.25em;
 	--padding-md: 1em;
 	--padding-sm: 0.75em;
 	--padding-xs: 0.5em;
-	--padding-xxs: 0.25em;
-	--padding-xxxs: 0.125em;
+	--padding-2xs: 0.25em;
+	--padding-3xs: 0.125em;
 
 	/* Colors */
 
@@ -355,8 +355,8 @@ pre :is(code, samp, kbd) {
 
 code,
 samp {
-	padding-block: var(--padding-xxxs);
-	padding-inline: var(--padding-xxs);
+	padding-block: var(--padding-3xs);
+	padding-inline: var(--padding-2xs);
 	white-space: break-spaces;
 	background-color: var(--c-bg-3);
 	border-radius: var(--border-radius);
@@ -377,7 +377,7 @@ pre > :is(code, samp) {
 
 kbd {
 	display: inline-block;
-	padding-block: var(--padding-xxxs);
+	padding-block: var(--padding-3xs);
 	padding-inline: var(--padding-xs);
 	font-family: var(--ff-sans-fallback);
 	line-height: var(--lh-medium);
@@ -426,7 +426,7 @@ td:has(+ th) {
 }
 
 caption {
-	padding-block: var(--padding-xxs);
+	padding-block: var(--padding-2xs);
 }
 
 /* Forms
@@ -438,7 +438,7 @@ fieldset {
 }
 
 legend {
-	padding-inline: var(--padding-xxs);
+	padding-inline: var(--padding-2xs);
 	font-weight: var(--fw-body-semibold);
 }
 
@@ -469,7 +469,7 @@ button {
 [type="color"] {
 	inline-size: 3em;
 	block-size: 1.5em;
-	padding: var(--padding-xxs);
+	padding: var(--padding-2xs);
 	background-color: var(--c-bg-2);
 }
 
@@ -529,7 +529,7 @@ details {
 }
 
 summary {
-	padding-block: var(--padding-xxs);
+	padding-block: var(--padding-2xs);
 	padding-inline: var(--padding-sm);
 	transition: background-color var(--tr-duration-and-timing-function);
 }
@@ -586,11 +586,11 @@ canvas {
 	margin-block-start: var(--space, 1rem);
 }
 
-.l-stack-xxxl > * + * {
+.l-stack-3xl > * + * {
 	--space: var(--s-800);
 }
 
-.l-stack-xxl > * + * {
+.l-stack-2xl > * + * {
 	--space: var(--s-700);
 }
 
@@ -614,7 +614,7 @@ canvas {
 	--space: var(--s-200);
 }
 
-.l-stack-xxs > * + * {
+.l-stack-2xs > * + * {
 	--space: var(--s-100);
 }
 
@@ -670,7 +670,7 @@ Can be any acceptable flexbox alignment value.
 	gap: var(--s-200);
 }
 
-.l-cluster-xxs {
+.l-cluster-2xs {
 	gap: var(--s-100);
 }
 
@@ -858,7 +858,7 @@ Can be any acceptable flexbox alignment value.
 
 /* Margin Block */
 
-.my-xxs {
+.my-2xs {
 	margin-block: var(--s-100);
 }
 
@@ -882,15 +882,15 @@ Can be any acceptable flexbox alignment value.
 	margin-block: var(--s-600);
 }
 
-.my-xxl {
+.my-2xl {
 	margin-block: var(--s-700);
 }
 
-.my-xxxl {
+.my-3xl {
 	margin-block: var(--s-800);
 }
 
-.my-xxxxl {
+.my-4xl {
 	margin-block: var(--s-900);
 }
 
@@ -986,7 +986,7 @@ Can be any acceptable flexbox alignment value.
 
 .link-only-icon {
 	display: block;
-	padding: var(--padding-xxs);
+	padding: var(--padding-2xs);
 	font-size: var(--step-1);
 	line-height: 0;
 	color: inherit;
@@ -1094,7 +1094,7 @@ a.logo {
 
 .site-nav-link {
 	display: block;
-	padding-block: var(--padding-xxxs);
+	padding-block: var(--padding-3xs);
 	font-weight: var(--fw-body-semibold);
 	line-height: var(--lh-medium);
 	color: var(--c-tx-2);
@@ -1123,7 +1123,7 @@ a.logo {
    ======================================== */
 
 .site-footer {
-	padding-block: var(--padding-xxxl);
+	padding-block: var(--padding-3xl);
 	font-size: var(--step--1);
 	color: var(--c-tx-2);
 	text-align: center;
@@ -1140,7 +1140,7 @@ a.logo {
 
 .tag {
 	display: inline-block;
-	padding-block: var(--padding-xxxs);
+	padding-block: var(--padding-3xs);
 	padding-inline: var(--padding-xs);
 	font-size: 0.875em;
 	line-height: var(--lh-medium);
