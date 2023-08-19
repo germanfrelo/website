@@ -1062,7 +1062,7 @@ a.logo {
    ======================================== */
 
 .site-header {
-	padding-block: var(--padding-l);
+	padding-block: var(--padding-m);
 	line-height: var(--lh-medium);
 	background-color: var(--c-bg-2);
 }
