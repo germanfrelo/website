@@ -1104,7 +1104,6 @@ a.logo {
 .site-nav-link {
 	display: block;
 	padding-block: var(--padding-3xs);
-	font-weight: var(--fw-body-semibold);
 	line-height: var(--lh-medium);
 	color: var(--c-tx-2);
 	text-decoration-line: none;
@@ -1116,6 +1115,7 @@ a.logo {
 }
 
 .site-nav-link[aria-current="page"] {
+	font-weight: var(--fw-body-semibold);
 	color: var(--c-tx-1);
 	border-block-end-color: var(--c-accent);
 }
