@@ -148,7 +148,6 @@
 	--c-bd-1: var(--c-neutral-60);
 	--c-bd-2: var(--c-neutral-85);
 	--c-link: var(--c-blue-on-light);
-	--c-accent: hsl(172deg 100% 45%);
 
 	/* Border With */
 
@@ -1107,7 +1106,6 @@ a.logo {
 	line-height: var(--lh-medium);
 	color: var(--c-tx-2);
 	text-decoration-line: none;
-	border-block-end: var(--bw-m) solid transparent;
 }
 
 .site-nav-link:hover {
@@ -1117,7 +1115,6 @@ a.logo {
 .site-nav-link[aria-current="page"] {
 	font-weight: var(--fw-body-semibold);
 	color: var(--c-tx-1);
-	border-block-end-color: var(--c-accent);
 }
 
 /* Site main
