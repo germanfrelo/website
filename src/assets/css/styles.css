@@ -197,8 +197,6 @@ html {
    ======================================== */
 
 body {
-	display: grid;
-	grid-template-rows: auto minmax(0, 1fr) auto;
 	font-family: var(--ff-body);
 	font-size: var(--step-0);
 	font-weight: var(--fw-body-regular);
@@ -206,10 +204,6 @@ body {
 	line-height: var(--lh-base);
 	color: var(--c-tx-1);
 	background-color: var(--c-bg-1);
-}
-
-body > * {
-	min-inline-size: 0;
 }
 
 h1,
@@ -1049,6 +1043,19 @@ a.logo {
 .projects {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+}
+
+/* Site layout
+   ======================================== */
+
+.site-layout {
+	display: grid;
+	grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.site-layout > * {
+	min-inline-size: 0;
 }
 
 /* Site header
