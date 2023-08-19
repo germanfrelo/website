@@ -484,8 +484,8 @@ button {
 
 button,
 [type="button"],
-[type="submit"],
-[type="reset"] {
+[type="reset"],
+[type="submit"] {
 	display: inline-flex;
 	gap: var(--padding-xs);
 	align-items: center;
@@ -505,7 +505,7 @@ button,
 	border-color: currentcolor;
 }
 
-:is(button, [type="button"], [type="submit"], [type="reset"], [type="color"]):is(:hover, :focus) {
+:is(button, [type="button"], [type="reset"], [type="submit"]):is(:hover, :focus) {
 	background-color: var(--c-bg-3);
 	border-color: var(--c-bd-1);
 }
