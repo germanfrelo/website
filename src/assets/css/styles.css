@@ -53,7 +53,7 @@
 	--step-5: clamp(1.91rem, calc(1.62rem + 1.49vw), 2.96rem);
 
 	/* Line Height */
-	--lh-base: 1.6;
+	--lh-base: 1.7;
 	--lh-medium: 1.3;
 	--lh-1: calc(var(--lh-base) - 0.1);
 	--lh-2: calc(var(--lh-base) - 0.2);
