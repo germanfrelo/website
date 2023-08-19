@@ -266,7 +266,7 @@ address {
 
 hr {
 	block-size: var(--bw-m);
-	background-color: var(--c-bd-1);
+	background-color: var(--c-bd-2);
 	border: none;
 }
 
@@ -357,11 +357,13 @@ samp {
 	padding-inline: var(--padding-2xs);
 	white-space: break-spaces;
 	background-color: var(--c-bg-3);
+	border: var(--bw-xs) solid var(--c-bg-a);
 	border-radius: var(--border-radius);
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
 	background-color: var(--c-bg-a);
+	border: 0;
 }
 
 pre > :is(code, samp) {
@@ -371,6 +373,7 @@ pre > :is(code, samp) {
 	overflow-wrap: normal;
 	white-space: pre;
 	background-color: transparent;
+	border: 0;
 }
 
 kbd {
@@ -468,7 +471,6 @@ button {
 	inline-size: 3em;
 	block-size: 1.5em;
 	padding: var(--padding-2xs);
-	background-color: var(--c-bg-2);
 }
 
 [type="color"]::-webkit-color-swatch-wrapper {
@@ -476,8 +478,8 @@ button {
 }
 
 [type="color"]:is(::-webkit-color-swatch, ::-moz-color-swatch) {
-	border: var(--bw-s) solid var(--c-bd-1);
-	border-radius: calc(var(--border-radius) / 2);
+	border: var(--bw-xs) solid var(--c-bd-1);
+	border-radius: calc(var(--border-radius) - var(--padding-2xs));
 }
 
 button,
@@ -1070,6 +1072,7 @@ a.logo {
 	padding-block: var(--padding-m);
 	line-height: var(--lh-medium);
 	background-color: var(--c-bg-2);
+	border-block-end: var(--bw-xs) solid var(--c-bd-2);
 }
 
 /* Site header layout
@@ -1135,9 +1138,14 @@ a.logo {
 	text-align: center;
 	text-wrap: balance;
 	background-color: var(--c-bg-2);
+	border-block-start: var(--bw-xs) solid var(--c-bd-2);
 }
 
-.site-footer .link-only-icon:hover {
+.site-footer a {
+	color: inherit;
+}
+
+.site-footer a:hover {
 	color: var(--c-tx-1);
 }
 
