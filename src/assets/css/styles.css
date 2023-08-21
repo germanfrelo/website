@@ -200,7 +200,6 @@ h6 {
 	font-weight: var(--fw-headings);
 	font-variant-ligatures: normal;
 	text-wrap: balance;
-	overflow-wrap: normal; /* For using with `text-wrap: balance` to prevent cases like this one: https://codepen.io/germanfrelo/pen/zYMOvWv */
 }
 
 .card :is(h1, h2, h3, h4, h5, h6) {
