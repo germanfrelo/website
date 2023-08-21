@@ -150,13 +150,13 @@
 
 	/* Border With */
 
-	--bw-xs: calc(1em / 16);
+	--bw-xs: max(1px, calc(1em / 16));
 	--bw-s: calc(1.5em / 16);
 	--bw-m: calc(2.5em / 16);
 	--bw-l: calc(5em / 16);
 
 	/* Border Radius */
-	--border-radius: 0.1875em;
+	--border-radius: calc(2.5em / 16);
 
 	/* Transitions */
 	--tr-duration-and-timing-function: 0.1s ease-out;
