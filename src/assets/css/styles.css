@@ -267,6 +267,14 @@ dd {
 	margin-inline-start: var(--padding-xl);
 }
 
+figure {
+	display: grid;
+	gap: var(--padding-s);
+	padding: var(--padding-s);
+	background-color: var(--c-bg-2);
+	border-radius: var(--border-radius);
+}
+
 /* Text-level semantics
    ======================================== */
 
