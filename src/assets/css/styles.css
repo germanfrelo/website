@@ -946,6 +946,7 @@ Can be any acceptable flexbox alignment value.
 .card {
 	display: flex;
 	flex-direction: column;
+	gap: var(--s-400);
 	align-items: flex-start;
 	padding-block: var(--padding-m);
 	padding-inline: var(--padding-l);
