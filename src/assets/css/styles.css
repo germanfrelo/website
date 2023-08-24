@@ -911,6 +911,37 @@ Can be any acceptable flexbox alignment value.
 
 /* ============ 5. BLOCKS ============ */
 
+/* About intro
+   ======================================== */
+
+.about-intro {
+	container: about-intro / inline-size;
+}
+
+.about-intro img {
+	inline-size: min(100%, 9rem);
+	border-radius: var(--border-radius);
+	transition: border-radius var(--tr-duration-and-timing-function);
+}
+
+@container about-intro (width > 20em) {
+	.about-intro {
+		display: flow-root;
+	}
+
+	.about-intro img {
+		float: right;
+		margin-block-end: 0.5em;
+		margin-inline-start: 1.5em;
+		border-radius: 50%;
+		shape-outside: ellipse(50% 50%);
+	}
+
+	.about-intro img + p {
+		--flow-space: 0;
+	}
+}
+
 /* Card
    ======================================== */
 
@@ -995,25 +1026,6 @@ Can be any acceptable flexbox alignment value.
 a.logo {
 	color: inherit;
 	text-decoration-line: none;
-}
-
-/* Photo about
-   ======================================== */
-
-.photo-about {
-	max-inline-size: min(10rem, 100%);
-	border-radius: var(--border-radius);
-	transition: border-radius var(--tr-duration-and-timing-function);
-}
-
-@media screen and (width >= 24rem) {
-	.photo-about {
-		float: left;
-		margin-block-end: 0.5em;
-		margin-inline-end: 1.25em;
-		border-radius: 50%;
-		shape-outside: ellipse(50% 50%);
-	}
 }
 
 /* Projects
