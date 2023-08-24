@@ -955,6 +955,21 @@ Can be any acceptable flexbox alignment value.
 	border-radius: var(--border-radius);
 }
 
+.card :is(h1, h2, h3, h4, h5, h6) > a::after {
+	position: relative;
+	top: 0;
+	left: 0.3em;
+	display: inline-block;
+	width: 0.5em;
+	height: 0.5em;
+	vertical-align: middle;
+	content: "";
+	border: 0.125em solid;
+	border-block-end-width: 0;
+	border-inline-start-width: 0;
+	transform: rotate(45deg);
+}
+
 /* Icon
    ======================================== */
 
