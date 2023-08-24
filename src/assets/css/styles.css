@@ -955,10 +955,6 @@ Can be any acceptable flexbox alignment value.
 	border-radius: var(--border-radius);
 }
 
-.card__content {
-	flex: 1;
-}
-
 /* Icon
    ======================================== */
 
@@ -1025,14 +1021,6 @@ Can be any acceptable flexbox alignment value.
 a.logo {
 	color: inherit;
 	text-decoration-line: none;
-}
-
-/* Projects
-   ======================================== */
-
-.projects {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
 }
 
 /* Site layout
