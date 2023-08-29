@@ -974,7 +974,7 @@ Can be any acceptable flexbox alignment value.
    ======================================== */
 
 .icon {
-	display: block;
+	display: inline-block;
 	inline-size: 1em;
 	block-size: 1em;
 }
