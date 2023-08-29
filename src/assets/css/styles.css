@@ -76,8 +76,7 @@
 	--padding-2xs: 0.25em;
 	--padding-3xs: 0.125em;
 
-	/* Border With */
-
+	/* Border Width */
 	--bw-xs: max(1px, calc(1em / 16));
 	--bw-s: calc(1.5em / 16);
 	--bw-m: calc(2.5em / 16);
