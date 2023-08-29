@@ -278,7 +278,7 @@ figure {
 
 a {
 	color: var(--c-link);
-	text-underline-offset: 0.1em;
+	text-underline-position: under;
 	transition: color var(--tr-duration-and-timing-function), text-decoration-color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
