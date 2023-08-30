@@ -613,29 +613,6 @@ Can be any acceptable flexbox alignment value.
 	--size: calc(var(--page-max-inline-size) / 6);
 }
 
-/* Input-Button
-   ======================================== */
-
-.input-button {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--s-200);
-}
-
-.input-button > * {
-	flex-grow: 1;
-}
-
-.input-button > input {
-	flex-basis: 0;
-	flex-grow: 999;
-	min-inline-size: 66.666%;
-}
-
-.input-button > [type="number"] {
-	min-inline-size: 50%;
-}
-
 /*
 REPEL
 A little layout that pushes items away from each other where
