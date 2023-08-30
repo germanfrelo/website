@@ -39,7 +39,7 @@
 	--lh-5: calc(var(--lh-base) - 0.5);
 
 	/* Line length */
-	--page-max-inline-size: 60rem;
+	--page-max-inline-size: 65rem;
 
 	/* Fluid Type Scale */
 
