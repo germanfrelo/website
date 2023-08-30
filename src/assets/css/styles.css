@@ -751,8 +751,6 @@ Can be any acceptable flexbox alignment value.
 /* Design tokens utility classes
    ======================================== */
 
-/* Layout */
-
 .flex-justify-center {
 	justify-content: center;
 }
@@ -824,8 +822,6 @@ Can be any acceptable flexbox alignment value.
 .my-4xl {
 	margin-block: var(--s-900);
 }
-
-/* Text */
 
 .balanced {
 	text-wrap: balance;
