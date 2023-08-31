@@ -820,6 +820,31 @@ canvas {
 
 /* ============ 5. BLOCKS ============ */
 
+/* About intro
+   ======================================== */
+
+.about-intro {
+	inline-size: 100%;
+	border-radius: var(--border-radius);
+}
+
+@media screen and (width >= 23.5rem) {
+	.about-intro {
+		display: flow-root;
+	}
+
+	.about-intro img {
+		max-inline-size: 11rem;
+		float: left;
+		margin-block-end: 1em;
+		margin-inline-end: 1em;
+	}
+
+	.about-intro img + p {
+		--flow-space: 0;
+	}
+}
+
 /* Button
    ======================================== */
 
@@ -890,23 +915,6 @@ canvas {
 
 .link-icon:hover {
 	background-color: var(--c-bg-a);
-}
-
-/* Photo about
-   ======================================== */
-
-.photo-about {
-	inline-size: 100%;
-	border-radius: var(--border-radius);
-}
-
-@media screen and (width >= 23.5rem) {
-	.photo-about {
-		max-inline-size: 11rem;
-		float: left;
-		margin-block-end: 1em;
-		margin-inline-end: 1em;
-	}
 }
 
 /* Projects
