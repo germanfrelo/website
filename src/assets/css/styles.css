@@ -823,7 +823,7 @@ canvas {
 /* About intro
    ======================================== */
 
-.about-intro {
+.about-intro img {
 	inline-size: 100%;
 	border-radius: var(--border-radius);
 }
