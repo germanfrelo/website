@@ -45,14 +45,14 @@
 
 	/* Fluid Type Scale */
 
-	/* @link https://utopia.fyi/type/calculator?c=320,18,1.125,1440,20,1.2,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-	--step--1: clamp(1rem, calc(0.99rem + 0.06vw), 1.04rem);
-	--step-0: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
-	--step-1: clamp(1.27rem, calc(1.2rem + 0.33vw), 1.5rem);
-	--step-2: clamp(1.42rem, calc(1.32rem + 0.54vw), 1.8rem);
-	--step-3: clamp(1.6rem, calc(1.44rem + 0.8vw), 2.16rem);
-	--step-4: clamp(1.8rem, calc(1.58rem + 1.13vw), 2.59rem);
-	--step-5: clamp(2.03rem, calc(1.72rem + 1.55vw), 3.11rem);
+	/* @link https://utopia.fyi/type/calculator?c=320,17,1.125,1440,19,1.2,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step--1: clamp(0.94rem, calc(0.93rem + 0.06vw), 0.99rem);
+	--step-0: clamp(1.06rem, calc(1.03rem + 0.18vw), 1.19rem);
+	--step-1: clamp(1.2rem, calc(1.13rem + 0.33vw), 1.43rem);
+	--step-2: clamp(1.35rem, calc(1.24rem + 0.52vw), 1.71rem);
+	--step-3: clamp(1.51rem, calc(1.36rem + 0.77vw), 2.05rem);
+	--step-4: clamp(1.7rem, calc(1.48rem + 1.09vw), 2.46rem);
+	--step-5: clamp(1.91rem, calc(1.62rem + 1.49vw), 2.96rem);
 
 	/* Line Height */
 	--lh-large: 1.6;
@@ -96,8 +96,7 @@
 	--border-radius: 0.25rem;
 
 	/* Transitions */
-	--tr-duration: 0.1s;
-	--tr-timing-function: ease-in;
+	--tr-duration-and-timing-function: 0.1s ease-in;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -133,7 +132,7 @@ html {
 	color-scheme: var(--color-scheme);
 }
 
-/* Sections
+/* Sections and headings
    ======================================== */
 
 body {
@@ -185,12 +184,12 @@ h6 {
 	font-size: var(--step-0);
 }
 
-/* Grouping content
-   ======================================== */
-
 address {
 	font-style: normal;
 }
+
+/* Grouping content
+   ======================================== */
 
 hr {
 	block-size: var(--bw-2);
@@ -250,7 +249,7 @@ dd {
 
 a {
 	color: var(--c-link);
-	transition: color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration-and-timing-function);
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
@@ -260,11 +259,11 @@ a {
 .site-header a {
 	display: inline-block;
 	color: inherit;
-	text-decoration: none;
+	text-decoration-line: none;
 }
 
 a:is(:hover, :focus) {
-	text-decoration: none;
+	text-decoration-line: none;
 }
 
 .site-nav a {
@@ -354,11 +353,8 @@ tfoot {
 }
 
 th,
-thead :is(tr, td),
-tfoot tr {
-	background-color: var(--c-bg-2);
-}
-
+thead,
+tfoot,
 td:has(+ th) {
 	background-color: var(--c-bg-2);
 }
@@ -394,7 +390,7 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition: color var(--tr-duration) var(--tr-timing-function), background-color var(--tr-duration) var(--tr-timing-function), border-color var(--tr-duration) var(--tr-timing-function);
+	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
 }
 
 button,
@@ -433,31 +429,16 @@ button,
 	background-color: var(--c-bg-1);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):hover {
+:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):is(:hover, :focus) {
 	background-color: var(--c-bg-2);
 }
 
-:is(button, [type="button"], [type="image"], [type="submit"], [type="reset"]):focus {
-	background-color: var(--c-bg-2);
-}
-
-[type="image"]:hover {
+[type="image"]:is(:hover, :focus) {
 	background-color: revert;
 	border-color: revert;
 }
 
-[type="image"]:focus {
-	background-color: revert;
-	border-color: revert;
-}
-
-[type="submit"]:hover {
-	color: inherit;
-	background-color: var(--c-bg-1);
-	border-color: var(--c-tx-1);
-}
-
-[type="submit"]:focus {
+[type="submit"]:is(:hover, :focus) {
 	color: inherit;
 	background-color: var(--c-bg-1);
 	border-color: var(--c-tx-1);
@@ -495,7 +476,7 @@ summary {
 	padding-block: var(--padding-xxs);
 	padding-inline: var(--padding-xs);
 	margin-inline: calc(-1 * var(--padding-xs));
-	transition: background-color var(--tr-duration) var(--tr-timing-function);
+	transition: background-color var(--tr-duration-and-timing-function);
 }
 
 summary:hover {
@@ -841,6 +822,31 @@ canvas {
 
 /* ============ 5. BLOCKS ============ */
 
+/* About intro
+   ======================================== */
+
+.about-intro img {
+	inline-size: 100%;
+	border-radius: var(--border-radius);
+}
+
+@media screen and (width >= 23.5rem) {
+	.about-intro {
+		display: flow-root;
+	}
+
+	.about-intro img {
+		max-inline-size: 11rem;
+		float: left;
+		margin-block-end: 1em;
+		margin-inline-end: 1em;
+	}
+
+	.about-intro img + p {
+		--flow-space: 0;
+	}
+}
+
 /* Button
    ======================================== */
 
@@ -854,7 +860,7 @@ canvas {
 	font-weight: var(--fw-body-bold);
 	line-height: var(--lh-small);
 	text-align: center;
-	text-decoration: none;
+	text-decoration-line: none;
 	background-color: transparent;
 	border: var(--bw-2) solid var(--c-bd-2);
 	border-radius: var(--border-radius);
@@ -905,29 +911,12 @@ canvas {
 	font-size: var(--step-1);
 	line-height: 0;
 	color: inherit;
-	text-decoration: none;
+	text-decoration-line: none;
 	border-radius: var(--border-radius);
 }
 
 .link-icon:hover {
 	background-color: var(--c-bg-a);
-}
-
-/* Photo about
-   ======================================== */
-
-.photo-about {
-	inline-size: 100%;
-	border-radius: var(--border-radius);
-}
-
-@media screen and (width >= 23.5rem) {
-	.photo-about {
-		max-inline-size: 11rem;
-		float: left;
-		margin-block-end: 1em;
-		margin-inline-end: 1em;
-	}
 }
 
 /* Projects
