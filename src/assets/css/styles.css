@@ -514,6 +514,16 @@ canvas {
 
 /* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
 
+/* Center
+   ======================================== */
+
+.center {
+	box-sizing: content-box;
+	max-inline-size: var(--page-max-inline-size, 70ch);
+	padding-inline: var(--space-s-m, 1rem);
+	margin-inline: auto;
+}
+
 /* Cluster
 
 A layout that lets you distribute items with consistent
@@ -740,12 +750,6 @@ Can be any acceptable flexbox alignment value.
 	overflow: hidden !important;
 	clip-path: inset(50%) !important;
 	white-space: nowrap !important;
-}
-
-.wrapper {
-	inline-size: 90%;
-	max-inline-size: var(--page-max-inline-size);
-	margin-inline: auto;
 }
 
 /* Design tokens utility classes
