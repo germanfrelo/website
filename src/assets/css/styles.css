@@ -73,9 +73,9 @@
 	/* Colors */
 	--color-scheme: light dark;
 	--c-tx-1: hsl(217deg 50% 15%);
-	--c-tx-1-a: hsl(217deg 50% 15% / 50%);
+	--c-tx-1-a: hsl(217deg 50% 15% / 33.33%);
 	--c-tx-2: hsl(217deg 15% 45%);
-	--c-tx-2-a: hsl(217deg 15% 45% / 50%);
+	--c-tx-2-a: hsl(217deg 15% 45% / 33.33%);
 	--c-bg-1: hsl(217deg 50% 100%);
 	--c-bg-2: hsl(217deg 40% 98%);
 	--c-bg-3: hsl(217deg 25% 95%);
@@ -83,7 +83,7 @@
 	--c-bd-1: hsl(217deg 25% 85%);
 	--c-bd-2: hsl(217deg 25% 90%);
 	--c-link: hsl(217deg 90% 47%);
-	--c-link-a: hsl(217deg 90% 47% / 50%);
+	--c-link-a: hsl(217deg 90% 47% / 33.33%);
 	--c-accent: hsl(172deg 100% 45%);
 	--c-mark: hsla(55deg 100% 50% / 25%);
 
@@ -104,9 +104,9 @@
 	:root {
 		/* Colors */
 		--c-tx-1: hsl(217deg 25% 90%);
-		--c-tx-1-a: hsl(117deg 25% 90% / 50%);
+		--c-tx-1-a: hsl(117deg 25% 90% / 33.33%);
 		--c-tx-2: hsl(217deg 10% 60%);
-		--c-tx-2-a: hsl(217deg 10% 60% / 50%);
+		--c-tx-2-a: hsl(217deg 10% 60% / 33.33%);
 		--c-bg-1: hsl(217deg 15% 6%);
 		--c-bg-2: hsl(217deg 15% 9%);
 		--c-bg-3: hsl(217deg 15% 15%);
@@ -114,7 +114,7 @@
 		--c-bd-1: hsl(217deg 10% 30%);
 		--c-bd-2: hsl(217deg 10% 25%);
 		--c-link: hsl(217deg 100% 67%);
-		--c-link-a: hsl(217deg 100% 67% / 50%);
+		--c-link-a: hsl(217deg 100% 67% / 33.33%);
 		--c-accent: hsl(172deg 100% 45%);
 		--c-mark: hsla(55deg 100% 50% / 25%);
 	}
@@ -259,8 +259,9 @@ a {
 	--color-underline: var(--c-link-a);
 
 	color: var(--color);
+	text-decoration-thickness: 0.2ex;
 	text-decoration-color: var(--color-underline);
-	text-underline-offset: 0.2em;
+	text-underline-offset: 0.2ex;
 	transition: text-decoration-color var(--tr-duration-and-timing-function), color var(--tr-duration-and-timing-function);
 }
 
@@ -270,18 +271,22 @@ a {
 }
 
 .site-header a {
+	--color: inherit;
+	--color-underline: inherit;
+
 	display: inline-block;
-	color: inherit;
 	text-decoration-line: none;
 }
 
-a[href^="https://"]:not([class])::after
+a:is([href^="http://"], [href^="https://"], [href^="mailto:"], [href^="tel:"]):not([class])::after
 {
-	padding-inline-end: 0.25em;
-	font-size: 0.875em;
+	display: inline-block;
+	padding-inline: 0.1em;
+	font-size: 0.75em;
 	font-style: normal;
-	color: var(--color-underline);
+	vertical-align: middle;
 	content: "\00A0↗";
+	opacity: 0.6;
 	transition: color var(--tr-duration-and-timing-function);
 }
 
