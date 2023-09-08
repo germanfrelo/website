@@ -259,9 +259,8 @@ a {
 	--color-underline: var(--c-link-a);
 
 	color: var(--color);
-	text-decoration-thickness: 0.2ex;
 	text-decoration-color: var(--color-underline);
-	text-underline-offset: 0.2ex;
+	text-underline-position: under;
 	transition: text-decoration-color var(--tr-duration-and-timing-function), color var(--tr-duration-and-timing-function);
 }
 
@@ -281,7 +280,7 @@ a {
 a:is([href^="http://"], [href^="https://"], [href^="mailto:"], [href^="tel:"]):not([class])::after
 {
 	display: inline-block;
-	padding-inline: 0.1em;
+	margin-inline: 0.1em;
 	font-size: 0.75em;
 	font-style: normal;
 	vertical-align: middle;
