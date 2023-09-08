@@ -97,7 +97,7 @@
 	--border-radius: 0.25rem;
 
 	/* Transitions */
-	--tr-duration-and-timing-function: 0.1s ease-in;
+	--tr-duration-and-timing-function: 0.05s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
