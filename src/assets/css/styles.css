@@ -277,7 +277,7 @@ a {
 	text-decoration-line: none;
 }
 
-a:is([href^="http://"], [href^="https://"], [href^="mailto:"], [href^="tel:"]):not([class])::after
+a:is([href*="://"], [href^="mailto:"], [href^="tel:"]):not([class])::after
 {
 	position: relative;
 	inset-block-end: 0.05em;
