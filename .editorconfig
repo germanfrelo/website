@@ -1,8 +1,20 @@
+# https://editorconfig.org
+
+# Top-most EditorConfig file
 root = true
 
+# All files
 [*]
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 indent_style = tab
+
+# YAML files
+[*.{yaml,yml}]
+# Tab characters must not be used in indentation:
+# - https://yaml.org/faq.html
+# - https://yaml.org/spec/1.2.2/#61-indentation-spaces
+indent_style = space
+indent_size = 2
