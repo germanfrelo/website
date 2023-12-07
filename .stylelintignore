@@ -2,4 +2,4 @@
 # See https://stylelint.io/user-guide/ignore-code and https://stylelint.io/user-guide/configure#ignorefiles for more details.
 
 # Eleventy output directory
-/public/
+/_site/

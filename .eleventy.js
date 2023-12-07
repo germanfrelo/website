@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-	// Set directories to pass through to the public folder
+	// Set directories to pass through to the output folder "_site"
 	eleventyConfig.addPassthroughCopy("./src/assets");
 	eleventyConfig.addPassthroughCopy("_redirects");
 
@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
 		htmlTemplateEngine: "njk",
 		dir: {
 			input: "src",
-			output: "public",
+			output: "_site",
 		},
 	};
 };
