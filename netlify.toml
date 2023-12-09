@@ -1,0 +1,51 @@
+# BUILD SETTINGS
+
+[build]
+publish = "_site/"
+command = "npm run build"
+
+# REDIRECTS
+
+# Netlify default subdomain
+
+[[redirects]]
+from = "https://germanfrelo.netlify.app/*"
+to = "https://germanfrelo.dev/:splat"
+status = 301
+force = true
+
+# Custom domains
+
+# Primary domain is germanfrelo.dev; there is no need to redirect www.germanfrelo.dev because Netlify already redirects automatically between the apex domain and www subdomain
+
+[[redirects]]
+from = "https://www.germanfreixinos.com/*"
+to = "https://germanfrelo.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://germanfreixinos.com/*"
+to = "https://germanfrelo.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.germanfreixinos.es/*"
+to = "https://germanfrelo.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://germanfreixinos.es/*"
+to = "https://germanfrelo.dev/:splat"
+status = 301
+force = true
+
+# Paths
+
+[[redirects]]
+from = "/portfolio/*"
+to = "/projects/:splat"
+status = 301
+force = true
