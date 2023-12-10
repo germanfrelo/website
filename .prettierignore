@@ -1,5 +1,0 @@
-# By default, Prettier ignores files in version control systems directories (".git", ".svn" and ".hg") and node_modules.
-# See https://prettier.io/docs/en/ignore for more details.
-
-# Eleventy output directory
-/_site/
