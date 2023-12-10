@@ -275,8 +275,8 @@ a:is(:hover, :focus) {
 	inset-block-end: calc(-2 * var(--underline-thickness));
 	inset-inline: 0;
 	display: block;
-	content: "";
 	block-size: var(--underline-thickness);
+	content: "";
 	background-color: var(--c-bd-1);
 }
 
@@ -388,7 +388,10 @@ button {
 	background-color: var(--c-bg-2);
 	border: var(--bw-2) solid transparent;
 	border-radius: var(--border-radius);
-	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
+	transition:
+		color var(--tr-duration-and-timing-function),
+		background-color var(--tr-duration-and-timing-function),
+		border-color var(--tr-duration-and-timing-function);
 }
 
 button,
@@ -834,8 +837,8 @@ canvas {
 	}
 
 	.about-intro img {
-		max-inline-size: 11rem;
 		float: left;
+		max-inline-size: 11rem;
 		margin-block-end: 1em;
 		margin-inline-end: 1em;
 	}
