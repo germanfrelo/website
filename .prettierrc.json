@@ -1,8 +1,5 @@
 {
-	"plugins": [
-		"@prettier/plugin-xml",
-		"prettier-plugin-multiline-arrays"
-	],
+	"plugins": ["prettier-plugin-multiline-arrays"],
 	"printWidth": 999999,
 	"singleAttributePerLine": true,
 	"useTabs": true
