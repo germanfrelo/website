@@ -34,6 +34,7 @@
 	},
 	"license": "ISC",
 	"author": "Germán Freixinós López",
+	"type": "module",
 	"main": ".eleventy.js",
 	"scripts": {
 		"build": "eleventy",
@@ -75,5 +76,8 @@
 		"stylelint": "16.0.1",
 		"stylelint-config-recess-order": "4.4.0",
 		"stylelint-config-standard": "35.0.0"
+	},
+	"engines": {
+		"node": ">=18.12.0"
 	}
 }
