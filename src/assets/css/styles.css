@@ -939,8 +939,7 @@ canvas {
 .site-header__inner {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-500);
-	column-gap: var(--s-600);
+	gap: var(--s-500) var(--s-600);
 	align-items: center;
 	justify-content: space-between;
 }
@@ -956,8 +955,7 @@ canvas {
    ======================================== */
 
 .site-main {
-	padding-block-start: var(--s-600);
-	padding-block-end: var(--s-900);
+	padding-block: var(--s-600) var(--s-900);
 }
 
 /* Site footer
