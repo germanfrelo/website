@@ -72,8 +72,8 @@
 		"lint-staged": "15.2.0",
 		"prettier": "3.1.1",
 		"sort-package-json": "2.6.0",
-		"stylelint": "15.11.0",
+		"stylelint": "16.0.2",
 		"stylelint-config-recess-order": "4.4.0",
-		"stylelint-config-standard": "33.0.0"
+		"stylelint-config-standard": "35.0.0"
 	}
 }
