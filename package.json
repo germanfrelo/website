@@ -72,7 +72,7 @@
 		"eslint-config-prettier": "9.1.0",
 		"husky": "8.0.3",
 		"lint-staged": "15.2.0",
-		"prettier": "3.2.3",
+		"prettier": "3.2.4",
 		"sort-package-json": "2.6.0",
 		"stylelint": "16.1.0",
 		"stylelint-config-recess-order": "4.4.0",
