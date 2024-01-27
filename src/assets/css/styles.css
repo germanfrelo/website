@@ -969,6 +969,49 @@ canvas {
 	background-color: var(--c-bg-2);
 }
 
+/* Status success
+   ======================================== */
+
+.status-success {
+	--flow-space: 1.5em;
+
+	display: flex;
+	gap: var(--padding-xs);
+	align-items: center;
+	max-inline-size: max-content;
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
+	font-size: var(--step--1);
+	font-weight: var(--fw-body-medium);
+	line-height: var(--lh-small);
+	background-color: hsl(152deg 66% 50% / 20%);
+	border-radius: calc(infinity * 1px);
+}
+
+.status-success::before {
+	display: inline-block;
+	inline-size: 0.875em;
+	block-size: 0.875em;
+	content: "";
+	background-color: hsl(152deg 100% 33%);
+	border-radius: 50%;
+	animation: fade-in-out 2s linear infinite;
+}
+
+@keyframes fade-in-out {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 /* Tag
    ======================================== */
 
