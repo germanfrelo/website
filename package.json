@@ -46,14 +46,9 @@
 		"lint:js": "eslint --max-warnings 0 .",
 		"lint:js:fix": "npm run lint:js -- --fix",
 		"prepare": "husky",
-		"sort-package-json": "sort-package-json",
 		"start": "eleventy --serve"
 	},
 	"lint-staged": {
-		"package.json": [
-			"sort-package-json",
-			"prettier --write"
-		],
 		"*.css": [
 			"stylelint --formatter verbose --max-warnings 0",
 			"prettier --write"
@@ -62,7 +57,7 @@
 			"eslint --max-warnings 0",
 			"prettier --write"
 		],
-		"**/!(package.json|*.css|*.js)": [
+		"**/!(*.css|*.js)": [
 			"prettier --write --ignore-unknown"
 		]
 	},
@@ -73,7 +68,6 @@
 		"husky": "9.0.6",
 		"lint-staged": "15.2.0",
 		"prettier": "3.2.4",
-		"sort-package-json": "2.6.0",
 		"stylelint": "16.2.0",
 		"stylelint-config-recess-order": "4.4.0",
 		"stylelint-config-standard": "36.0.0"
