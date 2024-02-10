@@ -1,3 +1,10 @@
 {
-	"css.validate": false
+	"css.styleSheets": ["src/**/*.css"],
+	"css.validate": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		// "source.fixAll.stylelint": ""
+	},
+	"stylelint.enable": true
 }
