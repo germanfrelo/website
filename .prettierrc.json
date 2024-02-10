@@ -1,5 +1,4 @@
 {
-	"singleAttributePerLine": true,
 	"useTabs": true,
 	"overrides": [
 		{
@@ -7,6 +6,10 @@
 			"options": {
 				"printWidth": 999999
 			}
+		},
+		{
+			"files": ["!*.html"],
+			"options": { "singleAttributePerLine": true }
 		}
 	]
 }
