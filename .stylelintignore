@@ -1,5 +1,6 @@
-# By default, Stylelint ignores the `node_modules` directory.
-# See https://stylelint.io/user-guide/ignore-code and https://stylelint.io/user-guide/configure#ignorefiles for more details.
+# Stylelint ignores the node_modules directory by default. More info:
+# - https://stylelint.io/user-guide/configure#ignorefiles)
+# - https://stylelint.io/user-guide/ignore-code#files-entirely
 
 # Eleventy output directory
 /_site/

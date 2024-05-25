@@ -1,2 +1,5 @@
-# Normalize line endings of all text files checked into the repo with LF.
+# Ensure that text files introduced to the repository have their line endings normalized to LF. More info:
+# - https://git-scm.com/docs/gitattributes#_end_of_line_conversion
+# - https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
+# - https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/
 * text=auto
