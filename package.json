@@ -1,6 +1,7 @@
 {
 	"name": "website",
 	"version": "1.0.0",
+	"private": true,
 	"description": "Personal website of Germán Freixinós López, front-end web developer.",
 	"keywords": [
 		"11ty-website",
