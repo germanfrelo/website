@@ -51,14 +51,14 @@
 	},
 	"lint-staged": {
 		"*.css": [
-			"stylelint --formatter verbose --max-warnings 0",
+			"stylelint --max-warnings 0",
 			"prettier --write"
 		],
 		"*.js": [
 			"eslint --max-warnings 0",
 			"prettier --write"
 		],
-		"**/!(*.css|*.js)": [
+		"!(*.css|*.js)": [
 			"prettier --write --ignore-unknown"
 		]
 	},
