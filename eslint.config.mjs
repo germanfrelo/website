@@ -1,14 +1,17 @@
-const js = require("@eslint/js");
-const globals = require("globals");
+import js from "@eslint/js";
+import globals from "globals";
 
-module.exports = [
+export default [
 	{
+		files: ["**/*.js"],
 		languageOptions: {
 			sourceType: "commonjs",
-			globals: {
-				// Enable all predefined browser global variables
-				...globals.browser,
-			},
+		},
+	},
+	{
+		languageOptions: {
+			// Enable all predefined browser global variables
+			globals: globals.browser,
 		},
 	},
 	// ESLint's predefined config that enables its recommended rules
