@@ -1,5 +1,8 @@
 {
 	"extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+	"reportDescriptionlessDisables": true,
+	"reportInvalidScopeDisables": true,
+	"reportNeedlessDisables": true,
 	"rules": {
 		"custom-media-pattern": null,
 		"custom-property-pattern": null,
