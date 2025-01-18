@@ -33,8 +33,8 @@
 		"type": "git",
 		"url": "https://github.com/germanfrelo/website.git"
 	},
-	"license": "ISC",
-	"author": "Germán Freixinós López",
+	"license": "MIT",
+	"author": "Germán Freixinós",
 	"main": ".eleventy.js",
 	"scripts": {
 		"build": "eleventy",
