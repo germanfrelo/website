@@ -499,12 +499,15 @@ canvas {
 /* Flow
    ======================================== */
 
-.flow > * + * {
-	margin-block-start: var(--flow-space, 1em);
+h1,
+h2,
+h3,
+hgroup {
+	--flow-space: 1.5em;
 }
 
-.flow :is(h2, h3) {
-	--flow-space: 2em;
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
 }
 
 /* Stack
@@ -819,6 +822,16 @@ canvas {
 	font-weight: var(--fw-body-bold);
 }
 
+/* Color */
+
+.color-primary {
+	color: var(--c-tx-1);
+}
+
+.color-secondary {
+	color: var(--c-tx-2);
+}
+
 /* ============ 5. BLOCKS ============ */
 
 /* About intro
@@ -875,6 +888,16 @@ canvas {
 	color: var(--c-tx-1);
 }
 
+/* Callout
+   ======================================== */
+
+.callout {
+	padding: var(--padding-md);
+	background-color: hsl(150deg 50% 50% / 10%);
+	border: var(--bw-2) solid hsl(150deg 50% 50% / 50%);
+	border-radius: var(--border-radius);
+}
+
 /* Card
    ======================================== */
 
@@ -892,6 +915,23 @@ canvas {
 	flex: 1;
 }
 
+/* Company logo
+   ======================================== */
+
+.company-logo {
+	max-inline-size: 64px;
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 0 0.0625em var(--c-bg-a);
+}
+
+/* Experience list
+   ======================================== */
+
+.experience-list > * + * {
+	padding-block-start: var(--space, var(--flow-space, 1em));
+	border-block-start: var(--bw-1) solid var(--c-bd-2);
+}
+
 /* Icon
    ======================================== */
 
@@ -907,15 +947,27 @@ canvas {
 .link-icon {
 	display: inline-block;
 	padding: var(--padding-xxs);
-	font-size: var(--step-1);
+	/* font-size: var(--step-1); */
+	font-size: 1.25em;
 	line-height: 0;
 	color: inherit;
 	text-decoration-line: none;
-	border-radius: var(--border-radius);
+	border: var(--bw-1) solid transparent;
+	/* border-radius: var(--border-radius); */
+	border-radius: 50%;
 }
 
 .link-icon:hover {
 	background-color: var(--c-bg-a);
+}
+
+.link-only-icon--bg {
+	background-color: var(--c-bg-3);
+}
+
+.link-only-icon--bg:hover {
+	background-color: var(--c-bg-1);
+	border-color: var(--c-bd-2);
 }
 
 /* Projects
