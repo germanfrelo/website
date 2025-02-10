@@ -1,4 +1,4 @@
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 	// Set directories to pass through to the output folder "_site"
 	eleventyConfig.addPassthroughCopy("./src/assets");
 	eleventyConfig.addPassthroughCopy("_redirects");
@@ -12,4 +12,4 @@ module.exports = function (eleventyConfig) {
 			data: "_data",
 		},
 	};
-};
+}
