@@ -270,7 +270,6 @@ a:is(:hover, :focus) {
 
 .site-nav a:is([aria-current="page"], :hover)::after {
 	--underline-thickness: var(--bw-3);
-
 	position: absolute;
 	inset-block-end: calc(-2 * var(--underline-thickness));
 	inset-inline: 0;
@@ -600,7 +599,6 @@ canvas {
 [class*="l-grid"] {
 	--size: 100%;
 	--gap: var(--space, var(--flow-space, 1rem));
-
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
 	gap: var(--gap);
@@ -974,7 +972,6 @@ canvas {
 
 .status-success {
 	--flow-space: 1.5em;
-
 	display: flex;
 	gap: var(--padding-xs);
 	align-items: center;
