@@ -1,7 +1,9 @@
 export default function (eleventyConfig) {
 	// Set directories to pass through to the output folder "_site"
-	eleventyConfig.addPassthroughCopy("./src/assets");
 	eleventyConfig.addPassthroughCopy("_redirects");
+	eleventyConfig.addPassthroughCopy("manifest.webmanifest");
+	eleventyConfig.addPassthroughCopy("src/assets");
+	eleventyConfig.addPassthroughCopy({ "src/favicon": "/" });
 
 	return {
 		htmlTemplateEngine: "njk",
