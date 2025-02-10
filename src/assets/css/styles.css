@@ -283,6 +283,7 @@ a:is([href*="://"], [href^="mailto:"], [href^="tel:"]):not([class])::after
 	inset-block-end: 0.05em;
 	display: inline-block;
 	margin-inline: 0.1em;
+	font-family: var(--ff-sans-fallback);
 	font-size: 0.75em;
 	font-style: normal;
 	content: "\00A0↗";
