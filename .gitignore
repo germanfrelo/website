@@ -1,5 +1,9 @@
-# Node.js
+### Node ###
+
+# Dependency directories
 node_modules/
+
+### Eleventy ###
 
 # Eleventy output directory
 /_site/

@@ -1,27 +1,37 @@
-# https://editorconfig.org
+# NOTE:
+# EditorConfig and Prettier share some options. To avoid conflicts between them, only configure these options in the .editorconfig file. Prettier will use them instead of its own defaults.
+# Refs. https://prettier.io/docs/en/configuration#editorconfig and https://joepkockelkorn.com/blog/combining-gitattributes-editorconfig-and-prettier
 
-# Top-most EditorConfig file
+# Stop the editor from looking for .editorconfig files in parent directories
 root = true
 
 # All files
 [*]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
-indent_style = tab
+charset = utf-8                   # 1
+end_of_line = lf                  # 2
+insert_final_newline = true       # 3
+trim_trailing_whitespace = true   # 4
+indent_style = tab                # 5
 
-# Markdown files
+# Markdown
 [*.md]
-# Keep trailing whitespace in order to create hard line breaks (see https://code.visualstudio.com/docs/languages/markdown#_keep-trailing-whitespace-in-order-to-create-line-breaks)
-trim_trailing_whitespace = false
-# 4-spaces indentation (see https://github.com/DavidAnson/vscode-markdownlint/issues/86#issuecomment-579860824)
-indent_style = space
-indent_size = 4
+indent_style = space              # 6
+indent_size = 2                   # 7
+trim_trailing_whitespace = false  # 8
 
-# YAML files
-[*.{yml,yaml}]
-# YAML doesn't support hard tabs (see https://yaml.org/spec/1.2.2/#61-indentation-spaces)
+# YAML
+[*.{yaml,yml}]                    # 9
 indent_style = space
-# The YAML spec doesn't mandate a specific number of spaces for indentation; however, two spaces per indentation level is the most widely recommended and used approach (see https://localheinz.com/articles/2023/02/06/indenting-yaml-files/#content-use-two-spaces-of-indentation)
 indent_size = 2
+
+# ---
+
+# 1. https://www.w3.org/International/questions/qa-html-encoding-declarations
+# 2. https://aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git
+# 3. https://stackoverflow.com/q/729692/10015695
+# 4. https://softwareengineering.stackexchange.com/q/121555
+# 5. https://gist.github.com/germanfrelo/fc3ac17ff5bd78b7bf0786734f15d8b4
+# 6. https://github.com/DavidAnson/markdownlint/blob/main/doc/md010.md
+# 7. https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md
+# 8. https://gist.github.com/germanfrelo/513086438cc38a6dadecb4ff49a46af4
+# 9. https://localheinz.com/articles/2023/02/06/indenting-yaml-files

@@ -1,15 +1,23 @@
 {
-	"useTabs": true,
+	"quoteProps": "consistent",
 	"overrides": [
 		{
-			"files": ["*.html", "*.css"],
+			"files": ["*.css", "*.html"],
 			"options": {
 				"printWidth": 9999
 			}
 		},
 		{
 			"files": ["*.js", "*.jsx", "*.vue"],
-			"options": { "singleAttributePerLine": true }
+			"options": {
+				"singleAttributePerLine": true
+			}
+		},
+		{
+			"files": ["*.jsonc"],
+			"options": {
+				"trailingComma": "none"
+			}
 		}
 	]
 }
