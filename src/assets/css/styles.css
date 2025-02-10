@@ -52,23 +52,32 @@
 	--step-4: clamp(1.7019rem, 1.0864vw + 1.4846rem, 2.4624rem);
 	--step-5: clamp(1.9147rem, 1.486vw + 1.6175rem, 2.9549rem);
 
-	/* Size Scale */
-	--base-size: 1rem;
-	--ratio: 1.333;
-	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
-	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
-	--s-700: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
-	--s-600: calc(var(--base-size) * var(--ratio) * var(--ratio));
-	--s-500: calc(var(--base-size) * var(--ratio));
-	--s-400: var(--base-size);
-	--s-300: calc(var(--base-size) / var(--ratio));
-	--s-200: calc(var(--base-size) / var(--ratio) / var(--ratio));
-	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
+	/* Fluid Space Scale */
+
+	/* @link https://utopia.fyi/space/calculator/?c=320,17,1.125,1440,19,1.2,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */
+
+	/* Individual sizes */
+	--space-3xs: clamp(0.25rem, 0.23rem + 0.09vw, 0.31rem);
+	--space-2xs: clamp(0.56rem, 0.54rem + 0.09vw, 0.63rem);
+	--space-xs: clamp(0.81rem, 0.79rem + 0.09vw, 0.88rem);
+	--space-s: clamp(1.06rem, 1.03rem + 0.18vw, 1.19rem); /* base */
+	--space-m: clamp(1.63rem, 1.57rem + 0.27vw, 1.81rem);
+	--space-l: clamp(2.13rem, 2.05rem + 0.36vw, 2.38rem);
+	--space-xl: clamp(3.19rem, 3.08rem + 0.54vw, 3.56rem);
+	--space-2xl: clamp(4.25rem, 4.11rem + 0.71vw, 4.75rem);
+	--space-3xl: clamp(6.38rem, 6.16rem + 1.07vw, 7.13rem);
+
+	/* One-up pairs */
+	--space-3xs-2xs: clamp(0.25rem, 0.14rem + 0.54vw, 0.63rem);
+	--space-2xs-xs: clamp(0.56rem, 0.47rem + 0.45vw, 0.88rem);
+	--space-xs-s: clamp(0.81rem, 0.71rem + 0.54vw, 1.19rem);
+	--space-s-m: clamp(1.06rem, 0.85rem + 1.07vw, 1.81rem);
+	--space-m-l: clamp(1.63rem, 1.41rem + 1.07vw, 2.38rem);
+	--space-l-xl: clamp(2.13rem, 1.71rem + 2.05vw, 3.56rem);
+	--space-xl-2xl: clamp(3.19rem, 2.74rem + 2.23vw, 4.75rem);
+	--space-2xl-3xl: clamp(4.25rem, 3.43rem + 4.11vw, 7.13rem);
 
 	/* Padding */
-	--padding-3xl: 2em;
-	--padding-2xl: 1.75em;
-	--padding-xl: 1.5em;
 	--padding-l: 1.25em;
 	--padding-m: 1em;
 	--padding-s: 0.75em;
@@ -86,7 +95,7 @@
 	--border-radius: calc(2.5em / 16);
 
 	/* Transitions */
-	--tr-duration-and-timing-function: 0.1s ease-out;
+	--tr-duration-and-timing-function: 0.05s ease-out;
 
 	/* Colors */
 	--c-neutral-100: hsl(217deg 0% 100%);
@@ -204,7 +213,7 @@ h6 {
 }
 
 address {
-	font-style: normal;
+	font-style: inherit;
 }
 
 /* Grouping content
@@ -245,7 +254,7 @@ blockquote {
 ol,
 ul,
 menu {
-	padding-inline-start: 1em;
+	padding-inline-start: var(--padding-m);
 }
 
 /*
@@ -261,7 +270,7 @@ dt {
 }
 
 dd {
-	margin-inline-start: var(--padding-xl);
+	margin-inline-start: var(--space-m);
 }
 
 figure {
@@ -525,59 +534,18 @@ canvas {
 }
 
 /* Cluster
-
-A layout that lets you distribute items with consistent
-spacing, regardless of their size.
-More info: https://github.com/Andy-set-studio/personal-site-eleventy/blob/main/src/css/compositions/cluster.css
-
-Custom properties and configuration:
-
---gutter (var(--space-s-m)): This defines the space
-between each item.
-
---cluster-horizontal-alignment (flex-start) How items should align
-horizontally. Can be any acceptable flexbox alignment value.
-
---cluster-vertical-alignment How items should align vertically.
-Can be any acceptable flexbox alignment value.
-
    ======================================== */
 
-[class*="cluster"] {
+.cluster {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--gutter, var(--space-s-l));
-	align-items: flex-start;
-	align-items: var(--cluster-vertical-alignment, center);
-	justify-content: var(--cluster-horizontal-alignment, flex-start);
+	gap: var(--gutter, var(--space-s, 1em));
+	align-items: var(--align-items, center);
+	justify-content: var(--justify-content, flex-start);
 }
 
-[class*="cluster"] > * {
+.cluster > * {
 	margin: 0;
-}
-
-.cluster-xl {
-	gap: var(--s-600);
-}
-
-.cluster-l {
-	gap: var(--s-500);
-}
-
-.cluster-m {
-	gap: var(--s-400);
-}
-
-.cluster-s {
-	gap: var(--s-300);
-}
-
-.cluster-xs {
-	gap: var(--s-200);
-}
-
-.cluster-2xs {
-	gap: var(--s-100);
 }
 
 /* Flow
@@ -587,6 +555,10 @@ Can be any acceptable flexbox alignment value.
 	--flow-space: calc(var(--lh-base) * 1em);
 }
 
+.flow > * {
+	margin-block: 0;
+}
+
 .flow > * + * {
 	margin-block-start: var(--flow-space, 1em);
 }
@@ -594,49 +566,23 @@ Can be any acceptable flexbox alignment value.
 /* Grid
    ======================================== */
 
-[class*="grid"] {
-	--size: 100%;
-	--gap: var(--space, var(--flow-space, 1rem));
-
+.grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--size) - var(--gap))), 1fr));
-	gap: var(--gap);
+	grid-template-columns: repeat(var(--grid-placement, auto-fit), minmax(min(100%, var(--grid-min-item-size, 16rem)), 1fr));
+	gap: var(--gutter, var(--flow-space, 1em));
 }
 
-.grid-2 {
-	--size: calc(var(--page-max-inline-size) / 2);
+.grid[data-layout="auto-fill"] {
+	--grid-placement: auto-fill;
 }
 
-.grid-3 {
-	--size: calc(var(--page-max-inline-size) / 3);
-}
+/* Repel
+   ======================================== */
 
-.grid-4 {
-	--size: calc(var(--page-max-inline-size) / 4);
-}
-
-.grid-5 {
-	--size: calc(var(--page-max-inline-size) / 5);
-}
-
-.grid-6 {
-	--size: calc(var(--page-max-inline-size) / 6);
-}
-
-/*
-REPEL
-A little layout that pushes items away from each other where
-there is space in the viewport and stacks on small viewports
-CUSTOM PROPERTIES AND CONFIGURATION
---gutter (var(--space-s-m)): This defines the space
-between each item.
---repel-vertical-alignment How items should align vertically.
-Can be any acceptable flexbox alignment value.
-*/
 .repel {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--gutter, var(--space-s-l));
+	gap: var(--gutter, var(--space-s, 1em));
 	align-items: var(--repel-vertical-alignment, center);
 	justify-content: space-between;
 }
@@ -645,78 +591,59 @@ Can be any acceptable flexbox alignment value.
 	flex-wrap: nowrap;
 }
 
+.repel > * {
+	margin: 0;
+}
+
 /* Sidebar
    ======================================== */
 
 [class*="with-sidebar-"] {
+	--contentMin: 66.666%;
+
 	display: flex;
 	flex-wrap: wrap;
-	align-items: flex-start;
 }
 
 [class*="with-sidebar-"] > * {
 	flex-grow: 1;
 }
 
+[class*="with-sidebar-"][data-contentMin="66.666"] {
+	--contentMin: 66.666%;
+}
+
+[class*="with-sidebar-"][data-contentMin="50%"] {
+	--contentMin: 50%;
+}
+
 .with-sidebar-left > :nth-child(2) {
 	flex-basis: 0;
 	flex-grow: 999;
-	min-inline-size: 66.666%;
+	min-inline-size: var(--contentMin);
 }
 
 .with-sidebar-right > :nth-child(1) {
 	flex-basis: 0;
 	flex-grow: 999;
-	min-inline-size: 66.666%;
+	min-inline-size: var(--contentMin);
 }
 
 /* Stack
    ======================================== */
 
-[class*="stack"] {
+.stack {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
-[class*="stack"] > * {
+.stack > * {
 	margin-block: 0;
 }
 
-[class*="stack"] > * + * {
-	margin-block-start: var(--space, 1rem);
-}
-
-.stack-3xl > * + * {
-	--space: var(--s-800);
-}
-
-.stack-2xl > * + * {
-	--space: var(--s-700);
-}
-
-.stack-xl > * + * {
-	--space: var(--s-600);
-}
-
-.stack-l > * + * {
-	--space: var(--s-500);
-}
-
-.stack-m > * + * {
-	--space: var(--s-400);
-}
-
-.stack-s > * + * {
-	--space: var(--s-300);
-}
-
-.stack-xs > * + * {
-	--space: var(--s-200);
-}
-
-.stack-2xs > * + * {
-	--space: var(--s-100);
+.stack > * + * {
+	margin-block-start: var(--gutter, var(--space-s, 1rem));
 }
 
 /* Switcher
@@ -725,10 +652,11 @@ Can be any acceptable flexbox alignment value.
 .switcher {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--s-400);
+	gap: var(--gutter, var(--space-s, 1em));
 }
 
 .switcher > * {
+	margin: 0;
 	flex-basis: calc((30rem - 100%) * 999);
 	flex-grow: 1;
 }
@@ -759,72 +687,72 @@ Can be any acceptable flexbox alignment value.
 	justify-content: center;
 }
 
-.gap-100 {
-	gap: var(--s-100);
+.gutter-2xs {
+	--gutter: var(--space-3xs);
 }
 
-.gap-200 {
-	gap: var(--s-200);
+.gutter-xs {
+	--gutter: var(--space-2xs);
 }
 
-.gap-300 {
-	gap: var(--s-300);
+.gutter-s {
+	--gutter: var(--space-xs);
 }
 
-.gap-400 {
-	gap: var(--s-400);
+.gutter-m {
+	--gutter: var(--space-s);
 }
 
-.gap-500 {
-	gap: var(--s-500);
+.gutter-l {
+	--gutter: var(--space-m);
 }
 
-.gap-600 {
-	gap: var(--s-600);
+.gutter-xl {
+	--gutter: var(--space-l);
 }
 
-.gap-700 {
-	gap: var(--s-700);
+.gutter-2xl {
+	--gutter: var(--space-xl);
 }
 
-.gap-800 {
-	gap: var(--s-800);
+.gutter-3xl {
+	--gutter: var(--space-2xl);
+}
+
+.gutter-4xl {
+	--gutter: var(--space-3xl);
 }
 
 .my-2xs {
-	margin-block: var(--s-100);
+	margin-block: var(--space-3xs);
 }
 
 .my-xs {
-	margin-block: var(--s-200);
+	margin-block: var(--space-2xs);
 }
 
 .my-s {
-	margin-block: var(--s-300);
+	margin-block: var(--space-xs);
 }
 
 .my-m {
-	margin-block: var(--s-400);
+	margin-block: var(--space-s);
 }
 
 .my-l {
-	margin-block: var(--s-500);
+	margin-block: var(--space-m);
 }
 
 .my-xl {
-	margin-block: var(--s-600);
+	margin-block: var(--space-l);
 }
 
 .my-2xl {
-	margin-block: var(--s-700);
+	margin-block: var(--space-xl);
 }
 
 .my-3xl {
-	margin-block: var(--s-800);
-}
-
-.my-4xl {
-	margin-block: var(--s-900);
+	margin-block: var(--space-2xl);
 }
 
 .balanced {
@@ -893,12 +821,13 @@ Can be any acceptable flexbox alignment value.
 }
 
 .about-intro img {
-	inline-size: min(100%, 9rem);
+	inline-size: 100%;
+	max-inline-size: 9rem;
 	border-radius: var(--border-radius);
 	transition: border-radius var(--tr-duration-and-timing-function);
 }
 
-@container about-intro (width > 20em) {
+@container about-intro (width > 38ch) {
 	.about-intro {
 		display: flow-root;
 	}
@@ -908,7 +837,7 @@ Can be any acceptable flexbox alignment value.
 		margin-block-end: 0.5em;
 		margin-inline-start: 1.5em;
 		border-radius: 50%;
-		shape-outside: ellipse(50% 50%);
+		shape-outside: circle();
 	}
 
 	.about-intro img + p {
@@ -922,10 +851,9 @@ Can be any acceptable flexbox alignment value.
 .card {
 	display: flex;
 	flex-direction: column;
-	gap: var(--s-400);
+	gap: var(--padding-s);
 	align-items: flex-start;
-	padding-block: var(--padding-m);
-	padding-inline: var(--padding-l);
+	padding: var(--padding-l);
 	text-align: start;
 	background-color: var(--c-bg-2);
 	border-radius: var(--border-radius);
@@ -966,7 +894,21 @@ Can be any acceptable flexbox alignment value.
 	align-items: center;
 	justify-content: center;
 	padding-block: var(--padding-xs);
-	padding-inline: var(--padding-m);
+	padding-inline: var(--padding-s);
+	font-weight: var(--fw-body-medium);
+	line-height: var(--lh-medium);
+	text-decoration-color: transparent;
+	border: var(--bw-s) solid var(--c-border);
+	border-radius: var(--border-radius);
+}
+
+.link-with-icon[data-style="alt"] {
+	display: flex;
+	gap: var(--padding-xs);
+	align-items: center;
+	justify-content: center;
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-s);
 	font-weight: var(--fw-body-medium);
 	line-height: var(--lh-medium);
 	text-decoration-color: transparent;
@@ -981,6 +923,11 @@ Can be any acceptable flexbox alignment value.
 
 .link-with-icon:hover {
 	text-decoration-color: revert;
+}
+
+.link-with-icon[data-style="alt"]:hover {
+	text-decoration-color: transparent;
+	border-color: currentcolor;
 }
 
 /* Logo
@@ -1005,6 +952,7 @@ a.logo {
 .site-layout {
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr) auto;
+	align-items: center;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -1016,7 +964,7 @@ a.logo {
    ======================================== */
 
 .site-header {
-	padding-block: var(--padding-l);
+	padding-block: var(--space-m);
 	line-height: var(--lh-medium);
 	background-color: var(--c-bg-2);
 }
@@ -1027,8 +975,8 @@ a.logo {
 .site-header-layout {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-400);
-	column-gap: var(--s-800);
+	row-gap: var(--space-s);
+	column-gap: var(--space-m-l);
 	align-items: baseline;
 	justify-content: space-between;
 }
@@ -1039,8 +987,8 @@ a.logo {
 .site-nav-layout {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: var(--s-300);
-	column-gap: var(--s-600);
+	row-gap: var(--space-s);
+	column-gap: var(--space-s-m);
 	align-items: center;
 }
 
@@ -1068,15 +1016,15 @@ a.logo {
    ======================================== */
 
 .site-main {
-	padding-block-start: var(--s-700);
-	padding-block-end: var(--s-900);
+	padding-block-start: var(--space-l-xl);
+	padding-block-end: var(--space-2xl-3xl);
 }
 
 /* Site footer
    ======================================== */
 
 .site-footer {
-	padding-block: var(--s-700);
+	padding-block: var(--space-l);
 	font-size: var(--step--1);
 	color: var(--c-tx-2);
 	text-align: center;
@@ -1089,7 +1037,7 @@ a.logo {
 }
 
 .site-footer a:hover {
-	color: var(--c-tx-1);
+	color: var(--c-link);
 }
 
 /* Tag
