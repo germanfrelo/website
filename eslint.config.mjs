@@ -3,12 +3,6 @@ import globals from "globals";
 
 export default [
 	{
-		files: ["**/*.js"],
-		languageOptions: {
-			sourceType: "commonjs",
-		},
-	},
-	{
 		languageOptions: {
 			// Enable all predefined browser global variables
 			globals: globals.browser,
