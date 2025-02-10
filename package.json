@@ -35,6 +35,7 @@
 	},
 	"license": "MIT",
 	"author": "Germán Freixinós",
+	"type": "module",
 	"scripts": {
 		"build": "eleventy",
 		"format": "prettier --write .",
