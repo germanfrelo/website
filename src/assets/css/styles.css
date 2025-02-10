@@ -640,14 +640,14 @@ canvas {
 }
 
 .l-with-sidebar-left > :nth-child(2) {
-	flex-basis: 0;
 	flex-grow: 999;
+	flex-basis: 0;
 	min-inline-size: 66.666%;
 }
 
 .l-with-sidebar-right > :nth-child(1) {
-	flex-basis: 0;
 	flex-grow: 999;
+	flex-basis: 0;
 	min-inline-size: 66.666%;
 }
 
@@ -665,8 +665,8 @@ canvas {
 }
 
 .l-input-button > input {
-	flex-basis: 0;
 	flex-grow: 999;
+	flex-basis: 0;
 	min-inline-size: 66.666%;
 }
 
