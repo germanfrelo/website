@@ -287,7 +287,11 @@ figure {
 a {
 	color: var(--c-link);
 	text-underline-position: under;
-	transition: color var(--tr-duration-and-timing-function), text-decoration-color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
+	transition:
+		color var(--tr-duration-and-timing-function),
+		text-decoration-color var(--tr-duration-and-timing-function),
+		background-color var(--tr-duration-and-timing-function),
+		border-color var(--tr-duration-and-timing-function);
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
@@ -349,7 +353,9 @@ kbd {
 	background-color: var(--c-bg-2);
 	border: var(--bw-xs) solid var(--c-border);
 	border-radius: var(--border-radius);
-	box-shadow: 0 calc(var(--bw-xs) / 2) 0 var(--c-border), 0 0 0 var(--bw-s) var(--c-bg-1) inset;
+	box-shadow:
+		0 calc(var(--bw-xs) / 2) 0 var(--c-border),
+		0 0 0 var(--bw-s) var(--c-bg-1) inset;
 }
 
 /* Embedded content
@@ -421,7 +427,10 @@ button {
 	background-color: var(--c-bg-1);
 	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
-	transition: color var(--tr-duration-and-timing-function), background-color var(--tr-duration-and-timing-function), border-color var(--tr-duration-and-timing-function);
+	transition:
+		color var(--tr-duration-and-timing-function),
+		background-color var(--tr-duration-and-timing-function),
+		border-color var(--tr-duration-and-timing-function);
 }
 
 [type="image"] {
