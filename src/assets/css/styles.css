@@ -609,7 +609,6 @@ canvas {
 
 [class*="with-sidebar-"] {
 	--contentMin: 66.666%;
-
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -627,14 +626,14 @@ canvas {
 }
 
 .with-sidebar-left > :nth-child(2) {
-	flex-basis: 0;
 	flex-grow: 999;
+	flex-basis: 0;
 	min-inline-size: var(--contentMin);
 }
 
 .with-sidebar-right > :nth-child(1) {
-	flex-basis: 0;
 	flex-grow: 999;
+	flex-basis: 0;
 	min-inline-size: var(--contentMin);
 }
 
@@ -665,9 +664,9 @@ canvas {
 }
 
 .switcher > * {
-	margin: 0;
-	flex-basis: calc((30rem - 100%) * 999);
 	flex-grow: 1;
+	flex-basis: calc((30rem - 100%) * 999);
+	margin: 0;
 }
 
 .switcher > :nth-last-child(n + 3),
@@ -685,8 +684,8 @@ canvas {
 	inline-size: 1px !important;
 	block-size: 1px !important;
 	overflow: hidden !important;
-	clip-path: inset(50%) !important;
 	white-space: nowrap !important;
+	clip-path: inset(50%) !important;
 }
 
 /* Design tokens utility classes
