@@ -963,7 +963,6 @@ a.logo {
 	align-items: center;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .site-layout > * {
 	min-inline-size: 0;
 }
