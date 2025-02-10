@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		// Formatting
+		"EditorConfig.EditorConfig",
+		"esbenp.prettier-vscode",
+		// Linting
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint"
+	]
+}
