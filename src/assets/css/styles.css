@@ -684,8 +684,8 @@ canvas {
 	inline-size: 1px !important;
 	block-size: 1px !important;
 	overflow: hidden !important;
-	clip-path: inset(50%) !important;
 	white-space: nowrap !important;
+	clip-path: inset(50%) !important;
 }
 
 .wrapper {
