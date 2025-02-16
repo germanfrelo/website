@@ -126,6 +126,8 @@
 	--c-neutral-lighter: hsl(217deg 10% 100% / 10%);
 	--c-blue-on-light: hsl(217deg 90% 48%);
 	--c-blue-on-dark: hsl(217deg 100% 72%);
+	--c-green-on-light: hsl(157deg 75% 30%);
+	--c-green-on-dark: hsl(157deg 100% 50%);
 
 	/* Colors (Light) */
 	--c-tx-1: var(--c-neutral-08);
@@ -136,22 +138,21 @@
 	--c-bg-a: var(--c-neutral-darker);
 	--c-border: var(--c-neutral-85);
 	--c-link: var(--c-blue-on-light);
+	--c-success: var(--c-green-on-light);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		/* Colors */
-		--c-tx-1: hsl(217deg 25% 90%);
-		--c-tx-2: hsl(217deg 10% 60%);
-		--c-bg-1: hsl(217deg 15% 6%);
-		--c-bg-2: hsl(217deg 15% 9%);
-		--c-bg-3: hsl(217deg 15% 15%);
-		--c-bg-a: hsl(217deg 15% 40% / 33.33%);
-		--c-bd-1: hsl(217deg 10% 30%);
-		--c-bd-2: hsl(217deg 10% 25%);
-		--c-link: hsl(217deg 100% 67%);
-		--c-accent: hsl(172deg 100% 45%);
-		--c-mark: hsl(55deg 100% 50% / 25%);
+		/* Colors (Dark) */
+		--c-tx-1: var(--c-neutral-97);
+		--c-tx-1-inverse: var(--c-neutral-08);
+		--c-tx-2: var(--c-neutral-70);
+		--c-bg-1: var(--c-neutral-08);
+		--c-bg-2: var(--c-neutral-13);
+		--c-bg-a: var(--c-neutral-lighter);
+		--c-border: var(--c-neutral-30);
+		--c-link: var(--c-blue-on-dark);
+		--c-success: var(--c-green-on-dark);
 	}
 }
 
@@ -1068,28 +1069,30 @@ a.logo {
    ======================================== */
 
 .status-success {
-	--color-hue: 152deg;
-	--flow-space: 1.5em;
+	--flow-space: 2em;
 	display: flex;
-	gap: 1.5ch;
+	gap: 1.25ch;
 	align-items: center;
 	max-inline-size: max-content;
-	padding-block: var(--padding-s);
-	padding-inline-start: var(--padding-m);
-	padding-inline-end: var(--padding-l);
+	padding-block: 0.5em;
+	padding-inline-start: 1.5ch;
+	padding-inline-end: 2.5ch;
 	font-size: var(--step--1);
 	font-weight: var(--fw-body-medium);
 	line-height: var(--lh-medium);
-	background-color: hsl(var(--color-hue, 152deg) 66% 50% / 20%);
+	color: var(--c-success);
+	text-transform: uppercase;
+	background-color: transparent;
+	border: var(--bw-s) solid var(--c-success);
 	border-radius: calc(infinity * 1px);
 }
 
 .status-success::before {
 	display: inline-block;
-	block-size: 1.25cap;
+	block-size: 1cap;
 	aspect-ratio: 1;
 	content: "";
-	background-color: hsl(var(--color-hue, 152deg) 100% 33%);
+	background-color: var(--c-success);
 	border-radius: 50%;
 	animation: fade-in-out 2s linear infinite;
 }
