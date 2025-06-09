@@ -1,51 +1,99 @@
+# ===============================
 # BUILD SETTINGS
+# ===============================
 
 [build]
 publish = "_site/"
 command = "npm run build"
 
+# ===============================
 # REDIRECTS
+# ===============================
 
-# Netlify default subdomain
+# -------------------------------
+# Netlify Default Subdomain Redirects
+# -------------------------------
+
+# Redirects the default Netlify subdomain to the primary custom domain.
+[[redirects]]
+  from = "https://germanfrelo-website.netlify.app/*"
+  to = "https://germanfrelo.dev/:splat"
+  status = 301
+  force = true
+
+# -------------------------------
+# Custom Domain Redirects
+# -------------------------------
+
+# Primary domain is germanfrelo.dev.
+# Netlify automatically handles redirects between the apex domain (germanfrelo.dev)
+# and its www subdomain (www.germanfrelo.dev), so no explicit rule is needed here.
+
+# Step 1: Force HTTP to HTTPS for Alias Domains
+
+# These rules ensure that any initial request over insecure HTTP for the alias domains
+# is immediately upgraded to HTTPS. This resolves "insecure connection" warnings
+# and establishes a secure connection before further redirection.
 
 [[redirects]]
-from = "https://germanfrelo-website.netlify.app/*"
-to = "https://germanfrelo.dev/:splat"
-status = 301
-force = true
-
-# Custom domains
-
-# Primary domain is germanfrelo.dev; there is no need to redirect www.germanfrelo.dev because Netlify already redirects automatically between the apex domain and www subdomain
+  from = "http://germanfreixinos.com/*"
+  to = "https://germanfreixinos.com/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "https://www.germanfreixinos.com/*"
-to = "https://germanfrelo.dev/:splat"
-status = 301
-force = true
+  from = "http://www.germanfreixinos.com/*"
+  to = "https://www.germanfreixinos.com/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "https://germanfreixinos.com/*"
-to = "https://germanfrelo.dev/:splat"
-status = 301
-force = true
+  from = "http://germanfreixinos.es/*"
+  to = "https://germanfreixinos.es/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "https://www.germanfreixinos.es/*"
-to = "https://germanfrelo.dev/:splat"
-status = 301
-force = true
+  from = "http://www.germanfreixinos.es/*"
+  to = "https://www.germanfreixinos.es/:splat"
+  status = 301
+  force = true
+
+# Step 2: Redirect HTTPS Alias Domains to Primary Production Domain
+
+# Once the connection is secure (HTTPS), these rules direct traffic
+# from the alias domains to your main germanfrelo.dev domain.
 
 [[redirects]]
-from = "https://germanfreixinos.es/*"
-to = "https://germanfrelo.dev/:splat"
-status = 301
-force = true
-
-# Paths
+  from = "https://germanfreixinos.com/*"
+  to = "https://germanfrelo.dev/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "/portfolio/*"
-to = "/projects/:splat"
-status = 301
-force = true
+  from = "https://www.germanfreixinos.com/*"
+  to = "https://germanfrelo.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://germanfreixinos.es/*"
+  to = "https://germanfrelo.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.germanfreixinos.es/*"
+  to = "https://germanfrelo.dev/:splat"
+  status = 301
+  force = true
+
+# -------------------------------
+# Path-Based Redirects
+# -------------------------------
+
+[[redirects]]
+  from = "/portfolio/*"
+  to = "/projects/:splat"
+  status = 301
+  force = true
