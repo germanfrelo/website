@@ -918,20 +918,6 @@ canvas {
 	border-radius: var(--border-radius);
 }
 
-.link-with-icon[data-style="alt"] {
-	display: flex;
-	gap: var(--padding-xs);
-	align-items: center;
-	justify-content: center;
-	padding-block: var(--padding-xs);
-	padding-inline: var(--padding-s);
-	font-weight: var(--fw-body-medium);
-	line-height: var(--lh-medium);
-	text-decoration-color: transparent;
-	border: var(--bw-s) solid var(--c-border);
-	border-radius: var(--border-radius);
-}
-
 .link-with-icon > .icon {
 	flex: none;
 	color: var(--c-tx-1);
