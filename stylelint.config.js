@@ -47,7 +47,7 @@ export default {
 				"severity": "warning",
 				"accidental-hover": false, // Enable as needed
 				"background-repeat": false, // The imported CSS reset already apply 'no-repeat' to all elements
-				"custom-property-fallbacks": true,
+				"custom-property-fallbacks": false, // Enable as needed
 				"flex-wrapping": true,
 				"scroll-chaining": true,
 				"scrollbar-gutter": false, // Enable as needed
