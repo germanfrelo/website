@@ -95,7 +95,8 @@
 	--border-radius: calc(2.5em / 16);
 
 	/* Transitions */
-	--tr-duration-and-timing-function: 0.05s ease-out;
+	--tr-duration: 0.05s;
+	--tr-timing-function: ease-out;
 
 	/* Colors */
 	--c-neutral-100: hsl(217deg 0% 100%);
@@ -291,11 +292,9 @@ figure {
 a {
 	color: var(--c-link);
 	text-underline-position: under;
-	transition:
-		color var(--tr-duration-and-timing-function),
-		text-decoration-color var(--tr-duration-and-timing-function),
-		background-color var(--tr-duration-and-timing-function),
-		border-color var(--tr-duration-and-timing-function);
+	transition-timing-function: var(--tr-timing-function);
+	transition-duration: var(--tr-duration);
+	transition-property: color, text-decoration-color, background-color, border-color;
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
@@ -431,10 +430,9 @@ button {
 	background-color: var(--c-bg-1);
 	border: var(--bw-s) solid var(--c-border);
 	border-radius: var(--border-radius);
-	transition:
-		color var(--tr-duration-and-timing-function),
-		background-color var(--tr-duration-and-timing-function),
-		border-color var(--tr-duration-and-timing-function);
+	transition-timing-function: var(--tr-timing-function);
+	transition-duration: var(--tr-duration);
+	transition-property: color, background-color, border-color;
 }
 
 [type="image"] {
@@ -509,7 +507,9 @@ details {
 summary {
 	padding-block: var(--padding-2xs);
 	padding-inline: var(--padding-s);
-	transition: background-color var(--tr-duration-and-timing-function);
+	transition-timing-function: var(--tr-timing-function);
+	transition-duration: var(--tr-duration);
+	transition-property: background-color;
 }
 
 summary:hover {
@@ -836,7 +836,9 @@ canvas {
 	inline-size: 100%;
 	max-inline-size: 9rem;
 	border-radius: var(--border-radius);
-	transition: border-radius var(--tr-duration-and-timing-function);
+	transition-timing-function: var(--tr-timing-function);
+	transition-duration: var(--tr-duration);
+	transition-property: border-radius;
 }
 
 @container about-intro (width > 38ch) {
