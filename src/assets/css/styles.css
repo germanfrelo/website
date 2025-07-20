@@ -95,7 +95,7 @@
 	--border-radius: calc(2.5em / 16);
 
 	/* Transitions */
-	--tr-duration: 0.05s;
+	--tr-duration: 0.1s;
 	--tr-timing-function: ease-out;
 
 	/* Colors */
@@ -290,8 +290,10 @@ figure {
    ======================================== */
 
 a {
+	--color-underline: color-mix(in srgb, currentcolor 66%, transparent);
 	color: var(--c-link);
-	text-underline-position: under;
+	text-decoration-color: var(--color-underline);
+	text-underline-offset: 0.2ex;
 	transition-timing-function: var(--tr-timing-function);
 	transition-duration: var(--tr-duration);
 	transition-property: color, text-decoration-color, background-color, border-color;
@@ -302,7 +304,7 @@ a {
 }
 
 a:is(:hover, :focus) {
-	text-decoration-color: transparent;
+	--color-underline: currentcolor;
 }
 
 b,
