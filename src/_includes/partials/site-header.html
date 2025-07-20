@@ -1,12 +1,14 @@
-<header class="[ site-header ] [ font-medium ]">
-	<div class="wrapper site-header__inner">
-		<a href="/" aria-label="Homepage" class="text-step-1 font-bold">Germán Freixinós López</a>
+<header class="site-header">
+	<div class="center site-header-layout">
+		<div>
+			<a href="/" aria-label="Homepage" rel="me" class="logo">Germán Freixinós López</a>
+		</div>
 
 		<nav>
-			<ul role="list" class="[ site-nav ] [ l-cluster-md ]">
+			<ul role="list" class="site-nav-layout">
 				{% for item in navigation.items %}
 				<li>
-					<a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} rel="{{ item.rel }}">{{ item.text }}</a>
+					<a href="{{ item.url }}" class="site-nav-link" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} rel="{{ item.rel }}">{{ item.text }}</a>
 				</li>
 				{% endfor %}
 			</ul>
