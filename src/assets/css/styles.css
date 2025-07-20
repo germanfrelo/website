@@ -85,20 +85,6 @@
 	--padding-2xs: 0.25em;
 	--padding-3xs: 0.125em;
 
-	/* Colors */
-	--color-scheme: light dark;
-	--c-tx-1: hsl(217deg 50% 15%);
-	--c-tx-2: hsl(217deg 15% 45%);
-	--c-bg-1: hsl(217deg 50% 100%);
-	--c-bg-2: hsl(217deg 40% 98%);
-	--c-bg-3: hsl(217deg 25% 95%);
-	--c-bg-a: hsl(217deg 25% 80% / 33.33%);
-	--c-bd-1: hsl(217deg 25% 85%);
-	--c-bd-2: hsl(217deg 25% 90%);
-	--c-link: hsl(217deg 90% 47%);
-	--c-accent: hsl(172deg 100% 45%);
-	--c-mark: hsl(55deg 100% 50% / 25%);
-
 	/* Border Width */
 	--bw-xs: max(1px, calc(1em / 16));
 	--bw-s: calc(1.5em / 16);
