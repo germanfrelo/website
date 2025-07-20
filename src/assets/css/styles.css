@@ -314,6 +314,9 @@ a:where([href*="://"])::after
 	font-style: normal;
 	color: var(--color-underline);
 	content: var(--link-external-icon, unset);
+	transition-timing-function: var(--tr-timing-function);
+	transition-duration: var(--tr-duration);
+	transition-property: color;
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
