@@ -978,7 +978,6 @@ a.logo {
 .site-layout {
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr) auto;
-	align-items: center;
 }
 
 .site-layout > * {
