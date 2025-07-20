@@ -94,6 +94,9 @@
 	/* Border Radius */
 	--border-radius: calc(2.5em / 16);
 
+	/* Link */
+	--link-external-icon: "\00A0↗";
+
 	/* Transitions */
 	--tr-duration: 0.1s;
 	--tr-timing-function: ease-out;
@@ -297,6 +300,20 @@ a {
 	transition-timing-function: var(--tr-timing-function);
 	transition-duration: var(--tr-duration);
 	transition-property: color, text-decoration-color, background-color, border-color;
+}
+
+/* External links */
+a:where([href*="://"])::after
+{
+	position: relative;
+	inset-block-end: 0.05em;
+	display: inline-block;
+	margin-inline: 0.1em;
+	font-family: var(--ff-sans-fallback);
+	font-size: 0.75em;
+	font-style: normal;
+	color: var(--color-underline);
+	content: var(--link-external-icon, unset);
 }
 
 :is(h1, h2, h3, h4, h5, h6) a {
@@ -888,6 +905,7 @@ canvas {
    ======================================== */
 
 .link-only-icon {
+	--link-external-icon: none;
 	display: block;
 	padding: var(--padding-2xs);
 	font-size: var(--step-1);
@@ -905,6 +923,7 @@ canvas {
    ======================================== */
 
 .link-with-icon {
+	--link-external-icon: none;
 	display: flex;
 	gap: var(--padding-xs);
 	align-items: center;
