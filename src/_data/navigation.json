@@ -19,11 +19,6 @@
 			"text": "Contact",
 			"url": "/contact/",
 			"rel": ""
-		},
-		{
-			"text": "CV",
-			"url": "https://www.linkedin.com/in/germanfrelo",
-			"rel": "external me"
 		}
 	]
 }

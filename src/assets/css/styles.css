@@ -717,6 +717,14 @@ canvas {
 /* Design tokens utility classes
    ======================================== */
 
+.color-primary {
+	color: var(--c-tx-1);
+}
+
+.color-secondary {
+	color: var(--c-tx-2);
+}
+
 .flex-justify-center {
 	justify-content: center;
 }
