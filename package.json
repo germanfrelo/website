@@ -33,7 +33,7 @@
 		"type": "git",
 		"url": "https://github.com/germanfrelo/website.git"
 	},
-	"license": "MIT",
+	"license": "UNLICENSED",
 	"author": "Germán Freixinós",
 	"type": "module",
 	"scripts": {
